@@ -2,69 +2,62 @@ import React from "react";
 import PropTypes from "prop-types";
 import Link from "gatsby-link";
 import Helmet from "react-helmet";
+import NavBar from "../components/NavBar";
+import "bootstrap/dist/css/bootstrap.css";
+import "flexboxgrid2/flexboxgrid2.css";
 
-import "./index.css";
+export default class TemplateWrapper extends React.Component {
+  constructor(props) {
+    super(props);
 
-const Header = () => (
-  <div
-    style={
-      {
-        // background: "rebeccapurple"
-        // marginBottom: "1.45rem"
-      }
-    }
-  >
-    <div
-      style={
-        {
-          // margin: "0 auto"
-          // maxWidth: 960,
-          // padding: "1.45rem 1.0875rem"
-        }
-      }
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={
-            {
-              // color: "white",
-              // textDecoration: "none"
-            }
-          }
+    console.log("hiiii", props);
+  }
+
+  render() {
+    return (
+      <div>
+        <Helmet
+          title="Andy Slezak"
+          meta={[
+            { name: "description", content: "Sample" },
+            { name: "keywords", content: "sample, something" }
+          ]}
         />
-      </h1>
-    </div>
-  </div>
-);
-
-const TemplateWrapper = ({ children }) => (
-  <div>
-    <Helmet
-      title="Gatsby Default Starter"
-      meta={[
-        { name: "description", content: "Sample" },
-        { name: "keywords", content: "sample, something" }
-      ]}
-    />
-    <Header />
-    <div
-      style={
-        {
-          // margin: "0 auto",
-          // maxWidth: 960,
-          // padding: "0px 1.0875rem 1.45rem",
-          // paddingTop: 0
-        }
-      }
-    >
-      {children()}
-    </div>
-  </div>
-);
+        <div>
+          <NavBar />
+          {this.props.children()}
+        </div>
+      </div>
+    );
+  }
+}
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func
 };
 
-export default TemplateWrapper;
+export const query = graphql`
+  query IndexQuery3 {
+    allImageSharp {
+      edges {
+        node {
+          ... on ImageSharp {
+            resize(width: 125, height: 125, rotate: 180) {
+              src
+            }
+          }
+        }
+      }
+    }
+    background: imageSharp(id: { regex: "/background-wood.jpg/" }) {
+      sizes(toFormat: JPG) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    gear: imageSharp(id: { regex: "/gear.png/" }) {
+      sizes(maxWidth: 1440) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+  }
+`;

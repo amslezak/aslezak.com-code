@@ -1,45 +1,71 @@
-import React from "react";
+import React, { Component } from "react";
+import styled from "react-emotion";
+import HeroHomepage from "../components/HeroHomepage";
+import About from "../components/About";
+import Work from "../components/Work";
+import Quote from "../components/Quote";
+import Portfolio from "../components/Portfolio";
+import Footer from "../components/Footer";
 
-import NavHeader from "../layouts/Header";
-import Hero from "../layouts/Hero";
-import About from "../layouts/About";
-import Work from "../layouts/Work";
-import Quote from "../layouts/Quote";
-import Portfolio from "../layouts/Portfolio";
-import Footer from "../layouts/Footer";
+const FlexContainer = styled.div`
+border-style: solid
+  display: flex;
+flex-flow: column nowrap
+  max-width: 960px;
 
-import stylesheet from "antd/dist/antd.min.css";
+  background-color: ${props => {
+    return props.backgroundColor ? props.backgroundColor : "white";
+  }};
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+`;
 
-import { Layout, Menu, Breadcrumb, Icon } from "antd";
+class HomePage extends Component {
+  constructor(props) {
+    super(props);
+  }
 
-const { SubMenu } = Menu;
-const { Header, Content, Sider } = Layout;
-
-export default class App extends React.Component {
   render() {
     return (
-      <Layout>
-        <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-        <style jsx>{`
-          #components-layout-demo-top-side-2 .logo {
-            width: 120px;
-            height: 31px;
-            background: #333;
-            border-radius: 6px;
-            margin: 16px 28px 16px 0;
-            float: left;
-          }
-        `}</style>
+      <div>
+        <HeroHomepage background={this.props.data.background.sizes} />
 
-        <NavHeader />
-        <Hero />
         <About />
         <Work />
         <Quote />
         <Portfolio />
         <Quote />
         <Footer />
-      </Layout>
+      </div>
     );
   }
 }
+
+export default HomePage;
+
+export const query = graphql`
+  query IndexQuery4 {
+    allImageSharp {
+      edges {
+        node {
+          ... on ImageSharp {
+            resize(width: 125, height: 125, rotate: 180) {
+              src
+            }
+          }
+        }
+      }
+    }
+    background: imageSharp(id: { regex: "/heroImg.jpg/" }) {
+      sizes(maxWidth: 1600) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    gear: imageSharp(id: { regex: "/gear.png/" }) {
+      sizes(maxWidth: 1600) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+  }
+`;

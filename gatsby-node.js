@@ -1,11 +1,40 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const path = require("path");
+const { createFilePath } = require(`gatsby-source-filesystem`);
 
-// You can delete this file if you're not using it
+exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
+  const { createNodeField } = boundActionCreators;
+  if (node.internal.type === "JSFrontmatter") {
+  }
+};
 
-exports.onCreateNode = ({ node }) => {
-  console.log(node.internal.type);
+exports.createPages = ({ graphql, boundActionCreators }) => {
+  const { createPage } = boundActionCreators;
+  return new Promise((resolve, reject) => {
+    graphql(`
+      query SkillPages {
+        allJsFrontmatter {
+          edges {
+            node {
+              data {
+                pageSlug
+              }
+            }
+          }
+        }
+      }
+    `).then(result => {
+      result.data.allJsFrontmatter.edges.map(({ node }) => {
+        if (node.data.pageSlug !== null) {
+          createPage({
+            path: node.data.pageSlug,
+            component: path.resolve(`./src/layouts/skill.js`),
+            context: {
+              pageSlug: node.data.pageSlug
+            }
+          });
+        }
+      });
+      resolve();
+    });
+  });
 };

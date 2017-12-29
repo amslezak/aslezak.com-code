@@ -1,0 +1,86 @@
+[
+  {
+    "section": {
+      "title": "Fundamentals",
+      "subtitle": "Web Standards",
+      "items": [
+        {
+          "title": "HTML",
+          "subtitle": "Web Page Layout",
+          "img": "http://lorempixel.com/100/100/"
+        },
+        {
+          "title": "CSS",
+          "subtitle": "Web Page Styling",
+          "img": "http://lorempixel.com/100/100/"
+        },
+        {
+          "title": "Javascript",
+          "subtitle": "Web Page Interactivity",
+          "img": "http://lorempixel.com/100/100/"
+        }
+      ]
+    }
+  },
+  {
+    "section": {
+      "title": "Libraries",
+      "subtitle": "Web Frameworks",
+      "items": [
+        {
+          "title": "React",
+          "subtitle": "Web Page Layout",
+          "img": "http://lorempixel.com/100/100/"
+        },
+        {
+          "title": "Redux",
+          "subtitle": "Web Page Layout",
+          "img": "http://lorempixel.com/100/100/"
+        },
+        {
+          "title": "Apollo",
+          "subtitle": "GraphQL",
+          "img": "http://lorempixel.com/100/100/"
+        },
+        {
+          "title": "Webpack",
+          "subtitle": "Package Bundling",
+          "img": "http://lorempixel.com/100/100/"
+        },
+        {
+          "title": "SASS",
+          "subtitle": "Kicked up CSS",
+          "img": "http://lorempixel.com/100/100/"
+        }
+      ]
+    }
+  },
+  {
+    "section": {
+      "title": "UI / UX",
+      "subtitle": "Web Graphics",
+      "items": [
+        {
+          "title": "Sketch",
+          "subtitle": "Pages + Photoshop + Illustrator",
+          "img": "http://lorempixel.com/100/100/"
+        },
+        {
+          "title": "Photoshop",
+          "subtitle": "The original design tool",
+          "img": "http://lorempixel.com/100/100/"
+        },
+        {
+          "title": "Illustrator",
+          "subtitle": "The original vector tool",
+          "img": "http://lorempixel.com/100/100/"
+        },
+        {
+          "title": "Lightroom",
+          "subtitle": "Photography Editing & Orginization",
+          "img": "http://lorempixel.com/100/100/"
+        }
+      ]
+    }
+  }
+]

@@ -1,5 +1,4 @@
 import { Component } from "react";
-import Header from "../layouts/Header";
 
 export default class extends Component {
   static getInitialProps() {

@@ -1,0 +1,140 @@
+import React from "react";
+import Link from "gatsby-link";
+import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from "reactstrap";
+import "../css/bootstrap.css";
+
+export default class NavigationBar extends React.Component {
+  render() {
+    return (
+      <div>
+        <Navbar fluid fixedTop inverse>
+          <Navbar.Header>
+            <Navbar.Brand>
+              <img src="/static/img/andyslezak_logo.svg" />
+            </Navbar.Brand>
+          </Navbar.Header>
+          <Nav pullRight>
+            <NavItem eventKey={1} href="#">
+              Link
+            </NavItem>
+            <NavItem eventKey={2} href="#">
+              Link
+            </NavItem>
+            <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
+              <MenuItem eventKey={3.1}>Action</MenuItem>
+              <MenuItem eventKey={3.2}>Another action</MenuItem>
+              <MenuItem eventKey={3.3}>Something else here</MenuItem>
+              <MenuItem divider />
+              <MenuItem eventKey={3.4}>Separated link</MenuItem>
+            </NavDropdown>
+          </Nav>
+        </Navbar>
+      </div>
+    );
+  }
+}
+
+// <nav className="navbar">
+// <a className="navbar-brand" href="/">
+//   <img src="/static/img/andyslezak_logo.svg" />
+// </a>
+// <button
+//   className="navbar-toggler"
+//   type="button"
+//   dataToggle="collapse"
+//   dataTarget="#navbarSupportedContent"
+// >
+//   <span className="navbar-toggler-icon" />
+// </button>
+
+// <div className="collapse navbar-collapse" id="navbarSupportedContent">
+//   <ul className="navbar-nav mr-auto">
+//     <li className="nav-item active">
+//       <a className="nav-link" href="#">
+//         Home <span className="sr-only" />
+//       </a>
+//     </li>
+//     <li className="nav-item">
+//       <a className="nav-link" href="#">
+//         Link
+//       </a>
+//     </li>
+//   </ul>
+// </div>
+// </nav>
+
+//   <li className="nav-item">
+//     <a className="nav-link" href="#">Link</a>
+//   </li>
+//   <li className="nav-item dropdown">
+//     <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+//       Dropdown
+//     </a>
+//     <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+//       <a className="dropdown-item" href="#">Action</a>
+//       <a className="dropdown-item" href="#">Another action</a>
+//       <div className="dropdown-divider"></div>
+//       <a className="dropdown-item" href="#">Something else here</a>
+//     </div>
+//   </li>
+//   <li className="nav-item">
+//     <a className="nav-link disabled" href="#">Disabled</a>
+//   </li>
+// </ul>
+// <form className="form-inline my-2 my-lg-0">
+//   <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+//   <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+// </form>
+// </div>
+
+// <nav
+// className="navbar navbar-expand-lg navbar-light bg-light"
+// role="navigation"
+// aria-label="main navigation"
+// >
+// <div className="navbar-brand">
+//   <a className="navbar-item" href="https://bulma.io">
+//     <img src="/static/img/andyslezak_logo.svg" />
+//   </a>
+//   <div
+//     className="navbar-burger"
+//     dataTarget="navbarExampleTransparentExample"
+//   >
+//     <span />
+//     <span />
+//     <span />
+//   </div>
+// </div>
+
+// <div id="navbarExampleTransparentExample" className="navbar-menu">
+//   <div className="navbar-start">
+//     <Link className="navbar-item" to={`/`}>
+//       Home
+//     </Link>
+//     <Link className="navbar-item" to={`/portfolio`}>
+//       Porfolio
+//     </Link>
+//     <div class="navbar-dropdown is-boxed is-active">
+//       <Link className="navbar-link has-dropdown" to={`/`}>
+//         Work
+//       </Link>
+//       <Link className="navbar-item" to={`/cloud`}>
+//         Cloud
+//       </Link>
+//       <Link className="navbar-item" to={`/design`}>
+//         Design
+//       </Link>
+//       <Link className="navbar-item" to={`/code`}>
+//         Code
+//       </Link>
+//       <Link className="navbar-item" to={`/iot/`}>
+//         IoT
+//       </Link>
+//       <Link className="navbar-item" to={`/about/`}>
+//         About
+//       </Link>
+//     </div>
+//   </div>
+//   <div class="navbar-end" />
+// </div>
+// </nav>
