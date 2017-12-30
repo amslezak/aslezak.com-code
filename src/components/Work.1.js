@@ -1,42 +1,48 @@
 import React from "react";
 import styled from "react-emotion";
 import Link from "gatsby-link";
-import backgroundWood from "../images/background-wood.jpg";
+import BgImage from "../components/global/BgImage";
 
 const Wrapper = styled.div`
-  padding: 100px 0;
-  background-image: url(${backgroundWood});
-
-  background-size: cover;
+  width: 100wh;
+  height: 100vh;
   @media (max-width: 700px) {
+    padding: 50px;
   }
 `;
 
-const ServicesContainer = styled.div``;
+const ServicesContainer = styled.div`
+  position: absolute;
+  z-index: 1;
+  margin: auto;
+  width: 100wh
+  border-style: dotted;
+`;
 
 const Header = styled.div`
   h1 {
     font-family: AvenirNext-Bold;
     font-size: 48px;
-    color: #ffffff;
+    color: #FFFFFF;
     line-height: 63px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.47);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.47);
+
   }
 
   h2 {
-    text-transform: uppercase;
-    font-size: 18px;
-    color: #3ea6b2;
-    letter-spacing: 0.5px;
-    line-height: 24px;
-  }
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #3EA6B2;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  padding: 0;
+  margin: 0;
+}
+
 
   @media (max-width: 700px) {
-    padding-bottom: 50px;
-  }
-
-  @media (max-width: 668px) {
-    padding-left: 48px;
+    padding-bottom: 50px
+    margin: 0
   }
 `;
 
@@ -74,7 +80,6 @@ export default class App extends React.Component {
     super(props);
     console.log(props);
   }
-
   render() {
     return (
       <Wrapper>
@@ -83,55 +88,55 @@ export default class App extends React.Component {
             <div className="row">
               <div className="col-xs-12 col-sm-8 col-md-6 col-lg-12">
                 <Header>
-                  <h1>PORTFOLIO</h1>
-                  <h2 />
+                  <h1>WORK</h1>
+                  <h2>Services Offered</h2>
                 </Header>
               </div>
             </div>
 
             <div className="row center-lg center-md center-sm center-xs">
-              <div className="col-xs col-sm col-md-6 col-lg-3">
+              <div className="col-xs col-sm col-md-6 col-lg-6">
                 <ServiceItem>
+                  <h2>Design</h2>
                   <Link to={"/design"}>
-                    <img src="/static/img/portfolio/WEAVE.png" />
+                    <img src="/static/img/work/design.png" />
                   </Link>
+                  <h6>Vestibulum rutrum quam vitae fringilla tincidunt.</h6>
                 </ServiceItem>
               </div>
 
-              <div className="col-xs col-sm col-md-6 col-lg-3">
+              <div className="col-xs col-sm col-md-6 col-lg-6">
                 <ServiceItem>
+                  <h2>Code</h2>
                   <Link to={"/code"}>
-                    <img src="/static/img/portfolio/CHECKOUT.png" />
+                    <img src="/static/img/work/code.png" />
                   </Link>
+                  <h6>Vestibulum rutrum quam vitae fringilla tincidunt.</h6>
                 </ServiceItem>
               </div>
-              <div className="col-xs col-sm col-md-6 col-lg-3">
+              <div className="col-xs col-sm col-md-6 col-lg-6">
                 <ServiceItem>
+                  <h2>Cloud</h2>
                   <Link to={"/cloud"}>
-                    <img src="/static/img/portfolio/CYTEXONE.png" />
+                    <img src="/static/img/work/cloud.png" />
                   </Link>
+                  <h6>Vestibulum rutrum quam vitae fringilla tincidunt.</h6>
+                </ServiceItem>
+              </div>
+              <div className="col-xs col-sm col-md-6 col-lg-6">
+                <ServiceItem>
+                  <h2>IoT</h2>
+                  <Link to={"/iot"}>
+                    <img src="/static/img/work/iot.png" />
+                  </Link>
+                  <h6>Vestibulum rutrum quam vitae fringilla tincidunt.</h6>
                 </ServiceItem>
               </div>
             </div>
           </div>
         </ServicesContainer>
+        <BgImage sizes={this.props.background.sizes} />
       </Wrapper>
     );
   }
 }
-
-// <div className="work_wrapper">
-// <div className="service_container">
-//   <h2>Design</h2>
-//   <h5>TEST</h5>
-// </div>
-// <div className="service_container">
-//   <h2>Code</h2>
-//   <img src="/static/img/portfolio/CHECKOUT.png" />
-//   <h5>TEST</h5>
-// </div>
-// <div className="service_container">
-//   <h2>Cloud</h2>
-//   <h5>TEST</h5>
-// </div>
-// </div>

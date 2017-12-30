@@ -32,9 +32,13 @@ class HomePage extends Component {
         <HeroHomepage background={this.props.data.background.sizes} />
 
         <About />
-        <Work />
+        <Work background={this.props.data.bgWood} />
         <Quote />
-        <Portfolio />
+        <Portfolio
+          P1={this.props.data.portfolioWeave}
+          P2={this.props.data.portfolioCytexOne}
+          P3={this.props.data.portfolioCheckout}
+        />
         <Quote />
         <Footer />
       </div>
@@ -62,7 +66,28 @@ export const query = graphql`
         ...GatsbyImageSharpSizes
       }
     }
+
     gear: imageSharp(id: { regex: "/gear.png/" }) {
+      sizes(maxWidth: 1600) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    bgWood: imageSharp(id: { regex: "/background-wood.jpg/" }) {
+      sizes(maxWidth: 1600) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    portfolioWeave: imageSharp(id: { regex: "/portfolioWeave/" }) {
+      sizes(maxWidth: 1600) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    portfolioCheckout: imageSharp(id: { regex: "/portfolioCheckout/" }) {
+      sizes(maxWidth: 1600) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    portfolioCytexone: imageSharp(id: { regex: "/portfolioCytexone/" }) {
       sizes(maxWidth: 1600) {
         ...GatsbyImageSharpSizes
       }
