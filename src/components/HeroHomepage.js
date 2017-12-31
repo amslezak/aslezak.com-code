@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import Img from "gatsby-image";
 import styled from "react-emotion";
-import heroBg from "../../images/hero/hero.jpg";
+import heroBg from "../images/hero/hero.jpg";
 
 const Hero = styled.div`
-padding: 100px 0;
+padding: 10vh 0;
   background: url(${heroBg}) no-repeat
   background-position: 50% 50%
   background-size: cover;

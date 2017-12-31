@@ -24,6 +24,8 @@ export default class SkillPage extends React.Component {
   constructor(props) {
     super(props);
 
+    console.log("skill", props);
+
     if (this.props.data) {
       this.pageData = this.props.data.allJsFrontmatter.edges[0].node.data;
     }
@@ -86,9 +88,9 @@ export const query = graphql`
         ...GatsbyImageSharpSizes
       }
     }
-    logoNode: imageSharp(id: { regex: "/code/items/node.png/" }) {
+    logoNode: allImageSharp(filter: { id: { regex: "/skills/code/items/" } }) {
       sizes(maxWidth: 480) {
-        ...GatsbyImageSharpSizes
+        ...GatsbyImageSharpResolutions
       }
     }
   }
