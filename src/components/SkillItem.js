@@ -1,20 +1,30 @@
 import React from "react";
+import styled from "react-emotion";
+import Img from "gatsby-image";
+import Link from "gatsby-link";
+
+const Wrapper = styled.Wrapper`
+  border-style: solid;
+`;
 
 export default class SkillItem extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     const allItems = this.props.items.map(item => {
       return (
-        <div
-          className="d-inline-flex flex-column justify-content- align-items-left"
-          style={{ margin: "0 20px 10px 0" }}
-        >
-          <h5>{item.itemTitle}</h5>
-          <h6>{item.itemSubtitle}</h6>
-          <img src={item.itemImage} style={{ width: "100px" }} />
-        </div>
+        <Wrapper>
+          <Wrapper className="col-xs-12 col-sm-3 col-md-6 col-lg-6">
+            <h5>{item.itemTitle}</h5>
+            <h6>{item.itemSubtitle}</h6>
+            <img src={item.itemImage} />
+          </Wrapper>
+        </Wrapper>
       );
     });
 
-    return <div>{allItems}</div>;
+    return <Wrapper>{allItems}</Wrapper>;
   }
 }

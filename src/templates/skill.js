@@ -3,7 +3,6 @@ import SkillWrapper from "../components/SkillWrapper";
 import HeroHeader from "../components/HeroHeader";
 import HeroOverview from "../components/HeroOverview";
 import About from "../components/About";
-import Footer from "../components/Footer";
 
 export default class SkillPage extends React.Component {
   constructor(props) {
@@ -17,6 +16,7 @@ export default class SkillPage extends React.Component {
     return (
       <div>
         <HeroHeader
+          HI
           title={this.pageData.pageTitle || ""}
           subtitle={this.pageData.pageSubtitle || ""}
           image={this.pageData.headerImage || ""}
@@ -28,7 +28,6 @@ export default class SkillPage extends React.Component {
 
         <SkillWrapper skillItems={this.pageData.pageSections || ""} />
         <About />
-        <Footer />
       </div>
     );
   }

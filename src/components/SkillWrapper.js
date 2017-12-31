@@ -1,27 +1,85 @@
 import React from "react";
 import SkillItem from "./SkillItem";
+import styled from "react-emotion";
+import Img from "gatsby-image";
+
+const Header = styled.div`
+  padding: 50px 0 25px 0;
+  h1 {
+    text-transform: uppercase;
+    font-family: AvenirNext-Bold;
+    font-size: 24px;
+    color: #404040;
+    letter-spacing: 1.17px;
+    line-height: 32px;
+    padding: 0;
+    margin: 0;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #3ea6b2;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    padding: 0;
+    margin: 0;
+  }
+`;
+
+const Items = styled.div`
+  padding-bottom: 50px;
+
+  h1 {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+`;
+
+const Item = styled.div`
+  padding: 50px 100px 0 0;
+`;
 
 export default class SkillWrapper extends React.Component {
-  render() {
-    const allSections = this.props.skillItems.map(section => {
+  constructor(props) {
+    super(props);
+
+    this.skillItems = this.props.skillItems.map(item => {
       return (
-        <div style={{ margin: "50px 0 50px 0" }}>
-          <h3 style={{ textTransform: "uppercase", fontWeight: 700 }}>
-            {section.sectionTitle}
-          </h3>
-          <div
-            style={{
-              marginBottom: "30px",
-              fontWeight: 100
-            }}
-          >
-            <h5>{section.sectionTitle}</h5>
-          </div>
-          <SkillItem items={section.sectionItems} />
+        <div>
+          <Header>
+            <div className="row">
+              <div className="col-xs-12 col-sm-6 col-md-12 col-lg-4">
+                <h1>{item.sectionTitle}</h1>
+                <h2>{item.sectionSubtitle}</h2>
+              </div>
+            </div>
+          </Header>
+
+          <Items>
+            <div className="row">
+              {item.sectionItems.map(item => {
+                return (
+                  <Item>
+                    <div className="col-xs-12 col-sm-6 col-md-12 col-lg-12">
+                      <Img sizes={this.props.image.sizes} />
+                      <h1>{item.itemTitle}</h1>
+                      <h2>{item.itemSubtitle}</h2>
+                    </div>
+                  </Item>
+                );
+              })}
+            </div>
+          </Items>
         </div>
       );
     });
+  }
 
-    return <div>{allSections}</div>;
+  render() {
+    return <div className="container">{this.skillItems}</div>;
   }
 }

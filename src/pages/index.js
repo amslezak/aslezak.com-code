@@ -6,6 +6,7 @@ import Work from "../components/Work";
 import Quote from "../components/Quote";
 import Portfolio from "../components/Portfolio";
 import Footer from "../components/Footer";
+import FooterSub from "../components/FooterSub";
 
 const FlexContainer = styled.div`
 border-style: solid
@@ -24,23 +25,32 @@ flex-flow: column nowrap
 class HomePage extends Component {
   constructor(props) {
     super(props);
+
+    console.log("HOMEPAGE INDEX.JS", props);
   }
 
   render() {
     return (
       <div>
-        <HeroHomepage background={this.props.data.background.sizes} />
+        <HeroHomepage background={this.props.data.background} />
 
         <About />
-        <Work background={this.props.data.bgWood} />
+        <Work
+          background={this.props.data.bgWood}
+          design={this.props.data.workDesign}
+          code={this.props.data.workCode}
+          cloud={this.props.data.workCloud}
+          iot={this.props.data.workIoT}
+        />
         <Quote />
         <Portfolio
           P1={this.props.data.portfolioWeave}
-          P2={this.props.data.portfolioCytexOne}
+          P2={this.props.data.portfolioCytexone}
           P3={this.props.data.portfolioCheckout}
         />
         <Quote />
-        <Footer />
+        <Footer image={this.props.data.footer} />
+        <FooterSub image={this.props.data.social} />
       </div>
     );
   }
@@ -78,17 +88,47 @@ export const query = graphql`
       }
     }
     portfolioWeave: imageSharp(id: { regex: "/portfolioWeave/" }) {
-      sizes(maxWidth: 1600) {
+      sizes(maxWidth: 482) {
         ...GatsbyImageSharpSizes
       }
     }
     portfolioCheckout: imageSharp(id: { regex: "/portfolioCheckout/" }) {
-      sizes(maxWidth: 1600) {
+      sizes(maxWidth: 482) {
         ...GatsbyImageSharpSizes
       }
     }
     portfolioCytexone: imageSharp(id: { regex: "/portfolioCytexone/" }) {
-      sizes(maxWidth: 1600) {
+      sizes(maxWidth: 482) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    workDesign: imageSharp(id: { regex: "/work/design/" }) {
+      sizes(maxWidth: 482) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    workCode: imageSharp(id: { regex: "/work/code/" }) {
+      sizes(maxWidth: 482) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    workCloud: imageSharp(id: { regex: "/work/cloud/" }) {
+      sizes(maxWidth: 482) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    workIoT: imageSharp(id: { regex: "/work/iot/" }) {
+      sizes(maxWidth: 482) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    footer: imageSharp(id: { regex: "/footer/typewriter/" }) {
+      sizes(maxWidth: 482) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    social: imageSharp(id: { regex: "/footer/social/" }) {
+      sizes(maxWidth: 359) {
         ...GatsbyImageSharpSizes
       }
     }

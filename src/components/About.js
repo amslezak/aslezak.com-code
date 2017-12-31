@@ -68,11 +68,22 @@ export default class App extends React.Component {
             <Body>
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-10">
                 <h6>
-                  Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse
-                  nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla
-                  iaculis vitae. Donec sagittis faucibus lacus eget blandit.
-                  Mauris vitae ultricies metus, at condimentum nulla. Donec quis
-                  ornare lacus. Etiam gravida mollis tortor quis porttitor.
+                  <p>
+                    Vestibulum rutrum quam vitae fringilla tincidunt.
+                    Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis
+                    iaculis nulla iaculis vitae. Donec sagittis faucibus lacus
+                    eget blandit. Mauris vitae ultricies metus, at condimentum
+                    nulla. Donec quis ornare lacus. Etiam gravida mollis tortor
+                    quis porttitor.
+                  </p>
+
+                  <h6>DEDICATION</h6>
+                  <p>
+                    This site is dedicated to my mom and dad. To my dad, because
+                    he taught me how to teach myself, and to always continue to
+                    learn. To my mom for teaching me dogged persistance and
+                    love.
+                  </p>
                 </h6>
               </div>
             </Body>

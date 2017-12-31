@@ -15,6 +15,12 @@ import {
 } from "reactstrap";
 
 import "bootstrap/dist/css/bootstrap.css";
+import styled from "react-emotion";
+
+const Logo = styled.div`
+  padding: 5px 0;
+  margin: 0;
+`;
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -32,11 +38,13 @@ export default class Example extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className="container">
         <Navbar color="faded" light expand="md">
           <Link to={"/"}>
             <NavbarBrand>
-              <img src="/static/img/andyslezak_logo.svg" />
+              <Logo>
+                <img src="/static/img/andyslezak_logo.svg" />
+              </Logo>
             </NavbarBrand>
           </Link>
           <NavbarToggler onClick={this.toggle} />

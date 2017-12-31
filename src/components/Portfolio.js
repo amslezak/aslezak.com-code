@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "react-emotion";
 import Link from "gatsby-link";
+import Img from "gatsby-image";
 import backgroundWood from "../images/background-wood.jpg";
 
 const Wrapper = styled.div`
   padding: 100px 0;
   background-image: url(${backgroundWood});
 
-  background-size: cover;
   @media (max-width: 700px) {
   }
 `;
@@ -42,31 +42,21 @@ const Header = styled.div`
 
 const ServiceItem = styled.div`
   padding: 25px;
+`;
 
-  img {
-    max-height: 200px;
-    max-width: 200px;
-    align: center;
-  }
-
-  h2,
-  h6 {
-    margin: 25px 0;
-  }
-
-  h2 {
-    font-family: AvenirNext-Bold;
-    font-size: 24px;
-    color: #e4e4e4;
-    letter-spacing: 1.17px;
-    line-height: 32px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    text-transform: uppercase;
-  }
-
-  h6 {
-    font-family: Avenir;
-  }
+const Button = styled.button`
+  margin: 50px 0;
+  padding: 30px;
+  font-family: AvenirNext-Bold;
+  font-size: 24px;
+  color: #e4e4e4;
+  letter-spacing: 1.17px;
+  line-height: 32px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  /* Rectangle: */
+  background: #f1f1f1;
+  border: 3px solid #ffffff;
+  border-radius: 10px;
 `;
 
 export default class App extends React.Component {
@@ -83,34 +73,38 @@ export default class App extends React.Component {
             <div className="row">
               <div className="col-xs-12 col-sm-8 col-md-6 col-lg-12">
                 <Header>
-                  <h1>PORTFOLIO</h1>
+                  <h1>WORK</h1>
                   <h2 />
                 </Header>
               </div>
             </div>
 
             <div className="row center-lg center-md center-sm center-xs">
-              <div className="col-xs col-sm col-md-6 col-lg-3">
+              <div className="col-xs-12 col-sm-12 col-md-10 col-lg-4">
                 <ServiceItem>
-                  <Link to={"/design"}>
-                    <img src="/static/img/portfolio/WEAVE.png" />
-                  </Link>
+                  <Img sizes={this.props.P1.sizes} fadein />
                 </ServiceItem>
               </div>
 
-              <div className="col-xs col-sm col-md-6 col-lg-3">
+              <div className="col-xs-12 col-sm-12 col-md-10 col-lg-4">
                 <ServiceItem>
-                  <Link to={"/code"}>
-                    <img src="/static/img/portfolio/CHECKOUT.png" />
-                  </Link>
+                  <Img sizes={this.props.P2.sizes} fadeIn />
                 </ServiceItem>
               </div>
-              <div className="col-xs col-sm col-md-6 col-lg-3">
+              <div className="col-xs-12 col-sm-12 col-md-10 col-lg-4">
                 <ServiceItem>
-                  <Link to={"/cloud"}>
-                    <img src="/static/img/portfolio/CYTEXONE.png" />
-                  </Link>
+                  <Img sizes={this.props.P3.sizes} fadeIn />
                 </ServiceItem>
+              </div>
+            </div>
+            <div className="row center-lg- center-md center-sm center-xs">
+              <div className="col-xs-12 col-sm-12 col-md-5 col-lg-2">
+                <Button
+                  type="button"
+                  className="btn-lg btn-secondary btn-block"
+                >
+                  <Link to={"/portfolio"}>MORE</Link>
+                </Button>
               </div>
             </div>
           </div>
@@ -119,19 +113,3 @@ export default class App extends React.Component {
     );
   }
 }
-
-// <div className="work_wrapper">
-// <div className="service_container">
-//   <h2>Design</h2>
-//   <h5>TEST</h5>
-// </div>
-// <div className="service_container">
-//   <h2>Code</h2>
-//   <img src="/static/img/portfolio/CHECKOUT.png" />
-//   <h5>TEST</h5>
-// </div>
-// <div className="service_container">
-//   <h2>Cloud</h2>
-//   <h5>TEST</h5>
-// </div>
-// </div>
