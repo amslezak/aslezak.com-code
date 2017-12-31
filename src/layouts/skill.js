@@ -24,8 +24,6 @@ export default class SkillPage extends React.Component {
   constructor(props) {
     super(props);
 
-    console.log("skill", props);
-
     if (this.props.data) {
       this.pageData = this.props.data.allJsFrontmatter.edges[0].node.data;
     }
@@ -48,8 +46,8 @@ export default class SkillPage extends React.Component {
           />
         </Overview>
         <SkillWrapper
+          logos={this.props.data.logos}
           skillItems={this.pageData.pageSections}
-          image={this.props.data.logoNode}
         />
         <About />
       </div>
@@ -88,9 +86,17 @@ export const query = graphql`
         ...GatsbyImageSharpSizes
       }
     }
-    logoNode: allImageSharp(filter: { id: { regex: "/skills/code/items/" } }) {
-      sizes(maxWidth: 480) {
-        ...GatsbyImageSharpResolutions
+    logos: allImageSharp(filter: { id: { regex: "/skills/code/items/" } }) {
+      edges {
+        node {
+          sizes(
+            maxWidth: 480
+            quality: 80
+            traceSVG: { background: "#f2f8f3", color: "#d6ebd9" }
+          ) {
+            ...GatsbyImageSharpSizes_tracedSVG
+          }
+        }
       }
     }
   }

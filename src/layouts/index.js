@@ -9,8 +9,6 @@ import "flexboxgrid2/flexboxgrid2.css";
 export default class TemplateWrapper extends React.Component {
   constructor(props) {
     super(props);
-
-    console.log("hiiii", props);
   }
 
   render() {

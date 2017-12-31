@@ -47,6 +47,16 @@ export default class SkillWrapper extends React.Component {
   constructor(props) {
     super(props);
 
+    this.logos = props.logos.edges;
+
+    // console.log("logos array", this.logos);
+
+    this.myImage = this.logos.filter(logo => {
+      return /node/.test(logo.node.sizes.src);
+    });
+
+    // console.log("test", this.myImage);
+
     this.skillItems = this.props.skillItems.map(item => {
       return (
         <div>
@@ -65,9 +75,18 @@ export default class SkillWrapper extends React.Component {
                 return (
                   <Item>
                     <div className="col-xs-12 col-sm-6 col-md-12 col-lg-12">
-                      <Img sizes={this.props.image.sizes} />
                       <h1>{item.itemTitle}</h1>
                       <h2>{item.itemSubtitle}</h2>
+                      <Img
+                        sizes={
+                          this.props.logos.edges.filter(skill => {
+                            let regex = new RegExp(item.itemImage);
+                            let img = regex.test(skill.node.sizes.src);
+
+                            return img;
+                          })[0].node.sizes
+                        }
+                      />
                     </div>
                   </Item>
                 );

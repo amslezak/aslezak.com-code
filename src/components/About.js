@@ -79,10 +79,10 @@ export default class App extends React.Component {
 
                   <h6>DEDICATION</h6>
                   <p>
-                    This site is dedicated to my mom and dad. To my dad, because
-                    he taught me how to teach myself, and to always continue to
+                    This site is dedicated to my mom and dad. To my dad because
+                    he taught me how to teach myself, and to always continue
                     learn. To my mom for teaching me dogged persistance and
-                    love.
+                    living with endless love.
                   </p>
                 </h6>
               </div>
