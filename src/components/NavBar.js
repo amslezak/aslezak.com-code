@@ -15,6 +15,7 @@ import {
 } from "reactstrap";
 
 import "bootstrap/dist/css/bootstrap.css";
+import "animate.css";
 import styled from "react-emotion";
 
 const Logo = styled.div`
@@ -39,7 +40,7 @@ export default class Example extends React.Component {
   render() {
     return (
       <div className="container">
-        <Navbar color="faded" light expand="md">
+        <Navbar light expand="md">
           <Link to={"/"}>
             <NavbarBrand>
               <Logo>

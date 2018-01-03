@@ -24,10 +24,23 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       }
     `).then(result => {
       result.data.allJsFrontmatter.edges.map(({ node }) => {
-        if (node.data.pageSlug !== null) {
+        if (
+          node.data.pageSlug !== null &&
+          node.data.pageSlug !== "/portfolio"
+        ) {
           createPage({
             path: node.data.pageSlug,
             component: path.resolve(`./src/layouts/skill.js`),
+            context: {
+              pageSlug: node.data.pageSlug
+            }
+          });
+        }
+
+        if (node.data.pageSlug == "/portfolio") {
+          createPage({
+            path: node.data.pageSlug,
+            component: path.resolve(`./src/layouts/portfolio.js`),
             context: {
               pageSlug: node.data.pageSlug
             }

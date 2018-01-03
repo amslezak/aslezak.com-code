@@ -5,14 +5,13 @@ import Img from "gatsby-image";
 import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
 
 const Wrapper = styled.div`
-  padding: 100px 0;
+  padding: 15px 0;
+  margin-bottom: 5px;
 
   background-size: cover;
   @media (max-width: 700px) {
   }
 `;
-
-const ContactContainer = styled.div``;
 
 const Header = styled.div`
   font-weight: 700;
@@ -34,7 +33,9 @@ const NavItem = styled.div`
 `;
 
 const Social = styled.div`
-  margin: 0 50px;
+  // margin: 0 50px;
+  padding-bottom: 50px;
+  margin-bottom: 500px;
 `;
 
 export default class App extends React.Component {
@@ -46,63 +47,61 @@ export default class App extends React.Component {
   render() {
     return (
       <Wrapper>
-        <ContactContainer>
-          <div className="container">
-            <div className="row">
-              <div className="col-xs-12 col-sm-8 col-md-2 col-lg-2">
-                <Header>
-                  <Link to={"/"}>Home</Link>
-                </Header>
-              </div>
-              <div className="col-xs-12 col-sm-8 col-md-2 col-lg-2">
-                <Header>
-                  <Link to={"/"}>Work</Link>
-                </Header>
-              </div>
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-12 col-sm-8 col-md-2 col-lg-2">
+              <Header>
+                <Link to={"/"}>Home</Link>
+              </Header>
             </div>
-            <div className="row">
-              <div className="col-xs-2 col-sm-8 col-md-2 col-lg-2">
-                <NavItem>
-                  <Link to={"/portfolio"}>Portfolio</Link>
-                </NavItem>
-              </div>
-              <div className="col-xs-2 col-sm-8 col-md-2 col-lg-2">
-                <NavItem>
-                  <Link to={"/design"}>Design</Link>
-                </NavItem>
-              </div>
-              <div className="col-xs-12 col-sm-8 col-md-2 col-lg-2">
-                <NavItem>
-                  <Link to={"/cloud"}>Cloud</Link>
-                </NavItem>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-xs-12 col-sm-8 col-md-2 col-lg-2">
-                <NavItem>
-                  <Link to={"/about"}>About</Link>
-                </NavItem>
-              </div>
-              <div className="col-xs-12 col-sm-8 col-md-2 col-lg-2">
-                <NavItem>
-                  <Link to={"/code"}>Code</Link>
-                </NavItem>
-              </div>
-              <div className="col-xs-12 col-sm-8 col-md-2 col-lg-2">
-                <NavItem>
-                  <Link to={"/iot"}>IoT</Link>
-                </NavItem>
-              </div>
-            </div>
-            <div className="row end-lg">
-              <div className="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-                <Social>
-                  <Img sizes={this.props.image.sizes} />
-                </Social>
-              </div>
+            <div className="col-xs-12 col-sm-8 col-md-2 col-lg-2">
+              <Header>
+                <Link to={"/"}>Work</Link>
+              </Header>
             </div>
           </div>
-        </ContactContainer>
+          <div className="row">
+            <div className="col-xs-2 col-sm-8 col-md-2 col-lg-2">
+              <NavItem>
+                <Link to={"/portfolio"}>Portfolio</Link>
+              </NavItem>
+            </div>
+            <div className="col-xs-2 col-sm-8 col-md-2 col-lg-2">
+              <NavItem>
+                <Link to={"/design"}>Design</Link>
+              </NavItem>
+            </div>
+            <div className="col-xs-12 col-sm-8 col-md-2 col-lg-2">
+              <NavItem>
+                <Link to={"/cloud"}>Cloud</Link>
+              </NavItem>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-xs-12 col-sm-8 col-md-2 col-lg-2">
+              <NavItem>
+                <Link to={"/about"}>About</Link>
+              </NavItem>
+            </div>
+            <div className="col-xs-12 col-sm-8 col-md-2 col-lg-2">
+              <NavItem>
+                <Link to={"/code"}>Code</Link>
+              </NavItem>
+            </div>
+            <div className="col-xs-12 col-sm-8 col-md-2 col-lg-2">
+              <NavItem>
+                <Link to={"/iot"}>IoT</Link>
+              </NavItem>
+            </div>
+          </div>
+          <div className="row end-lg">
+            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+              <Social>
+                <Img sizes={this.props.image.sizes} />
+              </Social>
+            </div>
+          </div>
+        </div>
       </Wrapper>
     );
   }

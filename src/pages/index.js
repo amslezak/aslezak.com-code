@@ -25,8 +25,6 @@ flex-flow: column nowrap
 class HomePage extends Component {
   constructor(props) {
     super(props);
-
-    console.log("HOMEPAGE INDEX.JS", props);
   }
 
   render() {
@@ -34,7 +32,7 @@ class HomePage extends Component {
       <div>
         <HeroHomepage background={this.props.data.background} />
 
-        <About />
+        <About logo={this.props.data.logoSignature} />
         <Work
           background={this.props.data.bgWood}
           design={this.props.data.workDesign}
@@ -129,6 +127,11 @@ export const query = graphql`
     }
     social: imageSharp(id: { regex: "/footer/social/" }) {
       sizes(maxWidth: 359) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    logoSignature: imageSharp(id: { regex: "/logoSignature/" }) {
+      sizes(maxWidth: 480) {
         ...GatsbyImageSharpSizes
       }
     }

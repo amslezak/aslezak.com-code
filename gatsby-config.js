@@ -24,13 +24,12 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`
       }
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Source Serif Pro`, `Alegreya`, `EB Garamond`]
+      }
     }
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `component data`,
-    //     path: `${__dirname}/src/data/components`
-    //   }
-    // }
   ]
 };

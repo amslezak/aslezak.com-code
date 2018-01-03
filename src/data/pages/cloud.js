@@ -4,57 +4,151 @@ export const data = {
   pageSlug: "/cloud",
   headerTitle: "My Cloud Tools",
   headerBody: "These are the cloud tools that I use",
-  headerImage: "/static/img/100x100.png",
+  headerImage: "heroCloud4",
   pageSections: [
     {
       sectionTitle: "Infrastructure",
-      sectionSubtitle: "The Hardware",
+      sectionSubtitle: "Hardware",
       sectionItems: [
         {
           itemTitle: "Amazon AWS",
           itemSubtitle: "Still the King of Cloud",
-          itemImage: "/static/img/100x100.png"
+          itemImage: "logoAws"
         },
         {
           itemTitle: "Microsoft Azure",
-          itemSubtitle: "Gunning for the Big Man",
-          itemImage: "/static/img/100x100.png"
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoAzure"
         },
         {
-          itemTitle: "Google Cloud Platform",
-          itemSubtitle: "less features, cheaper, and solid",
-          itemImage: "/static/img/100x100.png"
+          itemTitle: "Google GCP",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoGcp"
         },
         {
           itemTitle: "VMware Cloud",
-          itemSubtitle: "Old reliable",
-          itemImage: "/static/img/100x100.png"
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoVmware"
         }
       ]
     },
     {
-      sectionTitle: "Infrastructure",
-      sectionSubtitle: "The Hardware",
+      sectionTitle: "Serverless",
+      sectionSubtitle: "The new cloud",
       sectionItems: [
         {
-          itemTitle: "Amazon AWS",
+          itemTitle: "AWS Lambda",
           itemSubtitle: "Still the King of Cloud",
-          itemImage: "/static/img/100x100.png"
+          itemImage: "logoAwslambda"
         },
         {
-          itemTitle: "Microsoft Azure",
-          itemSubtitle: "Gunning for the Big Man",
-          itemImage: "/static/img/100x100.png"
+          itemTitle: "AWS API Gateway",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoAwsapigateway"
         },
         {
-          itemTitle: "Google Cloud Platform",
-          itemSubtitle: "less features, cheaper, and solid",
-          itemImage: "/static/img/100x100.png"
+          itemTitle: "AWS ECS",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoAwsecs"
         },
         {
-          itemTitle: "VMware Cloud",
-          itemSubtitle: "Old reliable",
-          itemImage: "/static/img/100x100.png"
+          itemTitle: "AWS IoT",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoAwsiot"
+        }
+      ]
+    },
+    {
+      sectionTitle: "Database",
+      sectionSubtitle: "Storage",
+      sectionItems: [
+        {
+          itemTitle: "AWS DynamoDB",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoAwsdynamodb"
+        },
+        {
+          itemTitle: "Redis",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoRedis"
+        },
+        {
+          itemTitle: "PostgreSQL",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoPostgresql"
+        },
+        {
+          itemTitle: "MySQL",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoMysql"
+        },
+        {
+          itemTitle: "SQL Server",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoSqlserver"
+        }
+      ]
+    },
+    {
+      sectionTitle: "Anaylytics",
+      sectionSubtitle: "Data Insight",
+      sectionItems: [
+        {
+          itemTitle: "AWS Kinesis",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoAwskinesis"
+        },
+        {
+          itemTitle: "Elastic ELK",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoElastic"
+        },
+        {
+          itemTitle: "Nagios",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoNagios"
+        },
+        {
+          itemTitle: "Zabbix",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoZabbix"
+        }
+      ]
+    },
+    {
+      sectionTitle: "Storage",
+      sectionSubtitle: "Data & Distribution",
+      sectionItems: [
+        {
+          itemTitle: "AWS Cloudfront",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoAwscloudfront"
+        },
+        {
+          itemTitle: "AWS S3",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoAwss3"
+        }
+      ]
+    },
+    {
+      sectionTitle: "Identity",
+      sectionSubtitle: "Authorization",
+      sectionItems: [
+        {
+          itemTitle: "AWS IAM",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoAwsiam"
+        },
+        {
+          itemTitle: "AWS Cognito",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoAwscognito"
+        },
+        {
+          itemTitle: "Auth0",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoAuth0"
         }
       ]
     }

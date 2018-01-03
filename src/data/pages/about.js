@@ -1,60 +1,60 @@
 export const data = {
   pageTitle: "About",
-  pageSubtitle: "A little about Andy Slezak",
+  pageSubtitle: "Some more details",
   pageSlug: "/about",
-  headerTitle: "My Cloud Tools",
-  headerBody: "These are the cloud tools that I use",
-  headerImage: "/static/img/100x100.png",
+  headerTitle: "Overview",
+  headerBody: "Welcome",
+  headerImage: "heroAbout",
   pageSections: [
     {
-      sectionTitle: "Infrastructure",
-      sectionSubtitle: "The Hardware",
+      sectionTitle: "Education",
+      sectionSubtitle: "University",
       sectionItems: [
         {
-          itemTitle: "Amazon AWS",
+          itemTitle: "NYU",
           itemSubtitle: "Still the King of Cloud",
-          itemImage: "/static/img/100x100.png"
-        },
-        {
-          itemTitle: "Microsoft Azure",
-          itemSubtitle: "Gunning for the Big Man",
-          itemImage: "/static/img/100x100.png"
-        },
-        {
-          itemTitle: "Google Cloud Platform",
-          itemSubtitle: "less features, cheaper, and solid",
-          itemImage: "/static/img/100x100.png"
-        },
-        {
-          itemTitle: "VMware Cloud",
-          itemSubtitle: "Old reliable",
-          itemImage: "/static/img/100x100.png"
+          itemImage: "logoNyu"
         }
       ]
     },
     {
-      sectionTitle: "Infrastructure",
-      sectionSubtitle: "The Hardware",
+      sectionTitle: "PERSONAL",
+      sectionSubtitle: "INTERESTS",
       sectionItems: [
         {
-          itemTitle: "Amazon AWS",
+          itemTitle: "Coffee",
           itemSubtitle: "Still the King of Cloud",
-          itemImage: "/static/img/100x100.png"
+          itemImage: "logoCoffee"
         },
         {
-          itemTitle: "Microsoft Azure",
-          itemSubtitle: "Gunning for the Big Man",
-          itemImage: "/static/img/100x100.png"
+          itemTitle: "Chocolate",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoChocolate"
         },
         {
-          itemTitle: "Google Cloud Platform",
-          itemSubtitle: "less features, cheaper, and solid",
-          itemImage: "/static/img/100x100.png"
+          itemTitle: "Cameras",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoCamera"
         },
         {
-          itemTitle: "VMware Cloud",
-          itemSubtitle: "Old reliable",
-          itemImage: "/static/img/100x100.png"
+          itemTitle: "Construction",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoConstruction"
+        },
+        {
+          itemTitle: "Cooking",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoCooking"
+        },
+        {
+          itemTitle: "Computers",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoComputers"
+        },
+        {
+          itemTitle: "Creativity",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoCreativity"
         }
       ]
     }

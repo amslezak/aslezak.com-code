@@ -1,34 +1,91 @@
 export const data = {
   pageTitle: "Design",
-  pageSubtitle: "Where the code meets design",
+  pageSubtitle: "Web apps your mom would love",
   pageSlug: "/design",
-  headerTitle: "My Design Tools",
-  headerBody: "These are the design tools that I use",
-  headerImage: "/static/img/100x100.png",
+  headerTitle: "Overview",
+  headerBody: "My Design Tools",
+  headerImage: "heroDesign",
   pageSections: [
     {
-      sectionTitle: "Infrastructure",
-      sectionSubtitle: "The Hardware",
+      sectionTitle: "Fundamentals",
+      sectionSubtitle: "Hardware",
       sectionItems: [
         {
-          itemTitle: "Amazon AWS",
+          itemTitle: "JavaScript",
+          itemSubtitle: "Code",
+          itemImage: "logoJavascript"
+        },
+        {
+          itemTitle: "HTML",
+          itemSubtitle: "HTML",
+          itemImage: "logoHTML"
+        },
+        {
+          itemTitle: "CSS",
+          itemSubtitle: "CSS",
+          itemImage: "logoCSS"
+        }
+      ]
+    },
+    {
+      sectionTitle: "Libraries",
+      sectionSubtitle: "Functions",
+      sectionItems: [
+        {
+          itemTitle: "React",
           itemSubtitle: "Still the King of Cloud",
-          itemImage: "/static/img/100x100.png"
+          itemImage: "logoReact"
         },
         {
-          itemTitle: "Microsoft Azure",
-          itemSubtitle: "Gunning for the Big Man",
-          itemImage: "/static/img/100x100.png"
+          itemTitle: "Redux",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoRedux"
         },
         {
-          itemTitle: "Google Cloud Platform",
-          itemSubtitle: "less features, cheaper, and solid",
-          itemImage: "/static/img/100x100.png"
+          itemTitle: "Apollo",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoApollo"
         },
         {
-          itemTitle: "VMware Cloud",
-          itemSubtitle: "Old reliable",
-          itemImage: "/static/img/100x100.png"
+          itemTitle: "Webpack",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoWebpack"
+        },
+        {
+          itemTitle: "Lodash",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoLodash"
+        },
+        {
+          itemTitle: "Sass",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoSass"
+        }
+      ]
+    },
+    {
+      sectionTitle: "UI/UX",
+      sectionSubtitle: "Graphic Design",
+      sectionItems: [
+        {
+          itemTitle: "Sketch",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoSketch"
+        },
+        {
+          itemTitle: "Photoshop",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoPhotoshop"
+        },
+        {
+          itemTitle: "Illustrator",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoIllustrator"
+        },
+        {
+          itemTitle: "Lightroom",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoLightroom"
         }
       ]
     }

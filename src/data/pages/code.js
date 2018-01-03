@@ -1,10 +1,10 @@
 export const data = {
   pageTitle: "Code",
-  pageSubtitle: "Where the code meets design",
+  pageSubtitle: "Magic made with open source",
   pageSlug: "/code",
-  headerTitle: "Code",
-  headerBody: "",
-  headerImage: "/static/img/100x100.png",
+  headerTitle: "Overview",
+  headerBody: "My Coding Tools",
+  headerImage: "heroCode",
   pageSections: [
     {
       sectionTitle: "Languages",
@@ -13,17 +13,17 @@ export const data = {
         {
           itemTitle: "Node",
           itemSubtitle: "Server Side Javascript",
-          itemImage: "node"
+          itemImage: "logoNode"
         },
         {
           itemTitle: "Python",
           itemSubtitle: "Swiss Army Knife",
-          itemImage: "python"
+          itemImage: "logoPython"
         },
         {
           itemTitle: "PHP",
           itemSubtitle: "PHP Hypertext Preprocessor",
-          itemImage: "php"
+          itemImage: "logoPhp"
         }
       ]
     },
@@ -34,17 +34,42 @@ export const data = {
         {
           itemTitle: "VS Code",
           itemSubtitle: "Client IDE",
-          itemImage: "vscode"
+          itemImage: "logoVscode"
         },
         {
           itemTitle: "Vim",
           itemSubtitle: "Server IDE",
-          itemImage: "vim"
+          itemImage: "logoVim"
         },
         {
-          itemTitle: "VMware Cloud",
+          itemTitle: "Git",
           itemSubtitle: "Version Control",
-          itemImage: "git"
+          itemImage: "logoGit"
+        },
+        {
+          itemTitle: "Github",
+          itemSubtitle: "Server IDE",
+          itemImage: "logoGithub"
+        },
+        {
+          itemTitle: "Docker",
+          itemSubtitle: "Server IDE",
+          itemImage: "logoDocker"
+        },
+        {
+          itemTitle: "NPM",
+          itemSubtitle: "Server IDE",
+          itemImage: "logoNpm"
+        },
+        {
+          itemTitle: "Serverless",
+          itemSubtitle: "Server IDE",
+          itemImage: "logoServerless"
+        },
+        {
+          itemTitle: "Shell",
+          itemSubtitle: "Server IDE",
+          itemImage: "logoShell"
         }
       ]
     }

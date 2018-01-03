@@ -7,6 +7,7 @@ import backgroundWood from "../images/background-wood.jpg";
 const Wrapper = styled.div`
   padding: 100px 0;
   background-image: url(${backgroundWood});
+  height: 100vh;
 
   @media (max-width: 700px) {
   }
@@ -99,12 +100,14 @@ export default class App extends React.Component {
             </div>
             <div className="row center-lg- center-md center-sm center-xs">
               <div className="col-xs-12 col-sm-12 col-md-5 col-lg-2">
-                <Button
-                  type="button"
-                  className="btn-lg btn-secondary btn-block"
-                >
-                  <Link to={"/portfolio"}>MORE</Link>
-                </Button>
+                <Link to={"/portfolio"}>
+                  <Button
+                    type="button"
+                    className="btn-lg btn-secondary btn-block"
+                  >
+                    MORE
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

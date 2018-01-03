@@ -1,60 +1,44 @@
 export const data = {
   pageTitle: "IoT",
-  pageSubtitle: "Where the code meets design",
+  pageSubtitle: 'Giving "smart" devices brains',
   pageSlug: "/iot",
-  headerTitle: "My IoT Tools",
+  headerTitle: "Overview",
   headerBody: "These are the cloud tools that I use",
-  headerImage: "/static/img/100x100.png",
+  headerImage: "heroIot4",
   pageSections: [
     {
-      sectionTitle: "Infrastructure",
-      sectionSubtitle: "The Hardware",
+      sectionTitle: "Hardware",
+      sectionSubtitle: "Platforms",
       sectionItems: [
         {
-          itemTitle: "Amazon AWS",
+          itemTitle: "Raspberry Pi",
           itemSubtitle: "Still the King of Cloud",
-          itemImage: "/static/img/100x100.png"
+          itemImage: "logoRaspberrypi"
         },
         {
-          itemTitle: "Microsoft Azure",
-          itemSubtitle: "Gunning for the Big Man",
-          itemImage: "/static/img/100x100.png"
-        },
-        {
-          itemTitle: "Google Cloud Platform",
-          itemSubtitle: "less features, cheaper, and solid",
-          itemImage: "/static/img/100x100.png"
-        },
-        {
-          itemTitle: "VMware Cloud",
-          itemSubtitle: "Old reliable",
-          itemImage: "/static/img/100x100.png"
-        }
-      ]
-    },
-    {
-      sectionTitle: "Infrastructure",
-      sectionSubtitle: "The Hardware",
-      sectionItems: [
-        {
-          itemTitle: "Amazon AWS",
+          itemTitle: "Arduino",
           itemSubtitle: "Still the King of Cloud",
-          itemImage: "/static/img/100x100.png"
+          itemImage: "logoArduino"
         },
         {
-          itemTitle: "Microsoft Azure",
-          itemSubtitle: "Gunning for the Big Man",
-          itemImage: "/static/img/100x100.png"
+          itemTitle: "AWS Greengrass",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoAwsgreengrass"
         },
         {
-          itemTitle: "Google Cloud Platform",
-          itemSubtitle: "less features, cheaper, and solid",
-          itemImage: "/static/img/100x100.png"
+          itemTitle: "Lutron",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoLutron"
         },
         {
-          itemTitle: "VMware Cloud",
-          itemSubtitle: "Old reliable",
-          itemImage: "/static/img/100x100.png"
+          itemTitle: "Control4",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoControl4"
+        },
+        {
+          itemTitle: "Savant",
+          itemSubtitle: "Still the King of Cloud",
+          itemImage: "logoSavant"
         }
       ]
     }

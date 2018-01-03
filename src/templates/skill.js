@@ -17,6 +17,9 @@ export default class SkillPage extends React.Component {
       <div>
         <HeroHeader
           HI
+          FROM
+          SKILL
+          TEMPLATE
           title={this.pageData.pageTitle || ""}
           subtitle={this.pageData.pageSubtitle || ""}
           image={this.pageData.headerImage || ""}

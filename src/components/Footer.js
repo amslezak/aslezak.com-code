@@ -7,9 +7,9 @@ import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
 import backgroundWood from "../images/background-wood.jpg";
 
 const Wrapper = styled.div`
-  padding: 100px 0;
+  padding: 50px 0;
   background-image: url(${backgroundWood});
-
+  height: 83vh;
   @media (max-width: 700px) {
   }
 `;
@@ -46,6 +46,10 @@ const ServiceItem = styled.div`
   padding: 25px;
 `;
 
+const FormWrapper = styled.div`
+  padding-top 100px;
+`;
+
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -68,36 +72,38 @@ export default class App extends React.Component {
             <div className="row start-md">
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                 <ServiceItem>
-                  <Form>
-                    <FormGroup>
-                      <Label for="name">Name</Label>
-                      <Input
-                        type="email"
-                        name="email"
-                        id="exampleEmail"
-                        placeholder="Jane Appleseed"
-                      />
-                    </FormGroup>
+                  <FormWrapper>
+                    <Form>
+                      <FormGroup>
+                        <Label for="name">Name</Label>
+                        <Input
+                          type="email"
+                          name="email"
+                          id="exampleEmail"
+                          placeholder="Jane Appleseed"
+                        />
+                      </FormGroup>
 
-                    <FormGroup>
-                      <Label for="email">Email</Label>
-                      <Input
-                        type="email"
-                        name="email"
-                        id="exampleEmail"
-                        placeholder="jane@appleseed.com"
-                      />
-                    </FormGroup>
-                    <FormGroup>
-                      <Label for="exampleText">Message</Label>
-                      <Input type="textarea" name="text" id="exampleText" />
-                    </FormGroup>
-                    <FormGroup>
-                      <Button size="lg" block>
-                        Send
-                      </Button>
-                    </FormGroup>
-                  </Form>
+                      <FormGroup>
+                        <Label for="email">Email</Label>
+                        <Input
+                          type="email"
+                          name="email"
+                          id="exampleEmail"
+                          placeholder="jane@appleseed.com"
+                        />
+                      </FormGroup>
+                      <FormGroup>
+                        <Label for="exampleText">Message</Label>
+                        <Input type="textarea" name="text" id="exampleText" />
+                      </FormGroup>
+                      <FormGroup>
+                        <Button size="lg" block>
+                          Send
+                        </Button>
+                      </FormGroup>
+                    </Form>
+                  </FormWrapper>
                 </ServiceItem>
               </div>
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6">

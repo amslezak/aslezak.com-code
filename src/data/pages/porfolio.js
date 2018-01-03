@@ -1,62 +1,17 @@
 export const data = {
-  pageTitle: "Porfolio",
-  pageSubtitle: "A little about Andy Slezak",
+  pageTitle: "Portfolio",
+  pageSubtitle: "Where the code meets design",
   pageSlug: "/portfolio",
   headerTitle: "My Cloud Tools",
   headerBody: "These are the cloud tools that I use",
-  headerImage: "/static/img/100x100.png",
+  headerImage: "heroPortfolio",
   pageSections: [
     {
-      sectionTitle: "Infrastructure",
-      sectionSubtitle: "The Hardware",
-      sectionItems: [
-        {
-          itemTitle: "Amazon AWS",
-          itemSubtitle: "Still the King of Cloud",
-          itemImage: "/static/img/100x100.png"
-        },
-        {
-          itemTitle: "Microsoft Azure",
-          itemSubtitle: "Gunning for the Big Man",
-          itemImage: "/static/img/100x100.png"
-        },
-        {
-          itemTitle: "Google Cloud Platform",
-          itemSubtitle: "less features, cheaper, and solid",
-          itemImage: "/static/img/100x100.png"
-        },
-        {
-          itemTitle: "VMware Cloud",
-          itemSubtitle: "Old reliable",
-          itemImage: "/static/img/100x100.png"
-        }
-      ]
-    },
-    {
-      sectionTitle: "Infrastructure",
-      sectionSubtitle: "The Hardware",
-      sectionItems: [
-        {
-          itemTitle: "Amazon AWS",
-          itemSubtitle: "Still the King of Cloud",
-          itemImage: "/static/img/100x100.png"
-        },
-        {
-          itemTitle: "Microsoft Azure",
-          itemSubtitle: "Gunning for the Big Man",
-          itemImage: "/static/img/100x100.png"
-        },
-        {
-          itemTitle: "Google Cloud Platform",
-          itemSubtitle: "less features, cheaper, and solid",
-          itemImage: "/static/img/100x100.png"
-        },
-        {
-          itemTitle: "VMware Cloud",
-          itemSubtitle: "Old reliable",
-          itemImage: "/static/img/100x100.png"
-        }
-      ]
+      workTitle: "Web App",
+      workSubtitle:
+        "PoC App for monitoring & controlling IoT devices in real-time, anywhere.",
+      workImage: "portfolioWeave",
+      workTags: ["Code", "Design", "IoT", "Cloud"]
     }
   ]
 };

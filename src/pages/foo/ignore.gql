@@ -111,3 +111,65 @@ query IndexQuery {
     }
   }
 }
+
+
+
+
+
+
+
+
+query Portfolio {
+    allJsFrontmatter(filter: {data: {pageSlug: {eq: "/portfolio"}}}) {
+      edges {
+        node {
+          data {
+            pageTitle
+            pageSubtitle
+            pageSlug
+            headerTitle
+            headerBody
+            headerImage
+            pageSections {
+              workTitle
+              workSubtitle
+              workImage
+              workTags
+            }
+            error
+          }
+        }
+      }
+    }
+  }
+  }
+    heroCode: imageSharp(id: { regex: "/heroCode.png/" }) {
+      sizes(maxWidth: 1600) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    logos: allImageSharp(filter: { id: { regex: "/skills/" } }) {
+      edges {
+        node {
+          sizes(maxWidth: 480, quality: 80) {
+            ...GatsbyImageSharpSizes
+          }
+        }
+      }
+    }
+    logoSignature: imageSharp(id: { regex: "/logoSignature/" }) {
+      sizes(maxWidth: 480) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    footerTypewriter: imageSharp(id: { regex: "footer/typewriter/" }) {
+      sizes(maxWidth: 480) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    social: imageSharp(id: { regex: "/footer/social/" }) {
+      sizes(maxWidth: 359) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+  }

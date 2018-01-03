@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Img from "gatsby-image";
 import styled from "react-emotion";
 import heroBg from "../images/hero/hero.jpg";
+import "animate.css";
 
 const Hero = styled.div`
 padding: 10vh 0;
@@ -9,8 +10,6 @@ padding: 10vh 0;
   background-position: 50% 50%
   background-size: cover;
   height: 100vh;
-
-
 
   h1 {
     font-family: AvenirNext-Bold;
@@ -49,14 +48,14 @@ export default class componentName extends Component {
     return (
       <Hero>
         <div className="container">
-          <div className="row center-lg center-md- center-sm center-xs">
-            <div className="col-xs-12 col-sm-8 col-md-6 col-lg-12">
+          <div className="row center-lg center-md- center-sm center-xs animated fadeInDown">
+            <div className="col-xs-12 col-sm-8 col-md-12 col-lg-12">
               <h3>Welcome! I'm</h3>
             </div>
-            <div className="col-xs-12 col-sm-8 col-md-6 col-lg-12">
+            <div className="col-xs-12 col-sm-8 col-md-12 col-lg-12 animated fadeIn">
               <h1>Andy Slezak</h1>
             </div>
-            <div className="col-xs-12 col-sm-8 col-md-6 col-lg-12">
+            <div className="col-xs-12 col-sm-8 col-md-12 col-lg-12 animated fadeIn">
               <h2>I like to design & code real-time web apps</h2>
             </div>
           </div>

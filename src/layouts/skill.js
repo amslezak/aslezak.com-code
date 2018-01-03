@@ -6,9 +6,11 @@ import HeroHeader from "../components/HeroHeader";
 import HeroOverview from "../components/HeroOverview";
 import About from "../components/About";
 import backgroundWood from "../images/background-wood.jpg";
+import Footer from "../components/Footer";
+import FooterSub from "../components/FooterSub";
+import "animate.css";
 
 const Hero = styled.div`
-  padding: 100px 0;
   background-image: url(${backgroundWood});
 
   @media (max-width: 700px) {
@@ -16,16 +18,19 @@ const Hero = styled.div`
 `;
 
 const Overview = styled.div`
-  background: #fafafa;
-  padding: 50px 0;
+  margin-bottom: 75px;
 `;
 
 export default class SkillPage extends React.Component {
   constructor(props) {
     super(props);
 
+    console.log(props);
+
     if (this.props.data) {
       this.pageData = this.props.data.allJsFrontmatter.edges[0].node.data;
+    } else {
+      console.log("no props in skills");
     }
   }
 
@@ -37,6 +42,8 @@ export default class SkillPage extends React.Component {
             title={this.pageData.pageTitle}
             subtitle={this.pageData.pageSubtitle}
             image={this.props.data.heroCode}
+            heroImage={this.pageData.headerImage}
+            logos={this.props.data.logos}
           />
         </Hero>
         <Overview>
@@ -49,7 +56,9 @@ export default class SkillPage extends React.Component {
           logos={this.props.data.logos}
           skillItems={this.pageData.pageSections}
         />
-        <About />
+        <About logo={this.props.data.logoSignature} />
+        <Footer image={this.props.data.footerTypewriter} />
+        <FooterSub image={this.props.data.social} />
       </div>
     );
   }
@@ -86,17 +95,28 @@ export const query = graphql`
         ...GatsbyImageSharpSizes
       }
     }
-    logos: allImageSharp(filter: { id: { regex: "/skills/code/items/" } }) {
+    logos: allImageSharp(filter: { id: { regex: "/skills/" } }) {
       edges {
         node {
-          sizes(
-            maxWidth: 480
-            quality: 80
-            traceSVG: { background: "#f2f8f3", color: "#d6ebd9" }
-          ) {
-            ...GatsbyImageSharpSizes_tracedSVG
+          sizes(maxWidth: 480, quality: 80) {
+            ...GatsbyImageSharpSizes
           }
         }
+      }
+    }
+    logoSignature: imageSharp(id: { regex: "/logoSignature/" }) {
+      sizes(maxWidth: 480) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    footerTypewriter: imageSharp(id: { regex: "footer/typewriter/" }) {
+      sizes(maxWidth: 480) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    social: imageSharp(id: { regex: "/footer/social/" }) {
+      sizes(maxWidth: 359) {
+        ...GatsbyImageSharpSizes
       }
     }
   }

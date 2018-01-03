@@ -26,6 +26,7 @@ const Header = styled.div`
   h2 {
     text-transform: uppercase;
     font-size: 18px;
+    font-weight: 500;
     color: #e4e4e4;
     letter-spacing: 1.5px;
     line-height: 24px;
