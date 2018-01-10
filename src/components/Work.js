@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   padding: 100px 0;
   background-image: url(${backgroundWood});
 
+  background-size: 1800px;
   @media (max-width: 700px) {
   }
 `;
@@ -47,9 +48,9 @@ const ServiceItem = styled.div`
 
   h2 {
     font-family: AvenirNext-Bold;
-    font-size: 36px;
+    font-size: 24px;
     color: #e4e4e4;
-    letter-spacing: 1.17px;
+    letter-spacing: 2.25px;
     line-height: 64px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     text-transform: uppercase;
@@ -68,6 +69,8 @@ const ServiceItem = styled.div`
     }
   }
 `;
+
+const ImageWrapper = styled.div``;
 
 export default class App extends React.Component {
   constructor(props) {
@@ -89,43 +92,39 @@ export default class App extends React.Component {
             </div>
 
             <div className="row center-lg center-md center-sm center-xs">
-              <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+              <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6 hvr-grow">
                 <ServiceItem>
                   <Link to={"/design"}>
                     <Img sizes={this.props.design.sizes} />
                   </Link>
                   <h2>Design</h2>
-                  <h6>Loveable Web Apps</h6>
                 </ServiceItem>
               </div>
 
-              <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+              <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6 hvr-grow">
                 <ServiceItem>
                   <Link to={"/code"}>
                     <Img sizes={this.props.code.sizes} />
                   </Link>
                   <h2>Code</h2>
-                  <h6>Functional Web Apps</h6>
                 </ServiceItem>
               </div>
 
-              <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+              <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6 hvr-grow">
                 <ServiceItem>
                   <Link to={"/cloud"}>
                     <Img sizes={this.props.cloud.sizes} />
                   </Link>
                   <h2>Cloud</h2>
-                  <h6>Scalable Web Apps</h6>
                 </ServiceItem>
               </div>
 
-              <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+              <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6 hvr-grow">
                 <ServiceItem>
                   <Link to={"/iot"}>
                     <Img sizes={this.props.iot.sizes} />
                   </Link>
                   <h2>IoT</h2>
-                  <h6>Smart Web Apps</h6>
                 </ServiceItem>
               </div>
             </div>

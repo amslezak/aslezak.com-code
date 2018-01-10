@@ -17,7 +17,7 @@ const Quote = styled.div`
   text-align: justify;
   font-size: 36px;
   font-weight: 700;
-  font-family: "Source Serif Pro", "EB Garamond", "Alegreya", "Source Serif Pro",
+  font-family: "Source Serif Pro";
     serif;
   text-shadow: 0 1px 1px #fff;
 `;
@@ -35,21 +35,23 @@ const Author = styled.div`
 `;
 
 export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    console.log("quote", props.quotes);
+  }
+
   render() {
     return (
       <Wrapper>
         <div className="container">
           <div className="row center-lg">
             <div className="col-xs col-sm col-md col-lg-10 animated fadeIn">
-              <Quote>
-                The real voyage of discovery consists not in seeking new
-                landscapes, but in having new eyes.
-              </Quote>
+              <Quote>{this.props.quotes.quote}</Quote>
             </div>
           </div>
           <div className="row center-lg">
             <div className="col-xs col-sm col-md col-lg-10">
-              <Author>Marcel Proust</Author>
+              <Author>{this.props.quotes.author}</Author>
             </div>
           </div>
         </div>

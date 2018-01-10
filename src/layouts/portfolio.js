@@ -8,11 +8,13 @@ import About from "../components/About";
 import backgroundWood from "../images/background-wood.jpg";
 import Footer from "../components/Footer";
 import FooterSub from "../components/FooterSub";
+import WorkItems from "../components/WorkItem";
 import "animate.css";
 
 const Hero = styled.div`
   background-image: url(${backgroundWood});
 
+  background-size: 1800px;
   @media (max-width: 700px) {
   }
 `;
@@ -21,17 +23,15 @@ const Overview = styled.div`
   margin-bottom: 75px;
 `;
 
+const WorkWrapper = styled.div``;
+
 export default class SkillPage extends React.Component {
   constructor(props) {
     super(props);
 
-    console.log(props);
+    console.log("Portfolio", props);
 
-    if (this.props.data) {
-      this.pageData = this.props.data.allJsFrontmatter.edges[0].node.data;
-    } else {
-      console.log("no props in skills");
-    }
+    this.pageData = this.props.data.allJsFrontmatter.edges[0].node.data;
   }
 
   render() {
@@ -52,6 +52,13 @@ export default class SkillPage extends React.Component {
             subtitle={this.pageData.headerBody}
           />
         </Overview>
+
+        <WorkWrapper items={this.pageData}>
+          <WorkItems
+            data={this.pageData.pageSections}
+            portfolio={this.props.data.portfolio}
+          />
+        </WorkWrapper>
 
         <About logo={this.props.data.logoSignature} />
         <Footer image={this.props.data.footerTypewriter} />
@@ -79,7 +86,6 @@ export const query = graphql`
               workImage
               workTags
             }
-            error
           }
         }
       }
@@ -112,6 +118,15 @@ export const query = graphql`
     social: imageSharp(id: { regex: "/footer/social/" }) {
       sizes(maxWidth: 359) {
         ...GatsbyImageSharpSizes
+      }
+    }
+    portfolio: allImageSharp(filter: { id: { regex: "/portfolio/" } }) {
+      edges {
+        node {
+          sizes(maxWidth: 480, quality: 80) {
+            ...GatsbyImageSharpSizes
+          }
+        }
       }
     }
   }

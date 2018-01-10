@@ -2,89 +2,90 @@ export const data = {
   pageTitle: "Design",
   pageSubtitle: "Web apps your mom would love",
   pageSlug: "/design",
-  headerTitle: "Overview",
-  headerBody: "My Design Tools",
+  headerTitle: "Philosophy",
+  headerBody:
+    "To me, design is an experience.  It's about create an emotion that can't help but to be evoked.  You don't know why you want to use something, and yet it just feels good when you do.  That's where Apple gets it right:  make the product so inherently beautiful and inviting that you just want to use it.  That's my ultimate goal - to make something you *want* to use.  Oh, and to help find loads of great data along the way.  Here are some of the tools I use.",
   headerImage: "heroDesign",
   pageSections: [
     {
-      sectionTitle: "Fundamentals",
-      sectionSubtitle: "Hardware",
+      sectionTitle: "Fundamental",
+      sectionSubtitle: "Tools",
       sectionItems: [
         {
           itemTitle: "JavaScript",
-          itemSubtitle: "Code",
+          itemSubtitle: "ES6+",
           itemImage: "logoJavascript"
         },
         {
           itemTitle: "HTML",
-          itemSubtitle: "HTML",
+          itemSubtitle: "HTML5+",
           itemImage: "logoHTML"
         },
         {
           itemTitle: "CSS",
-          itemSubtitle: "CSS",
+          itemSubtitle: "CSS3+",
           itemImage: "logoCSS"
         }
       ]
     },
     {
-      sectionTitle: "Libraries",
-      sectionSubtitle: "Functions",
+      sectionTitle: "Framework",
+      sectionSubtitle: "Tools",
       sectionItems: [
         {
           itemTitle: "React",
-          itemSubtitle: "Still the King of Cloud",
+          itemSubtitle: "Smart Web Components",
           itemImage: "logoReact"
         },
         {
           itemTitle: "Redux",
-          itemSubtitle: "Still the King of Cloud",
+          itemSubtitle: "Smart State for Large Apps",
           itemImage: "logoRedux"
         },
         {
           itemTitle: "Apollo",
-          itemSubtitle: "Still the King of Cloud",
+          itemSubtitle: "Amazing GraphQL Suite",
           itemImage: "logoApollo"
         },
         {
           itemTitle: "Webpack",
-          itemSubtitle: "Still the King of Cloud",
+          itemSubtitle: "Web Bundler",
           itemImage: "logoWebpack"
         },
         {
           itemTitle: "Lodash",
-          itemSubtitle: "Still the King of Cloud",
+          itemSubtitle: "Swiss Army Functions",
           itemImage: "logoLodash"
         },
         {
           itemTitle: "Sass",
-          itemSubtitle: "Still the King of Cloud",
+          itemSubtitle: "Dynamic CSS",
           itemImage: "logoSass"
         }
       ]
     },
     {
       sectionTitle: "UI/UX",
-      sectionSubtitle: "Graphic Design",
+      sectionSubtitle: "Tools",
       sectionItems: [
         {
           itemTitle: "Sketch",
-          itemSubtitle: "Still the King of Cloud",
+          itemSubtitle: "Web Graphics/Vector Tool",
           itemImage: "logoSketch"
         },
         {
           itemTitle: "Photoshop",
-          itemSubtitle: "Still the King of Cloud",
+          itemSubtitle: "Classic Design Tool",
           itemImage: "logoPhotoshop"
         },
         {
           itemTitle: "Illustrator",
-          itemSubtitle: "Still the King of Cloud",
+          itemSubtitle: "Powerful Vector Tool",
           itemImage: "logoIllustrator"
         },
         {
           itemTitle: "Lightroom",
-          itemSubtitle: "Still the King of Cloud",
+          itemSubtitle: "Organize & Edit photos",
           itemImage: "logoLightroom"
         }
       ]

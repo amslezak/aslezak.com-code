@@ -1,9 +1,10 @@
 export const data = {
   pageTitle: "About",
-  pageSubtitle: "Some more details",
+  pageSubtitle: "A little more about Andy Slezak",
   pageSlug: "/about",
-  headerTitle: "Overview",
-  headerBody: "Welcome",
+  headerTitle: "WELCOME",
+  headerBody:
+    "So you wanted to know more, I see?  Well, good! As you know I'm Andy and I like to design & code.  I love to learn as much as I can so I can make the world a better place.  My hero is Leonardo Da Vinci.  I like to laugh and collaborate.  I am currently avaialable for both full-time and contract work.",
   headerImage: "heroAbout",
   pageSections: [
     {
@@ -12,7 +13,7 @@ export const data = {
       sectionItems: [
         {
           itemTitle: "NYU",
-          itemSubtitle: "Still the King of Cloud",
+          itemSubtitle: "Liberal Arts & Business",
           itemImage: "logoNyu"
         }
       ]
@@ -23,37 +24,37 @@ export const data = {
       sectionItems: [
         {
           itemTitle: "Coffee",
-          itemSubtitle: "Still the King of Cloud",
+          itemSubtitle: "Love a good fresh roast",
           itemImage: "logoCoffee"
         },
         {
           itemTitle: "Chocolate",
-          itemSubtitle: "Still the King of Cloud",
+          itemSubtitle: "The darker, the better",
           itemImage: "logoChocolate"
         },
         {
           itemTitle: "Cameras",
-          itemSubtitle: "Still the King of Cloud",
+          itemSubtitle: "Framing the world the way we want to see it",
           itemImage: "logoCamera"
         },
         {
           itemTitle: "Construction",
-          itemSubtitle: "Still the King of Cloud",
+          itemSubtitle: "Satisfaction gained by shaping our physical world",
           itemImage: "logoConstruction"
         },
         {
           itemTitle: "Cooking",
-          itemSubtitle: "Still the King of Cloud",
+          itemSubtitle: "Showing love with taste",
           itemImage: "logoCooking"
         },
         {
           itemTitle: "Computers",
-          itemSubtitle: "Still the King of Cloud",
+          itemSubtitle: "Making the mundane enjoyable",
           itemImage: "logoComputers"
         },
         {
           itemTitle: "Creativity",
-          itemSubtitle: "Still the King of Cloud",
+          itemSubtitle: "Taking an idea bringing it to life",
           itemImage: "logoCreativity"
         }
       ]

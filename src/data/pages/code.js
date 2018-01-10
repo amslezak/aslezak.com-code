@@ -3,12 +3,13 @@ export const data = {
   pageSubtitle: "Magic made with open source",
   pageSlug: "/code",
   headerTitle: "Overview",
-  headerBody: "My Coding Tools",
+  headerBody:
+    "Code is a recently discovered love.  Little did I know I approached life in a manner that was already... coding.  Just basic logic, and mapping out every step of the way.  And if you throw in some amazing tools, you can create some apps that just boggle your mind.  I'd love to work with you and create great apps together.  Here are the tools I use.",
   headerImage: "heroCode",
   pageSections: [
     {
-      sectionTitle: "Languages",
-      sectionSubtitle: "Coding",
+      sectionTitle: "Language",
+      sectionSubtitle: "Tools",
       sectionItems: [
         {
           itemTitle: "Node",
@@ -48,27 +49,27 @@ export const data = {
         },
         {
           itemTitle: "Github",
-          itemSubtitle: "Server IDE",
+          itemSubtitle: "Hosted Version Control",
           itemImage: "logoGithub"
         },
         {
           itemTitle: "Docker",
-          itemSubtitle: "Server IDE",
+          itemSubtitle: "Containerized Apps",
           itemImage: "logoDocker"
         },
         {
           itemTitle: "NPM",
-          itemSubtitle: "Server IDE",
+          itemSubtitle: "Node Package Manager",
           itemImage: "logoNpm"
         },
         {
           itemTitle: "Serverless",
-          itemSubtitle: "Server IDE",
+          itemSubtitle: "Easy Serverless Development",
           itemImage: "logoServerless"
         },
         {
           itemTitle: "Shell",
-          itemSubtitle: "Server IDE",
+          itemSubtitle: "Gateway to the Command Line",
           itemImage: "logoShell"
         }
       ]

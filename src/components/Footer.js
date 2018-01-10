@@ -2,14 +2,17 @@ import React from "react";
 import styled from "react-emotion";
 import Link from "gatsby-link";
 import Img from "gatsby-image";
-import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
+import { Form, FormGroup, Label, Input, FormText } from "reactstrap";
+import Button from "../components/Button";
 
 import backgroundWood from "../images/background-wood.jpg";
 
 const Wrapper = styled.div`
   padding: 50px 0;
   background-image: url(${backgroundWood});
-  height: 83vh;
+  height: 78vh;
+  background-size: 1800px;
+
   @media (max-width: 700px) {
   }
 `;
@@ -17,6 +20,9 @@ const Wrapper = styled.div`
 const ContactContainer = styled.div``;
 
 const Header = styled.div`
+  padding: 0;
+  margin: 0;
+
   h1 {
     font-family: AvenirNext-Bold;
     font-size: 48px;
@@ -28,9 +34,11 @@ const Header = styled.div`
   h2 {
     text-transform: uppercase;
     font-size: 18px;
-    color: #3ea6b2;
-    letter-spacing: 0.5px;
+    font-weight: 500;
+    color: #e4e4e4;
+    letter-spacing: 1.5px;
     line-height: 24px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.47);
   }
 
   @media (max-width: 700px) {
@@ -43,19 +51,24 @@ const Header = styled.div`
 `;
 
 const ServiceItem = styled.div`
-  padding: 25px;
+  padding: 50px 0 0 0;
+`;
+
+const ContactPicture = styled.div`
+  margin: -90px 0 0 50px;
 `;
 
 const FormWrapper = styled.div`
-  padding-top 100px;
+  padding-top 25px;
+  color: #e4e4e4
+    letter-spacing: .5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
 `;
 
-export default class App extends React.Component {
-  constructor(props) {
-    super(props);
-    console.log(props);
-  }
+const ButtonWrapper = styled.div``;
 
+export default class App extends React.Component {
   render() {
     return (
       <Wrapper>
@@ -65,7 +78,7 @@ export default class App extends React.Component {
               <div className="col-xs-12 col-sm-8 col-md-6 col-lg-12">
                 <Header>
                   <h1>CONTACT</h1>
-                  <h2 />
+                  <h2> Message</h2>
                 </Header>
               </div>
             </div>
@@ -95,20 +108,24 @@ export default class App extends React.Component {
                       </FormGroup>
                       <FormGroup>
                         <Label for="exampleText">Message</Label>
-                        <Input type="textarea" name="text" id="exampleText" />
+                        <Input
+                          type="textarea"
+                          name="text"
+                          id="exampleText"
+                          style={{ height: "100px" }}
+                          placeholder="Hey, Andy!  Let's work together!"
+                        />
                       </FormGroup>
-                      <FormGroup>
-                        <Button size="lg" block>
-                          Send
-                        </Button>
-                      </FormGroup>
+                      <Button title="Send" className="col-lg-2" />
                     </Form>
                   </FormWrapper>
                 </ServiceItem>
               </div>
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                 <ServiceItem>
-                  <Img sizes={this.props.image.sizes} />
+                  <ContactPicture>
+                    <Img sizes={this.props.image.sizes} />
+                  </ContactPicture>
                 </ServiceItem>
               </div>
             </div>

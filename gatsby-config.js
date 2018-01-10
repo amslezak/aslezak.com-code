@@ -21,6 +21,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `component data`,
+        path: `${__dirname}/src/data/components`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `images`,
         path: `${__dirname}/src/images`
       }
@@ -28,7 +35,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Source Serif Pro`, `Alegreya`, `EB Garamond`]
+        fonts: [`Source Serif Pro`]
       }
     }
   ]

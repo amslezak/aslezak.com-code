@@ -1,12 +1,23 @@
 import React from "react";
 import styled from "react-emotion";
 import Img from "gatsby-image";
-import Link from "gatsby-link";
+import Button from "../components/Button";
+
+import {
+  Link,
+  DirectLink,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller
+} from "react-scroll";
 
 const Wrapper = styled.div`
-  padding: 100px 0;
-  background-color: #f8f8fb;
-  border-bottom: 1px solid RGBA(67, 166, 177, 0.05);
+  height: 40vh;
+  padding: 35px 0;
+  background-color: #fafafa;
+  border-bottom: 1px solid #e0e0e0;
 `;
 
 const Header = styled.div`
@@ -15,7 +26,7 @@ const Header = styled.div`
     font-size: 24px;
     color: #626262;
     letter-spacing: 2px;
-    line-height: 33px;
+    line-height: 49px;
     text-transform: uppercase;
   }
 
@@ -23,7 +34,7 @@ const Header = styled.div`
     font-size: 18px;
     color: #3ea6b2;
     letter-spacing: 0.65px;
-    line-height: 26px;
+    line-height: 29px;
     text-transform: uppercase;
     margin: 0;
     padding: 0;
@@ -31,16 +42,42 @@ const Header = styled.div`
   h3 {
     font-size: 18px;
     color: rgba(0, 0, 0, 0.58);
-    line-height: 26px;
+    line-height: 29px;
     text-align: justify;
     text-justify: inter-word;
     margin-top: 25px;
+  }
+
+  h4 {
+    font-size: 18px;
+    letter-spacing: 0.65px;
+    line-height: 26px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+  }
+`;
+
+const LearnMore = styled.button`
+  display: block;
+  background: #6859b2;
+  align: middle;
+  margin: 50px 0 0 0;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  h4 {
+    text-shadow: 0 1px 5px #000;
+    color: HSLA(0, 0%, 100%, 0.9);
+    letter-spacing: 1.1px;
   }
 `;
 
 export default class HeroOverview extends React.Component {
   constructor(props) {
     super(props);
+    console.log("overview", props);
   }
 
   render() {
@@ -49,19 +86,15 @@ export default class HeroOverview extends React.Component {
         <Header>
           <div className="container">
             <div className="row">
-              <div className="col-xs-12 col-sm-6 col-md-6 col-lg-10">
-                <div>
-                  <h1>{this.props.title}</h1>
-                  <h2>{this.props.subtitle}</h2>
-                  <h3>
-                    Vestibulum rutrum quam vitae fringilla tincidunt.
-                    Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis
-                    iaculis nulla iaculis vitae. Donec sagittis faucibus lacus
-                    eget blandit. Mauris vitae ultricies metus, at condimentum
-                    nulla. Donec quis ornare lacus. Etiam gravida mollis tortor
-                    quis porttitor.
-                  </h3>
-                </div>
+              <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h1>{this.props.title}</h1>
+                <h3>{this.props.body}</h3>
+
+                <Link to="more" smooth={true} duration={500} offset={-60}>
+                  <Button title="Learn More" className="col-lg-2" />
+                </Link>
+
+                <Element name="more" />
               </div>
             </div>
           </div>

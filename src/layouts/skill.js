@@ -12,14 +12,18 @@ import "animate.css";
 
 const Hero = styled.div`
   background-image: url(${backgroundWood});
+  background-size: 1800px;
 
   @media (max-width: 700px) {
   }
 `;
 
-const Overview = styled.div`
-  margin-bottom: 75px;
+const SkillBorder = styled.div`
+  background-color: #e0e0e0;
+  padding: 25px 0;
 `;
+
+const Overview = styled.div``;
 
 export default class SkillPage extends React.Component {
   constructor(props) {
@@ -49,13 +53,15 @@ export default class SkillPage extends React.Component {
         <Overview>
           <HeroOverview
             title={this.pageData.headerTitle}
-            subtitle={this.pageData.headerBody}
+            body={this.pageData.headerBody}
           />
         </Overview>
-        <SkillWrapper
-          logos={this.props.data.logos}
-          skillItems={this.pageData.pageSections}
-        />
+        <SkillBorder>
+          <SkillWrapper
+            logos={this.props.data.logos}
+            skillItems={this.pageData.pageSections}
+          />
+        </SkillBorder>
         <About logo={this.props.data.logoSignature} />
         <Footer image={this.props.data.footerTypewriter} />
         <FooterSub image={this.props.data.social} />
@@ -85,7 +91,6 @@ export const query = graphql`
                 itemImage
               }
             }
-            error
           }
         }
       }

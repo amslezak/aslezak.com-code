@@ -5,10 +5,11 @@ import heroBg from "../images/hero/hero.jpg";
 import "animate.css";
 
 const Hero = styled.div`
-padding: 10vh 0;
+  padding: 10vh 0;
   background: url(${heroBg}) no-repeat
-  background-position: 50% 50%
+  background-position: 50% 50%;
   background-size: cover;
+  background-position: fixed;
   height: 100vh;
 
   h1 {
@@ -41,7 +42,6 @@ text-shadow: 0 2px 4px rgba(0,0,0,0.75);
 export default class componentName extends Component {
   constructor(props) {
     super(props);
-    console.log("homepage", props);
   }
 
   render() {

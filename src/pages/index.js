@@ -9,9 +9,9 @@ import Footer from "../components/Footer";
 import FooterSub from "../components/FooterSub";
 
 const FlexContainer = styled.div`
-border-style: solid
+  border-style: solid;
   display: flex;
-flex-flow: column nowrap
+  flex-flow: column nowrap;
   max-width: 960px;
 
   background-color: ${props => {
@@ -25,6 +25,7 @@ flex-flow: column nowrap
 class HomePage extends Component {
   constructor(props) {
     super(props);
+    console.log("HOME INDEX", props);
   }
 
   render() {
@@ -40,13 +41,13 @@ class HomePage extends Component {
           cloud={this.props.data.workCloud}
           iot={this.props.data.workIoT}
         />
-        <Quote />
+        <Quote quotes={this.props.data.quotes.edges[0].node.data.quotes[0]} />
         <Portfolio
           P1={this.props.data.portfolioWeave}
           P2={this.props.data.portfolioCytexone}
           P3={this.props.data.portfolioCheckout}
         />
-        <Quote />
+        <Quote quotes={this.props.data.quotes.edges[0].node.data.quotes[1]} />
         <Footer image={this.props.data.footer} />
         <FooterSub image={this.props.data.social} />
       </div>
@@ -133,6 +134,19 @@ export const query = graphql`
     logoSignature: imageSharp(id: { regex: "/logoSignature/" }) {
       sizes(maxWidth: 480) {
         ...GatsbyImageSharpSizes
+      }
+    }
+    quotes: allJsFrontmatter(filter: { id: { regex: "/quotes/" } }) {
+      edges {
+        node {
+          id
+          data {
+            quotes {
+              author
+              quote
+            }
+          }
+        }
       }
     }
   }
