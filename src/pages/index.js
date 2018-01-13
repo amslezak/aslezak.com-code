@@ -25,7 +25,7 @@ const FlexContainer = styled.div`
 class HomePage extends Component {
   constructor(props) {
     super(props);
-    console.log("HOME INDEX", props);
+    console.log("HOME INDEX", props.data);
   }
 
   render() {
@@ -42,14 +42,14 @@ class HomePage extends Component {
           iot={this.props.data.workIoT}
         />
         <Quote quotes={this.props.data.quotes.edges[0].node.data.quotes[0]} />
-        <Portfolio
-          P1={this.props.data.portfolioWeave}
-          P2={this.props.data.portfolioCytexone}
-          P3={this.props.data.portfolioCheckout}
-        />
+        <Portfolio image={this.props.data.portfolio} />
         <Quote quotes={this.props.data.quotes.edges[0].node.data.quotes[1]} />
         <Footer image={this.props.data.footer} />
-        <FooterSub image={this.props.data.social} />
+        <FooterSub
+          twitter={this.props.data.socialTwitter}
+          github={this.props.data.socialGithub}
+          codewars={this.props.data.socialCodewars}
+        />
       </div>
     );
   }
@@ -71,66 +71,66 @@ export const query = graphql`
       }
     }
     background: imageSharp(id: { regex: "/heroImg.jpg/" }) {
-      sizes(maxWidth: 1600) {
+      sizes(maxWidth: 1800, quality: 100) {
         ...GatsbyImageSharpSizes
       }
     }
-
     gear: imageSharp(id: { regex: "/gear.png/" }) {
-      sizes(maxWidth: 1600) {
+      sizes(maxWidth: 2560, quality: 100) {
         ...GatsbyImageSharpSizes
       }
     }
     bgWood: imageSharp(id: { regex: "/background-wood.jpg/" }) {
-      sizes(maxWidth: 1600) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-    portfolioWeave: imageSharp(id: { regex: "/portfolioWeave/" }) {
-      sizes(maxWidth: 482) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-    portfolioCheckout: imageSharp(id: { regex: "/portfolioCheckout/" }) {
-      sizes(maxWidth: 482) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-    portfolioCytexone: imageSharp(id: { regex: "/portfolioCytexone/" }) {
-      sizes(maxWidth: 482) {
+      sizes(maxWidth: 2560, quality: 100) {
         ...GatsbyImageSharpSizes
       }
     }
     workDesign: imageSharp(id: { regex: "/work/design/" }) {
-      sizes(maxWidth: 482) {
+      sizes(maxWidth: 960, quality: 100) {
         ...GatsbyImageSharpSizes
       }
     }
     workCode: imageSharp(id: { regex: "/work/code/" }) {
-      sizes(maxWidth: 482) {
+      sizes(maxWidth: 960, quality: 100) {
         ...GatsbyImageSharpSizes
       }
     }
     workCloud: imageSharp(id: { regex: "/work/cloud/" }) {
-      sizes(maxWidth: 482) {
+      sizes(maxWidth: 960, quality: 100) {
         ...GatsbyImageSharpSizes
       }
     }
     workIoT: imageSharp(id: { regex: "/work/iot/" }) {
-      sizes(maxWidth: 482) {
+      sizes(maxWidth: 960, quality: 100) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    portfolio: imageSharp(id: { regex: "/heroPortfolio2/" }) {
+      sizes(maxWidth: 960, quality: 100) {
         ...GatsbyImageSharpSizes
       }
     }
     footer: imageSharp(id: { regex: "/footer/typewriter/" }) {
-      sizes(maxWidth: 482) {
+      sizes(maxWidth: 960, quality: 100) {
         ...GatsbyImageSharpSizes
       }
     }
-    social: imageSharp(id: { regex: "/footer/social/" }) {
-      sizes(maxWidth: 359) {
+    socialTwitter: imageSharp(id: { regex: "/footer/logoTwitter/" }) {
+      sizes(maxWidth: 128, quality: 95) {
         ...GatsbyImageSharpSizes
       }
     }
+    socialGithub: imageSharp(id: { regex: "/footer/logoGithub/" }) {
+      sizes(maxWidth: 128, quality: 95) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    socialCodewars: imageSharp(id: { regex: "/footer/logoCodewars/" }) {
+      sizes(maxWidth: 128, quality: 95) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+
     logoSignature: imageSharp(id: { regex: "/logoSignature/" }) {
       sizes(maxWidth: 480) {
         ...GatsbyImageSharpSizes

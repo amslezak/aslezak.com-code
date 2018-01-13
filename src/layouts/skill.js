@@ -13,14 +13,19 @@ import "animate.css";
 const Hero = styled.div`
   background-image: url(${backgroundWood});
   background-size: 1800px;
-
-  @media (max-width: 700px) {
-  }
 `;
 
 const SkillBorder = styled.div`
   background-color: #e0e0e0;
-  padding: 25px 0;
+  padding: 50px 0;
+  @media (max-width: 768px) {
+    padding: 25px 0;
+  }
+
+  @media (max-width: 375px) {
+    padding: 1px 0;
+    margin: 0;
+  }
 `;
 
 const Overview = styled.div``;
@@ -29,12 +34,8 @@ export default class SkillPage extends React.Component {
   constructor(props) {
     super(props);
 
-    console.log(props);
-
     if (this.props.data) {
       this.pageData = this.props.data.allJsFrontmatter.edges[0].node.data;
-    } else {
-      console.log("no props in skills");
     }
   }
 
@@ -64,7 +65,11 @@ export default class SkillPage extends React.Component {
         </SkillBorder>
         <About logo={this.props.data.logoSignature} />
         <Footer image={this.props.data.footerTypewriter} />
-        <FooterSub image={this.props.data.social} />
+        <FooterSub
+          twitter={this.props.data.socialTwitter}
+          github={this.props.data.socialGithub}
+          codewars={this.props.data.socialCodewars}
+        />
       </div>
     );
   }
@@ -121,6 +126,21 @@ export const query = graphql`
     }
     social: imageSharp(id: { regex: "/footer/social/" }) {
       sizes(maxWidth: 359) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    socialTwitter: imageSharp(id: { regex: "/footer/logoTwitter/" }) {
+      sizes(maxWidth: 128, quality: 95) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    socialGithub: imageSharp(id: { regex: "/footer/logoGithub/" }) {
+      sizes(maxWidth: 128, quality: 95) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    socialCodewars: imageSharp(id: { regex: "/footer/logoCodewars/" }) {
+      sizes(maxWidth: 128, quality: 95) {
         ...GatsbyImageSharpSizes
       }
     }

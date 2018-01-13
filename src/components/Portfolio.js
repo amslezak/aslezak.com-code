@@ -7,10 +7,16 @@ import backgroundWood from "../images/background-wood.jpg";
 const Wrapper = styled.div`
   padding: 100px 0;
   background-image: url(${backgroundWood});
-  height: 100vh;
   background-size: 1800px;
 
-  @media (max-width: 700px) {
+  @media (max-width: 768px) {
+    height: 50vh;
+    padding: 25px;
+  }
+
+  @media (max-width: 414px) {
+    height: 100%;
+    padding: 0;
   }
 `;
 
@@ -42,49 +48,64 @@ const Header = styled.div`
     padding-bottom: 50px;
   }
 
-  @media (max-width: 668px) {
-    padding-left: 48px;
+  @media(max-width: 414px) {
+    padding: 25px;
   }
 `;
 
 const ServiceItem = styled.div`
-  padding: 25px;
+  padding: 0 150px;
+
+  @media (max-width: 768px) {
+    > img {
+      padding: 150px;
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 414px) {
+    padding: 0;
+  }
 `;
 
 const Button = styled.button`
-  margin: 50px 0;
-  padding: 30px;
   font-family: AvenirNext-Bold;
   font-size: 24px;
   color: #e4e4e4;
   letter-spacing: 1.17px;
   line-height: 32px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  /* Rectangle: */
   background: #f1f1f1;
   border: 3px solid #ffffff;
   border-radius: 10px;
 `;
 
 const WorkWrapper = styled.div`
-  margin: 100px 0;
+  margin: 0;
+  padding: 0;
 `;
 
 const MoreButton = styled.div`
+  margin: -125px 0 0 -25px;
+
   > a {
+    font-family: AvenirNext-Bold;
+    font-size: 24px;
+    color: #e4e4e4;
+    letter-spacing: 2.25px;
+    line-height: 64px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    text-decoration: none;
+  }
 
+  @media (max-width: 768px) {
+    margin: -50px 0 0 -10px;
+    padding: 25px 0;
+  }
 
-    border: 5px solid rgb(127, 0, 0);
-    border: 3px solid rgba(255, 255, 255, .7);
-    -webkit-background-clip: padding-box; /* for Safari */
-    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */    
-    border-radius: 20px
-    padding: 30px 50px;
-    letter-spacing: 1.25px;
-    font-size: 22px;
-    color: #fff;
-
-    
+  @media (max-width: 414px) {
+    margin: -40px 0 50px 0;
   }
 `;
 
@@ -108,33 +129,20 @@ export default class App extends React.Component {
             </div>
 
             <WorkWrapper>
-              <div className="row center-lg center-md center-sm center-xs">
-                <div className="col-xs-12 col-sm-12 col-md-10 col-lg-4">
+              <div className="row center-lg center-md center-sm center-xs hvr-grow">
+                <div className="col-xs-12 col-sm-12 col-md-10 col-lg-12">
                   <ServiceItem>
-                    <Img sizes={this.props.P1.sizes} fadein />
+                    <Link to={"/portfolio"}>
+                      <Img sizes={this.props.image.sizes} fadein />
+                    </Link>
                   </ServiceItem>
-                </div>
 
-                <div className="col-xs-12 col-sm-12 col-md-10 col-lg-4">
-                  <ServiceItem>
-                    <Img sizes={this.props.P2.sizes} fadeIn />
-                  </ServiceItem>
-                </div>
-                <div className="col-xs-12 col-sm-12 col-md-10 col-lg-4">
-                  <ServiceItem>
-                    <Img sizes={this.props.P3.sizes} fadeIn />
-                  </ServiceItem>
+                  <MoreButton>
+                    <Link to={"/portfolio"}>PORTFOLIO</Link>
+                  </MoreButton>
                 </div>
               </div>
             </WorkWrapper>
-
-            <div className="row center-lg- center-md center-sm center-xs">
-              <div className="col-xs-12 col-sm-12 col-md-5 col-lg-2">
-                <MoreButton className="hvr-grow">
-                  <Link to={"/portfolio"}>MORE</Link>
-                </MoreButton>
-              </div>
-            </div>
           </div>
         </ServicesContainer>
       </Wrapper>

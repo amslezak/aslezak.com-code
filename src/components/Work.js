@@ -9,7 +9,14 @@ const Wrapper = styled.div`
   background-image: url(${backgroundWood});
 
   background-size: 1800px;
-  @media (max-width: 700px) {
+
+  @media (max-width: 768px) {
+    height: 100vh;
+    padding: 25px;
+  }
+
+  @media (max-width: 414px) {
+    height: 100%;
   }
 `;
 
@@ -38,8 +45,8 @@ const Header = styled.div`
     padding-bottom: 50px;
   }
 
-  @media (max-width: 668px) {
-    padding-left: 48px;
+  @media (max-width: 375px) {
+    padding: 0;
   }
 `;
 
@@ -54,6 +61,17 @@ const ServiceItem = styled.div`
     line-height: 64px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     text-transform: uppercase;
+  }
+
+  a {
+    font-family: AvenirNext-Bold;
+    font-size: 24px;
+    color: #e4e4e4;
+    letter-spacing: 2.25px;
+    line-height: 64px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    text-decoration: none;
   }
 
   h6 {
@@ -97,7 +115,9 @@ export default class App extends React.Component {
                   <Link to={"/design"}>
                     <Img sizes={this.props.design.sizes} />
                   </Link>
-                  <h2>Design</h2>
+                  <h2>
+                    <Link to={"/design"}>Design</Link>
+                  </h2>
                 </ServiceItem>
               </div>
 
@@ -106,7 +126,9 @@ export default class App extends React.Component {
                   <Link to={"/code"}>
                     <Img sizes={this.props.code.sizes} />
                   </Link>
-                  <h2>Code</h2>
+                  <h2>
+                    <Link to={"/code"}>Code</Link>
+                  </h2>
                 </ServiceItem>
               </div>
 
@@ -115,7 +137,9 @@ export default class App extends React.Component {
                   <Link to={"/cloud"}>
                     <Img sizes={this.props.cloud.sizes} />
                   </Link>
-                  <h2>Cloud</h2>
+                  <h2>
+                    <Link to={"/cloud"}>Cloud</Link>
+                  </h2>
                 </ServiceItem>
               </div>
 
@@ -124,7 +148,9 @@ export default class App extends React.Component {
                   <Link to={"/iot"}>
                     <Img sizes={this.props.iot.sizes} />
                   </Link>
-                  <h2>IoT</h2>
+                  <h2>
+                    <Link to={"/iot"}>IoT</Link>
+                  </h2>
                 </ServiceItem>
               </div>
             </div>

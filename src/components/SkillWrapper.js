@@ -14,10 +14,15 @@ const Wrapper = styled.div`
 
   box-shadow: 0px 1px 5px #757575, 0px 0px 10px #eeeeee;
   background-color: #fafafa;
+
+  @media(max-width: 414px) {
+    padding: 0;
+    margin: 0:
+  }
 `;
 
 const Header = styled.div`
-  padding: 25px 0;
+  padding: 25px;
 
   h1 {
     text-transform: uppercase;
@@ -39,9 +44,21 @@ const Header = styled.div`
     padding: 0;
     margin: 0 0 5px 0;
   }
+
+  @media (max-width: 414px) {
+    margin: 0;
+    padding: 25px;
+
+    h2 {
+      padding: 0;
+      margin: 0;
+    }
+  }
 `;
 
 const Items = styled.div`
+  padding: 25px;
+
   h1 {
     font-size: 16px;
     letter-spacing: -0.15px;
@@ -57,7 +74,17 @@ const Items = styled.div`
 const Item = styled.div`
   padding: 15px 0px 30px 0;
   margin: 0 0 10px 0;
+
   min-width: 200px;
+
+  @media (max-width: 768px) {
+    padding: 10px;
+    margin: 15px 0;
+  }
+
+  @media (max-width: 414px) {
+    min-width: 150px;
+  }
 `;
 
 const ImgWrapper = styled.div`
@@ -71,7 +98,7 @@ const ImgWrapper = styled.div`
 
   &:hover {
     box-shadow: 0px -1px #f5f5f5, 0px 1px 2px #9e9e9e;
-    transition: 0.2s;
+    transition: 0.1s;
     transform: scale(0.7);
     transform: translate(0px, 1px);
   }
@@ -82,7 +109,9 @@ const ImgWrapper = styled.div`
       transform: scale(1.7);
       transform: translate(0px, 1px);
     }
-  }
+
+    @media (max-width: 375px) {
+    }
 `;
 
 export default class SkillWrapper extends React.Component {
@@ -107,11 +136,11 @@ export default class SkillWrapper extends React.Component {
             </div>
           </Header>
           <Items>
-            <div className="row">
+            <div className="row center-xs start-lg center-md">
               {item.sectionItems.map(item => {
                 return (
                   <Item>
-                    <div className="col-xs-12 col-sm-6 col-md-12 col-lg-10">
+                    <div className="col-xs-12 col-sm-10 col-md-12 col-lg-10">
                       <Tooltip
                         title={item.itemSubtitle}
                         position="bottom"

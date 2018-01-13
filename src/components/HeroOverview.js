@@ -18,6 +18,20 @@ const Wrapper = styled.div`
   padding: 35px 0;
   background-color: #fafafa;
   border-bottom: 1px solid #e0e0e0;
+
+  @media (max-width: 900px) {
+    height: 70vh;
+    padding: 25px;
+  }
+
+  @media (max-width: 768px) {
+    height: 50vh;
+    padding: 25px;
+  }
+
+  @media (max-width: 414px) {
+    height: 100%;
+  }
 `;
 
 const Header = styled.div`
@@ -57,6 +71,9 @@ const Header = styled.div`
     margin: 0;
     padding: 0;
   }
+
+  @media (max-width: 768px) {
+  }
 `;
 
 const LearnMore = styled.button`
@@ -77,7 +94,6 @@ const LearnMore = styled.button`
 export default class HeroOverview extends React.Component {
   constructor(props) {
     super(props);
-    console.log("overview", props);
   }
 
   render() {
@@ -90,7 +106,7 @@ export default class HeroOverview extends React.Component {
                 <h1>{this.props.title}</h1>
                 <h3>{this.props.body}</h3>
 
-                <Link to="more" smooth={true} duration={500} offset={-60}>
+                <Link to="more" smooth={true} duration={500} offset={15}>
                   <Button title="Learn More" className="col-lg-2" />
                 </Link>
 

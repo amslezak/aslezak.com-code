@@ -15,21 +15,18 @@ const Hero = styled.div`
   background-image: url(${backgroundWood});
 
   background-size: 1800px;
-  @media (max-width: 700px) {
-  }
 `;
 
-const Overview = styled.div`
-  margin-bottom: 75px;
-`;
+const Overview = styled.div``;
 
-const WorkWrapper = styled.div``;
+const WorkWrapper = styled.div`
+  background-color: #e0e0e0;
+  padding: 50px 0;
+`;
 
 export default class SkillPage extends React.Component {
   constructor(props) {
     super(props);
-
-    console.log("Portfolio", props);
 
     this.pageData = this.props.data.allJsFrontmatter.edges[0].node.data;
   }
@@ -49,7 +46,7 @@ export default class SkillPage extends React.Component {
         <Overview>
           <HeroOverview
             title={this.pageData.headerTitle}
-            subtitle={this.pageData.headerBody}
+            body={this.pageData.headerBody}
           />
         </Overview>
 
@@ -62,7 +59,11 @@ export default class SkillPage extends React.Component {
 
         <About logo={this.props.data.logoSignature} />
         <Footer image={this.props.data.footerTypewriter} />
-        <FooterSub image={this.props.data.social} />
+        <FooterSub
+          twitter={this.props.data.socialTwitter}
+          github={this.props.data.socialGithub}
+          codewars={this.props.data.socialCodewars}
+        />
       </div>
     );
   }
@@ -120,10 +121,26 @@ export const query = graphql`
         ...GatsbyImageSharpSizes
       }
     }
+
+    socialTwitter: imageSharp(id: { regex: "/footer/logoTwitter/" }) {
+      sizes(maxWidth: 128, quality: 95) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    socialGithub: imageSharp(id: { regex: "/footer/logoGithub/" }) {
+      sizes(maxWidth: 128, quality: 95) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    socialCodewars: imageSharp(id: { regex: "/footer/logoCodewars/" }) {
+      sizes(maxWidth: 128, quality: 95) {
+        ...GatsbyImageSharpSizes
+      }
+    }
     portfolio: allImageSharp(filter: { id: { regex: "/portfolio/" } }) {
       edges {
         node {
-          sizes(maxWidth: 480, quality: 80) {
+          sizes(maxWidth: 960, quality: 90) {
             ...GatsbyImageSharpSizes
           }
         }

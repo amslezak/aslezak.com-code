@@ -61,6 +61,21 @@ export const data = {
           itemTitle: "Sass",
           itemSubtitle: "Dynamic CSS",
           itemImage: "logoSass"
+        },
+        {
+          itemTitle: "Gatsby",
+          itemSubtitle: "Static Web Framework",
+          itemImage: "logoGatsby"
+        },
+        {
+          itemTitle: "GraphQL",
+          itemSubtitle: "Next Generation API",
+          itemImage: "logoGraphql"
+        },
+        {
+          itemTitle: "Emotion",
+          itemSubtitle: "Next Generation CSS-in-JS",
+          itemImage: "logoEmotion"
         }
       ]
     },

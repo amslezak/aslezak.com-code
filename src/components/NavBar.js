@@ -15,35 +15,42 @@ import {
 } from "reactstrap";
 
 import "bootstrap/dist/css/bootstrap.css";
-import "animate.css";
 import "../css/aslezak.css";
 
 import styled from "react-emotion";
 
 const NavbarWrapper = styled.div`
-  border: 1px solid black
+  -webkit-backface-visibility: hidden
   &:after {
-    content: "";
     position: absolute;
     width: 100%;
-    bottom: 1px;
-    z-index: -1;
+    z-index: 10000;
     box-shadow: 0px 0px 8px 2px #000000;
   }
 `;
 
 const Logo = styled.div`
-  padding: 0 11px;
+  padding: 0;
   margin: 0;
+
+  @media (max-width: 414px) {
+    padding: 0;
+  }
 `;
 
 const LinkWrapper = styled.div`
   font-weight: 500;
-  text-shadow: 0 1px 1px #fff;
   > a {
     text-decoration: none;
+    -webkit-backface-visibility: hidden;
+  }
+
+  @media (max-width: 414px) {
+    padding: 0 0 0 6px;
   }
 `;
+
+const NavContainer = styled.div``;
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -61,7 +68,12 @@ export default class Example extends React.Component {
   }
   render() {
     return (
-      <div className="container" style={{ marginBottom: "78px" }}>
+      <div
+        className="container"
+        id="NavBar"
+        className={NavContainer}
+        style={{ marginBottom: "78px" }}
+      >
         <Navbar
           light
           expand="md"

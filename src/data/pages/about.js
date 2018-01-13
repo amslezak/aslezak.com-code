@@ -8,17 +8,6 @@ export const data = {
   headerImage: "heroAbout",
   pageSections: [
     {
-      sectionTitle: "Education",
-      sectionSubtitle: "University",
-      sectionItems: [
-        {
-          itemTitle: "NYU",
-          itemSubtitle: "Liberal Arts & Business",
-          itemImage: "logoNyu"
-        }
-      ]
-    },
-    {
       sectionTitle: "PERSONAL",
       sectionSubtitle: "INTERESTS",
       sectionItems: [
@@ -34,12 +23,12 @@ export const data = {
         },
         {
           itemTitle: "Cameras",
-          itemSubtitle: "Framing the world the way we want to see it",
+          itemSubtitle: "Seeing with new eyes",
           itemImage: "logoCamera"
         },
         {
           itemTitle: "Construction",
-          itemSubtitle: "Satisfaction gained by shaping our physical world",
+          itemSubtitle: "Shaping our world",
           itemImage: "logoConstruction"
         },
         {
@@ -56,6 +45,17 @@ export const data = {
           itemTitle: "Creativity",
           itemSubtitle: "Taking an idea bringing it to life",
           itemImage: "logoCreativity"
+        }
+      ]
+    },
+    {
+      sectionTitle: "Education",
+      sectionSubtitle: "University",
+      sectionItems: [
+        {
+          itemTitle: "NYU",
+          itemSubtitle: "Liberal Arts & Business",
+          itemImage: "logoNyu"
         }
       ]
     }

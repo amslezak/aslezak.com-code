@@ -42,6 +42,11 @@ const Button = styled.button`
     color: HSLA(0, 0%, 100%, 0.9);
     letter-spacing: 1.1px;
   }
+
+  @media (max-width: 414px) {
+    display: block;
+    width: 100%;
+  }
 `;
 
 class ButtonComponent extends Component {

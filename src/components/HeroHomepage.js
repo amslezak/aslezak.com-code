@@ -22,7 +22,7 @@ const Hero = styled.div`
   }
 
   h2 {
-    font-family: AvenirNext-Medium;
+      font-family: Arvo;
     font-size: 36px;
     color: #FFFFFF;
     letter-spacing: 0.62px;
@@ -31,12 +31,60 @@ const Hero = styled.div`
   }
 
   h3 {
-font-family: Arvo;
-font-size: 24px;
-color: #FFFFFF;
-line-height: 32px;
-text-shadow: 0 2px 4px rgba(0,0,0,0.75);
+    font-family: Arvo;
+    font-size: 24px;
+    color: #FFFFFF;
+    line-height: 32px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.75);
   }
+  
+
+  @media (max-width: 414px) {
+    padding: 4vh;
+    height: 89vh;
+    background-position: center bottom;
+
+    h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 44px;
+    line-height: 73px;
+    letter-spacing: .5px;
+    }
+
+    h2 {
+      font-size: 20px;
+      line-height: 39px;
+      letter-spacing: .8px;
+      padding: 0;
+       margin: 0;
+    }
+
+    h3 {
+      font-size: 18px;
+      line-height: 29px;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 375px){
+   
+    h1 {
+      font-size: 40px;
+      line-height: 65px;
+      }
+
+    h2 {
+      font-size: 18px;
+      line-height: 29px; 
+    }
+    h3 {
+      font-size: 16px;
+      line-height: 26px;
+      font-weight: 100;
+      }
+    } 
 `;
 
 export default class componentName extends Component {
@@ -48,7 +96,7 @@ export default class componentName extends Component {
     return (
       <Hero>
         <div className="container">
-          <div className="row center-lg center-md- center-sm center-xs animated fadeInDown">
+          <div className="row center-lg center-md- center-sm center-xs animated fadeInUp">
             <div className="col-xs-12 col-sm-8 col-md-12 col-lg-12">
               <h3>Welcome! I'm</h3>
             </div>
@@ -56,7 +104,7 @@ export default class componentName extends Component {
               <h1>Andy Slezak</h1>
             </div>
             <div className="col-xs-12 col-sm-8 col-md-12 col-lg-12 animated fadeIn">
-              <h2>I like to design & code real-time web apps</h2>
+              <h2>I like to design & code enjoyable web apps</h2>
             </div>
           </div>
         </div>

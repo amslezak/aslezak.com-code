@@ -8,11 +8,17 @@ const Wrapper = styled.div`
   @media (max-width: 700px) {
     padding: 50px;
   }
+  @media (max-width: 768px) {
+    padding: 150px 50px;
+  }
+
+  @media (max-width: 375px) {
+    padding: 50px;
+  }
 `;
 
 const Quote = styled.div`
   color: #4e4e4e;
-  letter-spacing: 0.75px;
   line-height: 47px;
   text-align: justify;
   font-size: 36px;
@@ -20,6 +26,14 @@ const Quote = styled.div`
   font-family: "Source Serif Pro";
     serif;
   text-shadow: 0 1px 1px #fff;
+
+  @media (max-width: 414px) {
+  text-align: center;
+  font-size: 24px;
+  line-height: 39px;
+  letter-spacing: 1.15px;
+  }
+
 `;
 
 const Author = styled.div`
@@ -32,12 +46,16 @@ const Author = styled.div`
   line-height: 32px;
   text-shadow: 0 1px 1px #fff;
   text-transform: uppercase;
+
+  @media (max-width: 414px) {
+    margin 10px 0 0 0;
+    text-align: center;
+  }
 `;
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-    console.log("quote", props.quotes);
   }
 
   render() {
