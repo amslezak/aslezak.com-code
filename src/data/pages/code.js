@@ -4,7 +4,7 @@ export const data = {
   pageSlug: "/code",
   headerTitle: "Overview",
   headerBody:
-    "Code is a recently discovered love.  Little did I know I approached life in a manner that was already... coding.  Just basic logic, and mapping out every step of the way.  And if you throw in some amazing tools, you can create some apps that just boggle your mind.  I'd love to work with you and create great apps together.  Here are the tools I use.",
+    "Code is a recently discovered love of mine.  Little did I know I approached life in a manner that was already 'coding'.  I found that if I took basic logic, and mapped out every step of the way, then I could make some powerful programs.  When I coupled these powerful essentials with powerful coding tools, I could create some magical apps.  I'd love to work with you and create magical apps together.  Below are some of my Code tools.",
   headerImage: "heroCode",
   pageSections: [
     {
@@ -64,12 +64,12 @@ export const data = {
         },
         {
           itemTitle: "Serverless",
-          itemSubtitle: "Easy Serverless Development",
+          itemSubtitle: "Serverless Development",
           itemImage: "logoServerless"
         },
         {
           itemTitle: "Shell",
-          itemSubtitle: "Gateway to the Command Line",
+          itemSubtitle: "Command Line",
           itemImage: "logoShell"
         }
       ]

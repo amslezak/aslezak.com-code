@@ -2,25 +2,25 @@ import React from "react";
 import styled from "react-emotion";
 import Link from "gatsby-link";
 import Img from "gatsby-image";
-import backgroundWood from "../images/background-wood.jpg";
+import "../css/aslezak.scss";
 
 const Wrapper = styled.div`
-  padding: 100px 0;
-  background-image: url(${backgroundWood});
-  background-size: 1800px;
+  margin: 0;
+  padding: 0;
 
+  height: 100%;
   @media (max-width: 768px) {
-    height: 50vh;
-    padding: 25px;
+    height: 100%;
   }
 
   @media (max-width: 414px) {
-    height: 100%;
-    padding: 0;
   }
 `;
 
-const ServicesContainer = styled.div``;
+const ServicesContainer = styled.div`
+  padding: 25px;
+  z-index: 1;
+`;
 
 const Header = styled.div`
   h1 {
@@ -53,13 +53,14 @@ const Header = styled.div`
   }
 `;
 
-const ServiceItem = styled.div`
-  padding: 0 150px;
+const Portfolio = styled.div`
+  padding: 0 225px;
 
   @media (max-width: 768px) {
-    > img {
-      padding: 150px;
+    padding: 0 175px;
+    img {
       margin: 0;
+      padding: 0;
     }
   }
 
@@ -78,11 +79,6 @@ const Button = styled.button`
   background: #f1f1f1;
   border: 3px solid #ffffff;
   border-radius: 10px;
-`;
-
-const WorkWrapper = styled.div`
-  margin: 0;
-  padding: 0;
 `;
 
 const MoreButton = styled.div`
@@ -112,15 +108,21 @@ const MoreButton = styled.div`
 export default class App extends React.Component {
   constructor(props) {
     super(props);
+    console.log("port", props);
   }
 
   render() {
     return (
       <Wrapper>
-        <ServicesContainer>
+        <Img
+          className="portfolio-background"
+          style={{ position: "absolute" }}
+          sizes={this.props.background.sizes}
+        />
+        <ServicesContainer className="z1" style={{ position: "relative" }}>
           <div className="container">
             <div className="row">
-              <div className="col-xs-12 col-sm-8 col-md-6 col-lg-12">
+              <div className="col-xs-12 col-sm-8 col-md-12 col-lg-12">
                 <Header>
                   <h1>WORK</h1>
                   <h2>Projects</h2>
@@ -128,21 +130,23 @@ export default class App extends React.Component {
               </div>
             </div>
 
-            <WorkWrapper>
-              <div className="row center-lg center-md center-sm center-xs hvr-grow">
-                <div className="col-xs-12 col-sm-12 col-md-10 col-lg-12">
-                  <ServiceItem>
-                    <Link to={"/portfolio"}>
-                      <Img sizes={this.props.image.sizes} fadein />
-                    </Link>
-                  </ServiceItem>
+            <div className="row center-lg center-md center-sm center-xs">
+              <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <Portfolio>
+                  <Link to={"/portfolio"}>
+                    <Img
+                      sizes={this.props.image.sizes}
+                      className="z1"
+                      style={{ position: "relative" }}
+                    />
+                  </Link>
+                </Portfolio>
 
-                  <MoreButton>
-                    <Link to={"/portfolio"}>PORTFOLIO</Link>
-                  </MoreButton>
-                </div>
+                <MoreButton>
+                  <Link to={"/portfolio"}>PORTFOLIO</Link>
+                </MoreButton>
               </div>
-            </WorkWrapper>
+            </div>
           </div>
         </ServicesContainer>
       </Wrapper>

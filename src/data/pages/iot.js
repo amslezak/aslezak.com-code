@@ -3,9 +3,7 @@ export const data = {
   pageSubtitle: 'Giving "smart" devices brains',
   pageSlug: "/iot",
   headerTitle: "At the edge",
-  headerBody: `IoT has been rapidly progressing for years now.  It's at the point of inflection where there's no turning back.  It's amazing that these connected tools are so inexpensive and accessible.  Coupled with low-power real-time connections, and you have a slew of very smart devices.  The power of now is real and here.
-    
-    Below are some tools that I'm familiar with when developing IoT solutions.`,
+  headerBody: `IoT has been progressing quickly for years now.  It's at the point of no turning back.  We can now all have small, inexpensive, low-power devices transmitting data about our world in a flash.  These smart devices, coupled with machine learning are changing our world.  They are giving us new eyes.  The power of now is real.  Below are some of my IoT tools.`,
   headerImage: "heroIot4",
   pageSections: [
     {
@@ -14,12 +12,12 @@ export const data = {
       sectionItems: [
         {
           itemTitle: "Raspberry Pi",
-          itemSubtitle: "Small on-prem goodness",
+          itemSubtitle: "Small on-premise hardware",
           itemImage: "logoRaspberrypi"
         },
         {
           itemTitle: "Arduino",
-          itemSubtitle: "Smaller on-prem goodness",
+          itemSubtitle: "Smaller on-prem hardware",
           itemImage: "logoArduino"
         },
         {

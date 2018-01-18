@@ -14,10 +14,19 @@ import {
 } from "react-scroll";
 
 const Wrapper = styled.div`
-  height: 40vh;
+  height: 50vh;
   padding: 35px 0;
+  margin: 0;
   background-color: #fafafa;
   border-bottom: 1px solid #e0e0e0;
+
+  @media (max-width: 1680px) {
+    height: 50vh;
+  }
+
+  @media (max-width: 1440px) {
+    height: 45vh;
+  }
 
   @media (max-width: 900px) {
     height: 70vh;

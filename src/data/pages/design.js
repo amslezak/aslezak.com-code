@@ -4,7 +4,7 @@ export const data = {
   pageSlug: "/design",
   headerTitle: "Philosophy",
   headerBody:
-    "To me, design is an experience.  It's about create an emotion that can't help but to be evoked.  You don't know why you want to use something, and yet it just feels good when you do.  That's where Apple gets it right:  make the product so inherently beautiful and inviting that you just want to use it.  That's my ultimate goal - to make something you *want* to use.  Oh, and to help find loads of great data along the way.  Here are some of the tools I use.",
+    "To me, design is an experience.  It's about evoking an emotion that can't help but be felt.  To be curiosly drawn.  And so that's my aim: to make a apps so inviting that you just want to use them.  Apps are better when they're beautiful and simple.  Below are some of my Design tools.",
   headerImage: "heroDesign",
   pageSections: [
     {
@@ -13,17 +13,17 @@ export const data = {
       sectionItems: [
         {
           itemTitle: "JavaScript",
-          itemSubtitle: "ES6+",
+          itemSubtitle: "Web Logic Language",
           itemImage: "logoJavascript"
         },
         {
           itemTitle: "HTML",
-          itemSubtitle: "HTML5+",
+          itemSubtitle: "Web Framework Language",
           itemImage: "logoHTML"
         },
         {
           itemTitle: "CSS",
-          itemSubtitle: "CSS3+",
+          itemSubtitle: "Web Design Language",
           itemImage: "logoCSS"
         }
       ]

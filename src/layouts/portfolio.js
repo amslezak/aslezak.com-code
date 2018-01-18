@@ -10,12 +10,9 @@ import Footer from "../components/Footer";
 import FooterSub from "../components/FooterSub";
 import WorkItems from "../components/WorkItem";
 import "animate.css";
+import "../css/aslezak.scss";
 
-const Hero = styled.div`
-  background-image: url(${backgroundWood});
-
-  background-size: 1800px;
-`;
+const Hero = styled.div``;
 
 const Overview = styled.div``;
 
@@ -35,6 +32,11 @@ export default class SkillPage extends React.Component {
     return (
       <div>
         <Hero>
+          <Img
+            className="skill-background"
+            style={{ position: "absolute" }}
+            sizes={this.props.data.bgWood.sizes}
+          />
           <HeroHeader
             title={this.pageData.pageTitle}
             subtitle={this.pageData.pageSubtitle}
@@ -58,7 +60,10 @@ export default class SkillPage extends React.Component {
         </WorkWrapper>
 
         <About logo={this.props.data.logoSignature} />
-        <Footer image={this.props.data.footerTypewriter} />
+        <Footer
+          background={this.props.data.bgWood}
+          image={this.props.data.footerTypewriter}
+        />
         <FooterSub
           twitter={this.props.data.socialTwitter}
           github={this.props.data.socialGithub}
@@ -104,6 +109,11 @@ export const query = graphql`
             ...GatsbyImageSharpSizes
           }
         }
+      }
+    }
+    bgWood: imageSharp(id: { regex: "/background-wood.jpg/" }) {
+      sizes(maxWidth: 2560, quality: 90) {
+        ...GatsbyImageSharpSizes
       }
     }
     logoSignature: imageSharp(id: { regex: "/logoSignature/" }) {

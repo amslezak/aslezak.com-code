@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   border-bottom: 1px solid RGBA(67, 166, 177, 0.05);
 
   @media (max-width: 768px) {
-    height: 93vh;
+    height: 83vh;
     padding: 25px;
   }
 
@@ -71,6 +71,10 @@ const Body = styled.div`
   @media (max-width: 768px) {
     padding: 0 5px 0 0;
     margin: 0 0 5px 0;
+  }
+
+  @media (max-width: 414px) {
+    letter-spacing: 1.1px;
   }
 `;
 

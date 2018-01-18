@@ -8,16 +8,17 @@ import About from "../components/About";
 import backgroundWood from "../images/background-wood.jpg";
 import Footer from "../components/Footer";
 import FooterSub from "../components/FooterSub";
-import "animate.css";
+import "../css/aslezak.scss";
 
-const Hero = styled.div`
-  background-image: url(${backgroundWood});
-  background-size: 1800px;
-`;
+const Hero = styled.div``;
 
 const SkillBorder = styled.div`
   background-color: #e0e0e0;
   padding: 50px 0;
+
+  @media (max-width: 1440px) {
+  }
+
   @media (max-width: 768px) {
     padding: 25px 0;
   }
@@ -43,6 +44,11 @@ export default class SkillPage extends React.Component {
     return (
       <div>
         <Hero>
+          <Img
+            className="skill-background"
+            style={{ position: "absolute" }}
+            sizes={this.props.data.bgWood.sizes}
+          />
           <HeroHeader
             title={this.pageData.pageTitle}
             subtitle={this.pageData.pageSubtitle}
@@ -64,7 +70,10 @@ export default class SkillPage extends React.Component {
           />
         </SkillBorder>
         <About logo={this.props.data.logoSignature} />
-        <Footer image={this.props.data.footerTypewriter} />
+        <Footer
+          background={this.props.data.bgWood}
+          image={this.props.data.footerTypewriter}
+        />
         <FooterSub
           twitter={this.props.data.socialTwitter}
           github={this.props.data.socialGithub}
@@ -121,6 +130,11 @@ export const query = graphql`
     }
     footerTypewriter: imageSharp(id: { regex: "footer/typewriter/" }) {
       sizes(maxWidth: 480) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    bgWood: imageSharp(id: { regex: "/background-wood.jpg/" }) {
+      sizes(maxWidth: 2560, quality: 90) {
         ...GatsbyImageSharpSizes
       }
     }

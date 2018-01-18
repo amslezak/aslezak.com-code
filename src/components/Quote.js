@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "react-emotion";
-import "animate.css";
 
 const Wrapper = styled.div`
   background-color: hsla(0, 0%, 98%, 1);
@@ -13,7 +12,7 @@ const Wrapper = styled.div`
   }
 
   @media (max-width: 375px) {
-    padding: 50px;
+    padding: 75px 25px;
   }
 `;
 
@@ -22,18 +21,19 @@ const Quote = styled.div`
   line-height: 47px;
   text-align: justify;
   font-size: 36px;
-  font-weight: 700;
-  font-family: "Source Serif Pro";
-    serif;
-  text-shadow: 0 1px 1px #fff;
+  font-weight: 200;
+  padding: 25px;
 
   @media (max-width: 414px) {
-  text-align: center;
-  font-size: 24px;
-  line-height: 39px;
-  letter-spacing: 1.15px;
+    text-align: justify;
+    font-size: 24px;
+    line-height: 39px;
+    letter-spacing: 1.5px;
   }
 
+  @media (max-width: 375px) {
+    text-align: left;
+  }
 `;
 
 const Author = styled.div`
@@ -48,8 +48,13 @@ const Author = styled.div`
   text-transform: uppercase;
 
   @media (max-width: 414px) {
-    margin 10px 0 0 0;
+    margin 0;
     text-align: center;
+  }
+
+  @media (max-width: 375px) {
+    padding: 0 25px;
+    text-align: left;
   }
 `;
 

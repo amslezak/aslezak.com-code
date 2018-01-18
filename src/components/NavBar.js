@@ -15,7 +15,7 @@ import {
 } from "reactstrap";
 
 import "bootstrap/dist/css/bootstrap.css";
-import "../css/aslezak.css";
+import "../css/aslezak.scss";
 
 import styled from "react-emotion";
 
@@ -45,8 +45,10 @@ const LinkWrapper = styled.div`
     -webkit-backface-visibility: hidden;
   }
 
+  > a:hover {
+    color: #43a6b1;
+
   @media (max-width: 414px) {
-    padding: 0 0 0 6px;
   }
 `;
 
@@ -92,7 +94,7 @@ export default class Example extends React.Component {
               <NavItem>
                 <LinkWrapper>
                   <Link to={"/"}>
-                    <NavLink>HOME</NavLink>
+                    <NavLink onClick={this.toggle}>HOME</NavLink>
                   </Link>
                 </LinkWrapper>
               </NavItem>
@@ -107,28 +109,28 @@ export default class Example extends React.Component {
                   <DropdownItem>
                     <LinkWrapper>
                       <Link to={`/design`}>
-                        <NavLink>DESIGN</NavLink>
+                        <NavLink onClick={this.toggle}>DESIGN</NavLink>
                       </Link>
                     </LinkWrapper>
                   </DropdownItem>
                   <DropdownItem>
                     <LinkWrapper>
                       <Link to={`/code`}>
-                        <NavLink>CODE</NavLink>
+                        <NavLink onClick={this.toggle}>CODE</NavLink>
                       </Link>
                     </LinkWrapper>
                   </DropdownItem>
                   <DropdownItem>
                     <LinkWrapper>
                       <Link to={`/cloud`}>
-                        <NavLink>CLOUD</NavLink>
+                        <NavLink onClick={this.toggle}>CLOUD</NavLink>
                       </Link>
                     </LinkWrapper>
                   </DropdownItem>
                   <DropdownItem>
                     <LinkWrapper>
                       <Link to={`/iot`}>
-                        <NavLink>IOT</NavLink>
+                        <NavLink onClick={this.toggle}>IOT</NavLink>
                       </Link>
                     </LinkWrapper>
                   </DropdownItem>
@@ -137,14 +139,14 @@ export default class Example extends React.Component {
               <NavItem>
                 <LinkWrapper>
                   <Link to={"/portfolio"}>
-                    <NavLink>PORTFOLIO</NavLink>
+                    <NavLink onClick={this.toggle}>PORTFOLIO</NavLink>
                   </Link>
                 </LinkWrapper>
               </NavItem>
               <NavItem>
                 <LinkWrapper>
-                  <Link to={"/about"}>
-                    <NavLink>ABOUT</NavLink>
+                  <Link to={"/about"} replace="true">
+                    <NavLink onClick={this.toggle}>ABOUT</NavLink>
                   </Link>
                 </LinkWrapper>
               </NavItem>

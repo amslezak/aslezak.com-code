@@ -42,6 +42,3 @@ export const query = graphql`
     }
   }
 `;
-
-// <Img sizes={this.background.sizes} fadeIn />
-//         <Img sizes={this.gear.sizes} fadeIn />

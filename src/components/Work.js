@@ -2,25 +2,27 @@ import React from "react";
 import styled from "react-emotion";
 import Link from "gatsby-link";
 import Img from "gatsby-image";
-import backgroundWood from "../images/background-wood.jpg";
 
 const Wrapper = styled.div`
-  padding: 100px 0;
-  background-image: url(${backgroundWood});
-
-  background-size: 1800px;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 
   @media (max-width: 768px) {
-    height: 100vh;
-    padding: 25px;
   }
 
   @media (max-width: 414px) {
+    height: 115%;
+  }
+  @media (max-width: 375px) {
     height: 100%;
   }
 `;
 
-const ServicesContainer = styled.div``;
+const ServicesContainer = styled.div`
+  padding: 25px;
+  z-index: 1;
+`;
 
 const Header = styled.div`
   h1 {
@@ -41,17 +43,13 @@ const Header = styled.div`
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.47);
   }
 
-  @media (max-width: 700px) {
-    padding-bottom: 50px;
-  }
-
   @media (max-width: 375px) {
     padding: 0;
   }
 `;
 
 const ServiceItem = styled.div`
-  padding: 25px;
+  padding: 0 50px;
 
   h2 {
     font-family: AvenirNext-Bold;
@@ -85,12 +83,19 @@ const ServiceItem = styled.div`
     > b {
       font-weight: 500;
     }
+
+    @media (max-width: 768px) {
+    }
+
+    @media (max-width: 414px) {
+      padding: 0;
+    }
   }
 `;
 
 const ImageWrapper = styled.div``;
 
-export default class App extends React.Component {
+export default class Work extends React.Component {
   constructor(props) {
     super(props);
     this.bgSrcSet = props.background.sizes.srcSet;
@@ -98,7 +103,13 @@ export default class App extends React.Component {
   render() {
     return (
       <Wrapper>
-        <ServicesContainer>
+        <Img
+          className="work-background"
+          style={{ position: "absolute" }}
+          sizes={this.props.background.sizes}
+        />
+
+        <ServicesContainer className="z1" style={{ position: "relative" }}>
           <div className="container">
             <div className="row">
               <div className="col-xs-12 col-sm-8 col-md-6 col-lg-12">
@@ -132,7 +143,10 @@ export default class App extends React.Component {
                 </ServiceItem>
               </div>
 
-              <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6 hvr-grow">
+              <div
+                css={{ zIndex: 2 }}
+                className="col-xs-12 col-sm-6 col-md-6 col-lg-6 hvr-grow"
+              >
                 <ServiceItem>
                   <Link to={"/cloud"}>
                     <Img sizes={this.props.cloud.sizes} />

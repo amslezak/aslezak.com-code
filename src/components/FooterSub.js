@@ -5,15 +5,22 @@ import Img from "gatsby-image";
 import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
 
 const Wrapper = styled.div`
-  padding: 30px 0;
-  height: 100%;
-
+  z-index: -1;
   background-color: #f8f9fa;
+  padding: 20px 0;
   @media (max-width: 768px) {
     padding: 25px;
+    margin: 0;
   }
 
   @media (max-width: 414px) {
+    padding: 0;
+    margin: 0;
+  }
+
+  @media (max-width: 414px) {
+    height: 30px;
+    background-color: transparent;
   }
 `;
 
@@ -31,7 +38,7 @@ const Header = styled.div`
     text-decoration: none;
   }
   @media (max-width: 414px) {
-    padding: 15px 0 0 25px;
+    display: none;
   }
 `;
 
@@ -50,6 +57,7 @@ const NavItem = styled.div`
 
   @media (max-width: 414px) {
     padding: 0 0 0 25px;
+    display: none;
   }
 
   @media (max-width: 320px) {
@@ -62,7 +70,7 @@ const Social = styled.div`
    padding: 0 15px;
 
   @media (max-width: 768px) {
-    margin: -15px 0 0 0
+    margin: -15px 0 0 0;
     padding: 0;
   }
 
@@ -71,16 +79,16 @@ const Social = styled.div`
     padding: 0;
 
     img {
-      padding: 25px;
+      padding: 35px;
     }
   }
 
   @media (max-width: 375px) {
-    margin: 0;
     padding: 0;
 
     img {
-      padding: 15px;
+    margin: 25px 0 0 0;
+      padding: 30px;
     }
   }
 
@@ -91,12 +99,16 @@ const Social = styled.div`
   }
 `;
 
-const NavWrapper = styled.div`
-  border: 1px solid black;
+const SocialWrapper = styled.section`
+  height: 100%;
+  @media (max-width: 414px) {
+  }
 `;
 
-const SocialWrapper = styled.section`
-  border: 1px solid black;
+const NavWrapper = styled.section`
+  @media (max-width: 414px) {
+    display: none;
+  }
 `;
 
 export default class App extends React.Component {
@@ -152,6 +164,7 @@ export default class App extends React.Component {
                     <Link to={"/iot"}>IoT</Link>
                   </NavItem>
                 </div>
+
                 <div className="offset-lg-3 offset-md-3 col-xs-4 col-sm-1 col-md-1 col-lg-1">
                   <Social>
                     <a href="https://twitter.com/aslezak">

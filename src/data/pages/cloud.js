@@ -4,7 +4,7 @@ export const data = {
   pageSlug: "/cloud",
   headerTitle: "Infrastructure",
   headerBody:
-    "Cloud native apps have opened my mind.  I couldn't imagine building any other way.  Using infrastructure as code, and gluing them together with serverless functions allow for apps that are force multipliers.  Making something look good, and then deploying to the cloud is the only way to fly.  Here is some infrastructure on which I've worked.",
+    "Cloud apps have opened my mind.  I couldn't imagine building any other way.  Writing code on my laptop and pushing it to a global infrastructure instantly.  There's something very powerful about taking an idea and making it available globally in seconds.  That is the power of the cloud.  Below are some of my Cloud tools.",
   headerImage: "heroCloud4",
   pageSections: [
     {
@@ -13,17 +13,17 @@ export const data = {
       sectionItems: [
         {
           itemTitle: "Amazon AWS",
-          itemSubtitle: "Still the King of Cloud",
+          itemSubtitle: "King of Cloud",
           itemImage: "logoAmazonaws1"
         },
         {
           itemTitle: "Microsoft Azure",
-          itemSubtitle: "They stepping it up",
+          itemSubtitle: "Great Cloud Provider",
           itemImage: "logoAzure"
         },
         {
           itemTitle: "Google GCP",
-          itemSubtitle: "Great Infrastructure",
+          itemSubtitle: "Solid Infrastructure",
           itemImage: "logoGcp"
         },
         {
@@ -39,7 +39,7 @@ export const data = {
       sectionItems: [
         {
           itemTitle: "AWS Lambda",
-          itemSubtitle: "Serverless Functions",
+          itemSubtitle: "Serverless Compute",
           itemImage: "logoAwslambda"
         },
         {
@@ -75,17 +75,17 @@ export const data = {
         },
         {
           itemTitle: "PostgreSQL",
-          itemSubtitle: "Great Database",
+          itemSubtitle: "Solid Database",
           itemImage: "logoPostgresql"
         },
         {
           itemTitle: "MySQL",
-          itemSubtitle: "My First",
+          itemSubtitle: "My First DB",
           itemImage: "logoMysql"
         },
         {
           itemTitle: "SQL Server",
-          itemSubtitle: "When in Microsoft-land",
+          itemSubtitle: "When in Microsoftland",
           itemImage: "logoSqlserver"
         }
       ]
@@ -122,12 +122,12 @@ export const data = {
       sectionItems: [
         {
           itemTitle: "AWS Cloudfront",
-          itemSubtitle: "Sticking S3 at Edge Locations",
+          itemSubtitle: "S3 at the Edge",
           itemImage: "logoAwscloudfront"
         },
         {
           itemTitle: "AWS S3",
-          itemSubtitle: "Beautiful Cloud Storage",
+          itemSubtitle: "Object Storage",
           itemImage: "logoAwss3"
         }
       ]

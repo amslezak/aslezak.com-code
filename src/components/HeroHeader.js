@@ -1,10 +1,23 @@
 import React from "react";
 import Img from "gatsby-image";
 import styled from "react-emotion";
+import "../css/aslezak.scss";
 
 const HeroWrapper = styled.div`
+  @media (max-width: 2560px) {
+    height: 800px;
+    padding: 0;
+    margin: 0;
+  }
+
+  @media (max-width: 1680px) {
+    height: 50vh;
+    padding: 0;
+    margin: 0;
+  }
+
   @media (max-width: 1440px) {
-    height: 55vh;
+    height: 50vh;
     padding: 0;
     margin: 0;
   }
@@ -21,6 +34,7 @@ const HeroWrapper = styled.div`
 `;
 
 const HeroText = styled.div`
+  padding: 18vh 0;
   h1 {
     font-family: AvenirNext-Bold;
     font-size: 64px;
@@ -41,7 +55,7 @@ const HeroText = styled.div`
   }
 
   @media (max-width: 1440px) {
-    margin: 20vh 0;
+    margin: 15vh 0;
     padding: 0;
   }
 
@@ -68,20 +82,26 @@ const HeroText = styled.div`
 `;
 
 const ImageWrapper = styled.div`
+  @media (max-width: 1680px) {
+    padding: 0;
+    margin: -5vh 0 0 0;
+    padding: 50px;
+  }
 
   @media (max-width: 1440px) {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: -5vh 0 0 0;
+    padding: 50px;
+  }
 
   @media (max-width: 768px) {
-  padding: 50px 0 0 0;
-}
+    padding: 50px 0 0 0;
+  }
 
-@media (max-width: 414px) {
-  margin: -25px 0;
-  padding: 25px
-}
-
+  @media (max-width: 414px) {
+    margin: -25px 0;
+    padding: 25px;
+  }
 `;
 
 export default class HeroHeader extends React.Component {
@@ -92,7 +112,7 @@ export default class HeroHeader extends React.Component {
 
   render() {
     return (
-      <HeroWrapper>
+      <HeroWrapper className="z1" style={{ position: "relative" }}>
         <div className="container">
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-7 col-lg-6">

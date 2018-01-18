@@ -4,7 +4,7 @@ export const data = {
   pageSlug: "/portfolio",
   headerTitle: "Experience",
   headerBody:
-    "I've been fortunate to be part of a lot of exciting projects over the years.  Everything from programming, to devops, to graphic design.  It is important to understand all the pieces.  It is important because when we understand how each layer to interconnects, the pieces align more gracefully, and it is felt in the end-user experience. Allow the end-user to effortlessly enjoy the experience, and the product will be successful.  Here's some of the work I've completed.",
+    "I've been fortunate to take part in many exciting projects over the years.  Everything from programming, devops, to graphic design.  I've learned it is important to understand all the pieces.  When we understand how each piece connects, the pieces align more smoothly.  The end-user can feel that smoothness.  It translates into an enjoyable experience, and joy is always successful.  Below are some of my completed works.",
 
   headerImage: "heroPortfolio",
   pageSections: [
@@ -23,14 +23,14 @@ export const data = {
     },
     {
       workTitle: "Web App",
-      workSubtitle:
-        "Checkout cart for IoT Company with Stripe-integration & outbound webhooks",
+      workSubtitle: "Checkout cartwith Stripe-integration & outbound webhooks",
       workImage: "portfolioCheckout10",
       workTags: ["Code", "Design", "IoT", "Cloud"]
     },
     {
       workTitle: "Serverless App",
-      workSubtitle: "App to handle incoming webhooks and run logic on payload",
+      workSubtitle:
+        "App to handle incoming webhooks and run logic on payload receipt",
       workImage: "portfolioFunction7",
       workTags: ["Code", "Design", "IoT", "Cloud"]
     },
@@ -49,13 +49,13 @@ export const data = {
     },
     {
       workTitle: "Business Card",
-      workSubtitle: "Implement corporate business cards (front and back)",
+      workSubtitle: "Corporate business cards (front and back)",
       workImage: "portfolioBizcard3",
       workTags: ["Code", "Design", "IoT", "Cloud"]
     },
     {
       workTitle: "Sticker & Logo",
-      workSubtitle: "Create logo and sticker for print on Amazon Echo",
+      workSubtitle: "Logo & sticker for print on Amazon Echo",
       workImage: "portfolioSticker2",
       workTags: ["Code", "Design", "IoT", "Cloud"]
     },

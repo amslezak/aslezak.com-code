@@ -53,3 +53,14 @@
 .navbar-toggler:focus {
   outline: none;
 }
+
+.navbar-light .navbar-nav .nav-link:hover {
+  font-weight: 500;
+  color: #43a6b1;
+  transition-duration: 0.1s;
+}
+
+.bgWood {
+  border: 1px solid black;
+  height: 200%;
+}

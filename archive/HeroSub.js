@@ -8,7 +8,6 @@ const { Header, Content, Sider } = Layout;
 export default class App extends React.Component {
   render() {
     return (
-      //   <Grid fluid>
       <Row>
         <Col xs={12}>
           <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
@@ -54,7 +53,6 @@ export default class App extends React.Component {
           </div>
         </Col>
       </Row>
-      //   </Grid>
     );
   }
 }
