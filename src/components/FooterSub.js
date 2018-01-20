@@ -4,10 +4,13 @@ import Link from "gatsby-link";
 import Img from "gatsby-image";
 import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
 
+import { ThemeProvider } from "emotion-theming";
+import theme from "../css/Theme";
 const Wrapper = styled.div`
   z-index: -1;
   background-color: #f8f9fa;
   padding: 20px 0;
+
   @media (max-width: 768px) {
     padding: 25px;
     margin: 0;

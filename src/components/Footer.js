@@ -7,6 +7,8 @@ import Button from "../components/Button";
 import ContactForm from "../components/ContactForm";
 import "../css/aslezak.scss";
 
+import { ThemeProvider } from "emotion-theming";
+import theme from "../css/Theme";
 import { Element } from "react-scroll";
 
 const Wrapper = styled.div`

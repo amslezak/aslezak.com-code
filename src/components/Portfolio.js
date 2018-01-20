@@ -2,6 +2,9 @@ import React from "react";
 import styled from "react-emotion";
 import Link from "gatsby-link";
 import Img from "gatsby-image";
+
+import { ThemeProvider } from "emotion-theming";
+import theme from "../css/Theme";
 import "../css/aslezak.scss";
 
 const Wrapper = styled.div`
@@ -26,7 +29,7 @@ const Header = styled.div`
   h1 {
     padding: 0;
     margin: 0;
-    font-family: AvenirNext-Bold;
+    font-family: AvenirNext-Bold, Montserrat, sans-serif;
     font-size: 48px;
     color: #ffffff;
     line-height: 63px;

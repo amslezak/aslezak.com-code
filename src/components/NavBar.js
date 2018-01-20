@@ -18,6 +18,8 @@ import {
 import "bootstrap/dist/css/bootstrap.css";
 import "../css/aslezak.scss";
 
+import { ThemeProvider } from "emotion-theming";
+import theme from "../css/Theme";
 import styled from "react-emotion";
 
 const NavbarWrapper = styled.div`

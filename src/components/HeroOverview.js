@@ -3,6 +3,8 @@ import styled from "react-emotion";
 import Img from "gatsby-image";
 import Button from "../components/Button";
 
+import { ThemeProvider } from "emotion-theming";
+import theme from "../css/Theme";
 import {
   Link,
   DirectLink,

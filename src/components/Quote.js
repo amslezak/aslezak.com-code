@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "react-emotion";
 
+import { ThemeProvider } from "emotion-theming";
+import theme from "../css/Theme";
 const Wrapper = styled.div`
   background-color: hsla(0, 0%, 98%, 1);
   padding: 250px 0;

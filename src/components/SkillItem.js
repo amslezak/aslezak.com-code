@@ -3,6 +3,8 @@ import styled from "react-emotion";
 import Img from "gatsby-image";
 import Link from "gatsby-link";
 
+import { ThemeProvider } from "emotion-theming";
+import theme from "../css/Theme";
 const Wrapper = styled.Wrapper`
   border-style: solid;
 `;

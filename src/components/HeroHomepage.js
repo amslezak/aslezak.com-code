@@ -5,13 +5,16 @@ import heroBg from "../images/hero/hero.jpg";
 import "animate.css";
 import "../css/aslezak.scss";
 
+import { ThemeProvider } from "emotion-theming";
+import theme from "../css/Theme";
 const Hero = styled.div`
   margin: 12vh 0;
   height: 75vh;
 
   h1 {
-    font-family: AvenirNext-Bold;
+    font-family: AvenirNext-Bold, Montserrat, sans-serif;
     font-size: 72px;
+    letter-spacing: 1.5px;
     color: #ffffff;
     line-height: 95px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.47);

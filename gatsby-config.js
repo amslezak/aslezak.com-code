@@ -36,13 +36,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Arvo`]
-      }
-    },
-    {
-      resolve: `gatsby-link`,
-      options: {
-        shouldUpdateScroll: false
+        fonts: [`Arvo`, `Montserrat:700`]
       }
     }
   ]

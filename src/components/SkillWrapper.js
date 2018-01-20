@@ -6,6 +6,8 @@ import "react-tippy/dist/tippy.css";
 
 import { Tooltip } from "react-tippy";
 
+import { ThemeProvider } from "emotion-theming";
+import theme from "../css/Theme";
 const Wrapper = styled.div`
   border: 1px solid #e0e0e0;
   border-radius: 10px;
