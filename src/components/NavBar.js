@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "gatsby-link";
+import Img from "gatsby-image";
 import {
   Collapse,
   Navbar,
@@ -31,7 +32,9 @@ const NavbarWrapper = styled.div`
 
 const Logo = styled.div`
   padding: 0;
+  width: 150px;
   margin: 0;
+  z-index: 4;
 
   @media (max-width: 414px) {
     padding: 0;
@@ -54,9 +57,10 @@ const LinkWrapper = styled.div`
 
 const NavContainer = styled.div``;
 
-export default class Example extends React.Component {
+export default class navbar extends React.Component {
   constructor(props) {
     super(props);
+    console.log(props);
 
     this.toggle = this.toggle.bind(this);
     this.state = {
@@ -84,7 +88,7 @@ export default class Example extends React.Component {
           <Link to={"/"}>
             <NavbarBrand>
               <Logo>
-                <img src="/static/img/andyslezak_logo.svg" />
+                <Img sizes={this.props.logo.sizes} />
               </Logo>
             </NavbarBrand>
           </Link>
@@ -108,7 +112,7 @@ export default class Example extends React.Component {
                 <DropdownMenu>
                   <DropdownItem>
                     <LinkWrapper>
-                      <Link to={`/design`}>
+                      <Link to={`/design`} replace>
                         <NavLink onClick={this.toggle}>DESIGN</NavLink>
                       </Link>
                     </LinkWrapper>

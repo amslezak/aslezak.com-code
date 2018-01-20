@@ -102,6 +102,21 @@
   height: 100vh;
 }
 
+.homeHero-gear {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+
+  @media (max-width: 768px) {
+    top: 125;
+  }
+
+  @media (max-width: 414px) {
+    top: 25;
+  }
+}
+
 .work-background {
   object-fit: cover;
   height: 1300px;

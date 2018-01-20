@@ -35,6 +35,7 @@ export default class SkillPage extends React.Component {
           <Img
             className="skill-background"
             style={{ position: "absolute" }}
+            backgroundColor="#99765E"
             sizes={this.props.data.bgWood.sizes}
           />
           <HeroHeader
@@ -99,59 +100,59 @@ export const query = graphql`
 
     heroCode: imageSharp(id: { regex: "/heroCode.png/" }) {
       sizes(maxWidth: 1600) {
-        ...GatsbyImageSharpSizes
+        ...GatsbyImageSharpSizes_withWebp
       }
     }
     logos: allImageSharp(filter: { id: { regex: "/skills/" } }) {
       edges {
         node {
           sizes(maxWidth: 480, quality: 80) {
-            ...GatsbyImageSharpSizes
+            ...GatsbyImageSharpSizes_withWebp
           }
         }
       }
     }
     bgWood: imageSharp(id: { regex: "/background-wood.jpg/" }) {
       sizes(maxWidth: 2560, quality: 90) {
-        ...GatsbyImageSharpSizes
+        ...GatsbyImageSharpSizes_withWebp
       }
     }
     logoSignature: imageSharp(id: { regex: "/logoSignature/" }) {
       sizes(maxWidth: 480) {
-        ...GatsbyImageSharpSizes
+        ...GatsbyImageSharpSizes_withWebp
       }
     }
     footerTypewriter: imageSharp(id: { regex: "footer/typewriter/" }) {
       sizes(maxWidth: 480) {
-        ...GatsbyImageSharpSizes
+        ...GatsbyImageSharpSizes_withWebp
       }
     }
     social: imageSharp(id: { regex: "/footer/social/" }) {
       sizes(maxWidth: 359) {
-        ...GatsbyImageSharpSizes
+        ...GatsbyImageSharpSizes_withWebp
       }
     }
 
     socialTwitter: imageSharp(id: { regex: "/footer/logoTwitter/" }) {
       sizes(maxWidth: 128, quality: 95) {
-        ...GatsbyImageSharpSizes
+        ...GatsbyImageSharpSizes_withWebp
       }
     }
     socialGithub: imageSharp(id: { regex: "/footer/logoGithub/" }) {
       sizes(maxWidth: 128, quality: 95) {
-        ...GatsbyImageSharpSizes
+        ...GatsbyImageSharpSizes_withWebp
       }
     }
     socialCodewars: imageSharp(id: { regex: "/footer/logoCodewars/" }) {
       sizes(maxWidth: 128, quality: 95) {
-        ...GatsbyImageSharpSizes
+        ...GatsbyImageSharpSizes_withWebp
       }
     }
     portfolio: allImageSharp(filter: { id: { regex: "/portfolio/" } }) {
       edges {
         node {
           sizes(maxWidth: 960, quality: 90) {
-            ...GatsbyImageSharpSizes
+            ...GatsbyImageSharpSizes_withWebp
           }
         }
       }

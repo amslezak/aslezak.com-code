@@ -106,11 +106,6 @@ const MoreButton = styled.div`
 `;
 
 export default class App extends React.Component {
-  constructor(props) {
-    super(props);
-    console.log("port", props);
-  }
-
   render() {
     return (
       <Wrapper>
@@ -131,7 +126,7 @@ export default class App extends React.Component {
             </div>
 
             <div className="row center-lg center-md center-sm center-xs">
-              <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 hvr-grow">
                 <Portfolio>
                   <Link to={"/portfolio"}>
                     <Img

@@ -106,6 +106,7 @@ export default class Work extends React.Component {
         <Img
           className="work-background"
           style={{ position: "absolute" }}
+          backgroundColor="#99765E"
           sizes={this.props.background.sizes}
         />
 

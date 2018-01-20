@@ -50,7 +50,7 @@ class HomePage extends Component {
 export default HomePage;
 
 export const query = graphql`
-  query IndexQuery4 {
+  query HomePageQuery {
     background: imageSharp(id: { regex: "/heroImg.jpg/" }) {
       sizes(maxWidth: 1800, quality: 100) {
         ...GatsbyImageSharpSizes
@@ -58,63 +58,63 @@ export const query = graphql`
     }
     gear: imageSharp(id: { regex: "/gear.png/" }) {
       sizes(maxWidth: 2560, quality: 100) {
-        ...GatsbyImageSharpSizes
+        ...GatsbyImageSharpSizes_withWebp
       }
     }
     bgWood: imageSharp(id: { regex: "/background-wood.jpg/" }) {
       sizes(maxWidth: 2560, quality: 100) {
-        ...GatsbyImageSharpSizes
+        ...GatsbyImageSharpSizes_withWebp
       }
     }
     workDesign: imageSharp(id: { regex: "/work/design/" }) {
       sizes(maxWidth: 960, quality: 100) {
-        ...GatsbyImageSharpSizes
+        ...GatsbyImageSharpSizes_withWebp
       }
     }
     workCode: imageSharp(id: { regex: "/work/code/" }) {
       sizes(maxWidth: 960, quality: 100) {
-        ...GatsbyImageSharpSizes
+        ...GatsbyImageSharpSizes_withWebp
       }
     }
     workCloud: imageSharp(id: { regex: "/work/cloud/" }) {
       sizes(maxWidth: 960, quality: 100) {
-        ...GatsbyImageSharpSizes
+        ...GatsbyImageSharpSizes_withWebp
       }
     }
     workIoT: imageSharp(id: { regex: "/work/iot/" }) {
       sizes(maxWidth: 960, quality: 100) {
-        ...GatsbyImageSharpSizes
+        ...GatsbyImageSharpSizes_withWebp
       }
     }
     portfolio: imageSharp(id: { regex: "/heroPortfolio2/" }) {
       sizes(maxWidth: 960, quality: 100) {
-        ...GatsbyImageSharpSizes
+        ...GatsbyImageSharpSizes_withWebp
       }
     }
-    footer: imageSharp(id: { regex: "/footer/typewriter/" }) {
+    footer: imageSharp(id: { regex: "/footer/typewriter.png/" }) {
       sizes(maxWidth: 960, quality: 100) {
-        ...GatsbyImageSharpSizes
+        ...GatsbyImageSharpSizes_withWebp
       }
     }
     socialTwitter: imageSharp(id: { regex: "/footer/logoTwitter/" }) {
       sizes(maxWidth: 128, quality: 95) {
-        ...GatsbyImageSharpSizes
+        ...GatsbyImageSharpSizes_withWebp
       }
     }
     socialGithub: imageSharp(id: { regex: "/footer/logoGithub/" }) {
       sizes(maxWidth: 128, quality: 95) {
-        ...GatsbyImageSharpSizes
+        ...GatsbyImageSharpSizes_withWebp
       }
     }
     socialCodewars: imageSharp(id: { regex: "/footer/logoCodewars/" }) {
       sizes(maxWidth: 128, quality: 95) {
-        ...GatsbyImageSharpSizes
+        ...GatsbyImageSharpSizes_withWebp
       }
     }
 
     logoSignature: imageSharp(id: { regex: "/logoSignature/" }) {
       sizes(maxWidth: 480) {
-        ...GatsbyImageSharpSizes
+        ...GatsbyImageSharpSizes_withWebp_tracedSVG
       }
     }
     quotes: allJsFrontmatter(filter: { id: { regex: "/quotes/" } }) {
@@ -132,15 +132,3 @@ export const query = graphql`
     }
   }
 `;
-
-//  <Portfolio
-//   background={this.props.data.bgWood}
-//   image={this.props.data.portfolio}
-// />
-
-// <Quote quotes={this.props.data.quotes.edges[0].node.data.quotes[1]} />
-
-// <Footer
-//   background={this.props.data.bgWood}
-//   image={this.props.data.footer}
-// />

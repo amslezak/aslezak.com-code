@@ -4,7 +4,7 @@ export const data = {
   pageSlug: "/about",
   headerTitle: "WELCOME",
   headerBody:
-    "I'm a self-taught, full-stack developer.  I love to learn and make the world a better place.  My hero is Leonardo Da Vinci.  I like to laugh and collaborate.  People like to ask me for directions.  I wear glasses & I'm blonde.  I am currently available for both full-time and contract work.  Below you'll find a little more about me.",
+    "I am a self-taught, full-stack developer.  I love to learn and make the world a better place.  My hero is Leonardo Da Vinci.  I like to laugh and collaborate.  People like to ask me for directions.  I wear glasses & I'm blonde.  I am currently available for both full-time and contract work.  Below you'll find a little more about me.",
   headerImage: "heroAbout",
   pageSections: [
     {

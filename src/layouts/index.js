@@ -9,6 +9,7 @@ import "flexboxgrid2/flexboxgrid2.css";
 export default class TemplateWrapper extends React.Component {
   constructor(props) {
     super(props);
+    console.log(props);
   }
 
   render() {
@@ -17,12 +18,16 @@ export default class TemplateWrapper extends React.Component {
         <Helmet
           title="Andy Slezak"
           meta={[
-            { name: "description", content: "Sample" },
-            { name: "keywords", content: "sample, something" }
+            { name: "description", content: "Andy Slezak" },
+            {
+              name: "keywords",
+              content:
+                "webapps, react, developer, fullstack, graphql, iot, aws, amazon, cloud"
+            }
           ]}
         />
         <div>
-          <NavBar />
+          <NavBar logo={this.props.data.logoAslezak} />
           {this.props.children()}
         </div>
       </div>
@@ -35,26 +40,10 @@ TemplateWrapper.propTypes = {
 };
 
 export const query = graphql`
-  query IndexQuery3 {
-    allImageSharp {
-      edges {
-        node {
-          ... on ImageSharp {
-            resize(width: 125, height: 125, rotate: 180) {
-              src
-            }
-          }
-        }
-      }
-    }
-    background: imageSharp(id: { regex: "/background-wood.jpg/" }) {
-      sizes(toFormat: JPG) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-    gear: imageSharp(id: { regex: "/gear.png/" }) {
-      sizes(maxWidth: 1440) {
-        ...GatsbyImageSharpSizes
+  query NavBarQuery {
+    logoAslezak: imageSharp(id: { regex: "/logo_aslezak.png/" }) {
+      sizes(maxWidth: 480) {
+        ...GatsbyImageSharpSizes_withWebp_tracedSVG
       }
     }
   }

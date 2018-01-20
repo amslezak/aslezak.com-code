@@ -4,13 +4,12 @@ import Link from "gatsby-link";
 import Img from "gatsby-image";
 import { Form, FormGroup, Label, Input, FormText } from "reactstrap";
 import Button from "../components/Button";
+import ContactForm from "../components/ContactForm";
 import "../css/aslezak.scss";
 
 import { Element } from "react-scroll";
 
 const Wrapper = styled.div`
-  padding: 0;
-
   @media (max-width: 1440px) {
   }
 
@@ -30,7 +29,9 @@ const Wrapper = styled.div`
 `;
 
 const ContactContainer = styled.div`
+  height: 700px;
   padding: 0;
+  padding: 50px 0 0 0;
   margin: 0;
 
   @media (max-width: 1440px) {
@@ -93,7 +94,7 @@ const Header = styled.div`
 const ContactPicture = styled.div`
 img {
   padding: 25px
-  margin: -125px 0 0 50px;
+  margin: -100px 0 0 25px;
 }
   @media (max-width: 1440px) {
     margin: 0;
@@ -114,30 +115,6 @@ img {
   }
 `;
 
-const FormWrapper = styled.div`
-  color: #e4e4e4;
-  letter-spacing: 0.5px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-  @media (max-width: 1440px) {
-    padding: 50px 0;
-  }
-  @media (max-width: 1024px) {
-    padding: 25px 0;
-  }
-
-  @media (max-width: 768px) {
-    padding: 25px;
-  }
-
-  @media (max-width: 414px) {
-    padding: 0;
-    margin: 0;
-  }
-`;
-
-const ButtonWrapper = styled.div``;
-
 export default class Footer extends React.Component {
   render() {
     return (
@@ -145,6 +122,7 @@ export default class Footer extends React.Component {
         <Img
           sizes={this.props.background.sizes}
           className="contact-wood-background"
+          backgroundColor="#99765E"
           style={{ position: "absolute", zIndex: -1 }}
         />
         <ContactContainer css={{ position: "relative" }}>
@@ -160,40 +138,7 @@ export default class Footer extends React.Component {
             </div>
             <div className="row start-md">
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-                <FormWrapper>
-                  <Form>
-                    <FormGroup>
-                      <Label for="name">Name</Label>
-                      <Input
-                        type="email"
-                        name="email"
-                        id="exampleEmail"
-                        placeholder="Jane Appleseed"
-                      />
-                    </FormGroup>
-
-                    <FormGroup>
-                      <Label for="email">Email</Label>
-                      <Input
-                        type="email"
-                        name="email"
-                        id="exampleEmail"
-                        placeholder="jane@appleseed.com"
-                      />
-                    </FormGroup>
-                    <FormGroup>
-                      <Label for="exampleText">Message</Label>
-                      <Input
-                        type="textarea"
-                        name="text"
-                        id="exampleText"
-                        style={{ height: "100px" }}
-                        placeholder="Hi, Andy - let's work together!"
-                      />
-                    </FormGroup>
-                    <Button title="Send" block />
-                  </Form>
-                </FormWrapper>
+                <ContactForm />
               </div>
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                 <ContactPicture>

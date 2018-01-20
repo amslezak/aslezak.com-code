@@ -1,10 +1,10 @@
 export const data = {
   pageTitle: "Portfolio",
-  pageSubtitle: "A sample of my work",
+  pageSubtitle: "Some of my work",
   pageSlug: "/portfolio",
   headerTitle: "Experience",
   headerBody:
-    "I've been fortunate to take part in many exciting projects over the years.  Everything from programming, devops, to graphic design.  I've learned it is important to understand all the pieces.  When we understand how each piece connects, the pieces align more smoothly.  The end-user can feel that smoothness.  It translates into an enjoyable experience, and joy is always successful.  Below are some of my completed works.",
+    "I've been lucky to take part in many exciting projects over the years.  Everything from programming, to devops, to graphic design.  The key lesson I've learned is it is important to understand all the pieces.  When we know how each piece connects, the pieces align more smoothly.  The end-user can feel that smoothness.  This translates into an enjoyable experience, and joy is always a success.",
 
   headerImage: "heroPortfolio",
   pageSections: [
@@ -23,7 +23,7 @@ export const data = {
     },
     {
       workTitle: "Web App",
-      workSubtitle: "Checkout cartwith Stripe-integration & outbound webhooks",
+      workSubtitle: "Checkout cart with Stripe-integration & outbound webhooks",
       workImage: "portfolioCheckout10",
       workTags: ["Code", "Design", "IoT", "Cloud"]
     },

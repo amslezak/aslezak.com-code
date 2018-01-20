@@ -32,7 +32,7 @@ const Header = styled.div`
 
 const Item = styled.div`
   padding: 0;
-  margin: 100px 0;
+  margin: 50px 0;
 
   @media (max-width: 768px) {
     margin: 50px 0;
@@ -43,7 +43,7 @@ const Item = styled.div`
   }
 
   h1 {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 700;
     line-height: 35px;
     letter-spacing: 1.25px
@@ -65,6 +65,7 @@ const Item = styled.div`
 
 const ImageBorder = styled.div`
   margin: 0px 10px;
+  padding: 35px 0;
   border-radius: 25px;
 
   @media (max-width: 375px) {
@@ -143,13 +144,17 @@ class componentName extends Component {
                       <Item>
                         <Tooltip
                           title={item.workSubtitle}
-                          position="bottom"
+                          position="top"
                           trigger="click"
                           theme="transparent"
                           animation="fade"
-                          distance="-0.5"
-                          arrow="true"
+                          distance="-100"
                         >
+                          <div className="row center-md center-sm center-xs center-lg">
+                            <div className="col-xs-12 col-sm-6 col-md-12 col-lg-12">
+                              <h1>{item.workTitle}</h1>
+                            </div>
+                          </div>
                           <ImageBorder>
                             <ImageWrapper>
                               <Img
@@ -161,11 +166,6 @@ class componentName extends Component {
                               />
                             </ImageWrapper>
                           </ImageBorder>
-                          <div className="row center-md center-sm center-xs center-lg">
-                            <div className="col-xs-12 col-sm-6 col-md-12 col-lg-12">
-                              <h1>{item.workTitle}</h1>
-                            </div>
-                          </div>
                         </Tooltip>
                       </Item>
                     </div>

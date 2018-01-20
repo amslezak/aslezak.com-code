@@ -95,20 +95,17 @@ export default class componentName extends Component {
             className="homeHero-background"
             style={{ position: "absolute" }}
             sizes={this.props.background.sizes}
+            backgroundColor="#99765E"
           />
           <GearWrapper>
             <Img
+              className="homeHero-gear"
               css={{
-                top: 25,
-                left: 0,
-                right: 0,
-                zIndex: 1,
                 backgroundSize: "cover",
                 backgroundPosition: "fixed",
                 backgroundPosition: "50% 50%",
                 height: "100vh"
               }}
-              className="hero-gear"
               style={{ position: "absolute" }}
               sizes={this.props.gear.sizes}
             />

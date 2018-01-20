@@ -38,6 +38,12 @@ module.exports = {
       options: {
         fonts: [`Arvo`]
       }
+    },
+    {
+      resolve: `gatsby-link`,
+      options: {
+        shouldUpdateScroll: false
+      }
     }
   ]
 };
