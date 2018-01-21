@@ -63,8 +63,11 @@ $h4-font-stack: Helvetica, sans-serif;
 
 .skill-background {
   top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
+  width: auto;
+  height: 100%;
   z-index: -1 !important;
 }
 
