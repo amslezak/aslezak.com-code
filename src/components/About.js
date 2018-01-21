@@ -3,45 +3,18 @@ import styled from "react-emotion";
 import Img from "gatsby-image";
 import { Link } from "react-scroll";
 
+// Styled Components
+import { Flex, Box } from "grid-styled";
 import { ThemeProvider } from "emotion-theming";
 import theme from "../css/Theme";
 
 import Container from "../style/Container";
 import Header from "../components/Header";
-
-import { Flex, Box } from "grid-styled";
-
-const Body = styled.div`
-  font-size: 18px;
-  line-height: 29px;
-  letter-spacing: 0.9px;
-  text-align: justify;
-
-  h6 {
-    text-transform: uppercase;
-    font-size: 18px;
-    color: #3ea6b2;
-    letter-spacing: 0.5px;
-    line-height: 29px;
-    padding: 0;
-    margin: 25px 0;
-  }
-`;
+import Body from "../style/Body";
+import ContactLink from "../style/ContactLink";
 
 const Signature = styled.div`
   max-width: 250px;
-`;
-
-const ContactLink = styled.a`
-  font-weight: 600;
-  cursor: pointer;
-  transition-duration: 0.2s;
-  text-decoration: underline;
-
-  &:hover {
-    transition-duration: 0.2s;
-    text-decoration: underline;
-  }
 `;
 
 export default class App extends React.Component {
@@ -49,7 +22,7 @@ export default class App extends React.Component {
     return (
       <ThemeProvider theme={theme}>
         <Container>
-          <Flex>
+          <Flex column>
             <Box p={3}>
               <Box>
                 <Header>

@@ -18,16 +18,6 @@ const Header = styled.div`
     padding: 0;
     margin: 0;
   }
-
-  @media (max-width: 768px) {
-    padding: 50px 0;
-    margin: 0;
-  }
-
-  @media (max-width: 375px) {
-    padding: 0;
-    margin: 0 0 25px 0;
-  }
 `;
 
 export default Header;
