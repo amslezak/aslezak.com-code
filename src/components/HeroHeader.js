@@ -1,40 +1,17 @@
 import React from "react";
 import Img from "gatsby-image";
 import styled from "react-emotion";
+import Container from "../style/Container";
+import { Flex, Box, Grid } from "grid-styled";
+import { flex, space, width, fontSize, color } from "styled-system";
 import "../css/aslezak.scss";
 
 const HeroWrapper = styled.div`
-  @media (max-width: 2560px) {
-    height: 800px;
-    padding: 0;
-    margin: 0;
-  }
-
-  @media (max-width: 1680px) {
-    height: 50vh;
-    padding: 0;
-    margin: 0;
-  }
-
-  @media (max-width: 1440px) {
-    height: 50vh;
-    padding: 0;
-    margin: 0;
-  }
-
-  @media (max-width: 768px) {
-    height: 40vh;
-  }
-
-  @media (max-width: 414px) {
-    margin: 0;
-    padding: 0;
-    height: 75vh;
-  }
+  z-index: 1;
+  position: relative;
 `;
 
 const HeroText = styled.div`
-  padding: 18vh 0;
   h1 {
     font-family: AvenirNext-Bold;
     font-size: 64px;
@@ -53,56 +30,9 @@ const HeroText = styled.div`
     line-height: 45px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   }
-
-  @media (max-width: 1440px) {
-    margin: 15vh 0;
-    padding: 0;
-  }
-
-  @media (max-width: 768px) {
-    margin: 50px 0 0 0;
-    padding: 50px 0 0 25px;
-  }
-
-  @media (max-width: 414px) {
-    margin: 0;
-    padding: 0 15px;
-
-    h1 {
-      padding: 15px 0 0 0;
-      font-size: 48px;
-      line-height: 78px;
-    }
-
-    h2 {
-      font-size: 24px;
-      line-height: 39px;
-    }
-  }
 `;
 
-const ImageWrapper = styled.div`
-  @media (max-width: 1680px) {
-    padding: 0;
-    margin: -5vh 0 0 0;
-    padding: 50px;
-  }
-
-  @media (max-width: 1440px) {
-    padding: 0;
-    margin: -5vh 0 0 0;
-    padding: 50px;
-  }
-
-  @media (max-width: 768px) {
-    padding: 50px 0 0 0;
-  }
-
-  @media (max-width: 414px) {
-    margin: -25px 0;
-    padding: 25px;
-  }
-`;
+const ImageWrapper = styled.div``;
 
 export default class HeroHeader extends React.Component {
   constructor(props) {
@@ -112,18 +42,19 @@ export default class HeroHeader extends React.Component {
 
   render() {
     return (
-      <HeroWrapper className="z1" style={{ position: "relative" }}>
-        <div className="container">
-          <div className="row">
-            <div className="col-xs-12 col-sm-12 col-md-7 col-lg-6">
+      <HeroWrapper>
+        <Container>
+          <Flex align="center">
+            <Box p={3} width={[1, 1 / 2]}>
               <HeroText>
                 <h1>{this.props.title}</h1>
                 <h2>{this.props.subtitle}</h2>
               </HeroText>
-            </div>
-            <div className="col-xs-12 col-sm-12 col-md-5 col-lg-6">
+            </Box>
+            <Box p={3} width={[1, 1 / 2]}>
               <ImageWrapper>
                 <Img
+                  className="skill-image"
                   sizes={
                     this.props.logos.edges.filter(item => {
                       let re = new RegExp(this.heroImage);
@@ -132,9 +63,9 @@ export default class HeroHeader extends React.Component {
                   }
                 />
               </ImageWrapper>
-            </div>
-          </div>
-        </div>
+            </Box>
+          </Flex>
+        </Container>
       </HeroWrapper>
     );
   }

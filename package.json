@@ -29,6 +29,7 @@
     "gatsby-transformer-remark": "^1.7.28",
     "gatsby-transformer-sharp": "^1.6.16",
     "glamorous": "^4.11.2",
+    "grid-styled": "^2.0.0-11",
     "jump.js": "^1.0.2",
     "node-sass": "^4.7.2",
     "object-fit-images": "^3.2.3",
@@ -41,6 +42,7 @@
     "reactstrap": "^5.0.0-alpha.4",
     "sass-extract": "^2.1.0",
     "sass-extract-js": "^0.3.0",
+    "styled-system": "^1.1.1",
     "yup": "^0.24.0"
   },
   "keywords": [

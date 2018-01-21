@@ -3,6 +3,8 @@ import styled from "react-emotion";
 import Img from "gatsby-image";
 import Button from "../components/Button";
 
+import Container from "../style/Container";
+
 import { ThemeProvider } from "emotion-theming";
 import theme from "../css/Theme";
 import {
@@ -15,34 +17,15 @@ import {
   scroller
 } from "react-scroll";
 
+import { Flex, Box, Grid } from "grid-styled";
+
 const Wrapper = styled.div`
-  height: 50vh;
+  z-index: 3;
   padding: 35px 0;
   margin: 0;
+  width: 100%
   background-color: #fafafa;
   border-bottom: 1px solid #e0e0e0;
-
-  @media (max-width: 1680px) {
-    height: 50vh;
-  }
-
-  @media (max-width: 1440px) {
-    height: 45vh;
-  }
-
-  @media (max-width: 900px) {
-    height: 70vh;
-    padding: 25px;
-  }
-
-  @media (max-width: 768px) {
-    height: 50vh;
-    padding: 25px;
-  }
-
-  @media (max-width: 414px) {
-    height: 100%;
-  }
 `;
 
 const Header = styled.div`
@@ -82,9 +65,6 @@ const Header = styled.div`
     margin: 0;
     padding: 0;
   }
-
-  @media (max-width: 768px) {
-  }
 `;
 
 const LearnMore = styled.button`
@@ -109,11 +89,11 @@ export default class HeroOverview extends React.Component {
 
   render() {
     return (
-      <Wrapper>
-        <Header>
-          <div className="container">
-            <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <Flex>
+        <Wrapper>
+          <Container>
+            <Header>
+              <Box p={3}>
                 <h1>{this.props.title}</h1>
                 <h3>{this.props.body}</h3>
 
@@ -122,11 +102,11 @@ export default class HeroOverview extends React.Component {
                 </Link>
 
                 <Element name="more" />
-              </div>
-            </div>
-          </div>
-        </Header>
-      </Wrapper>
+              </Box>
+            </Header>
+          </Container>
+        </Wrapper>
+      </Flex>
     );
   }
 }

@@ -8,16 +8,15 @@ import About from "../components/About";
 import backgroundWood from "../images/background-wood.jpg";
 import Footer from "../components/Footer";
 import FooterSub from "../components/FooterSub";
-import "../css/aslezak.scss";
 
-const Hero = styled.div``;
+import { Flex, Box, Grid } from "grid-styled";
+import { flex, space, width, fontSize, color } from "styled-system";
+import "../css/aslezak.scss";
 
 const SkillBorder = styled.div`
   background-color: #e0e0e0;
   padding: 50px 0;
-
-  @media (max-width: 1440px) {
-  }
+  position: relative;
 
   @media (max-width: 768px) {
     padding: 25px 0;
@@ -43,42 +42,57 @@ export default class SkillPage extends React.Component {
   render() {
     return (
       <div>
-        <Hero>
-          <Img
-            className="skill-background"
-            style={{ position: "absolute" }}
-            sizes={this.props.data.bgWood.sizes}
-          />
-          <HeroHeader
-            title={this.pageData.pageTitle}
-            subtitle={this.pageData.pageSubtitle}
-            image={this.props.data.heroCode}
-            heroImage={this.pageData.headerImage}
-            logos={this.props.data.logos}
-          />
-        </Hero>
-        <Overview>
-          <HeroOverview
-            title={this.pageData.headerTitle}
-            body={this.pageData.headerBody}
-          />
-        </Overview>
-        <SkillBorder>
-          <SkillWrapper
-            logos={this.props.data.logos}
-            skillItems={this.pageData.pageSections}
-          />
-        </SkillBorder>
-        <About logo={this.props.data.logoSignature} />
-        <Footer
-          background={this.props.data.bgWood}
-          image={this.props.data.footerTypewriter}
-        />
-        <FooterSub
-          twitter={this.props.data.socialTwitter}
-          github={this.props.data.socialGithub}
-          codewars={this.props.data.socialCodewars}
-        />
+        <Flex column>
+          <Flex align="center">
+            <Box width={1}>
+              <Img
+                className="skill-background"
+                css={{ zIndex: -1 }}
+                style={{ position: "absolute" }}
+                sizes={this.props.data.bgWood.sizes}
+              />
+              <HeroHeader
+                title={this.pageData.pageTitle}
+                subtitle={this.pageData.pageSubtitle}
+                image={this.props.data.heroCode}
+                heroImage={this.pageData.headerImage}
+                logos={this.props.data.logos}
+              />
+            </Box>
+          </Flex>
+          <Box>
+            <Overview>
+              <HeroOverview
+                title={this.pageData.headerTitle}
+                body={this.pageData.headerBody}
+              />
+            </Overview>
+          </Box>
+          <Box>
+            <SkillBorder>
+              <SkillWrapper
+                logos={this.props.data.logos}
+                skillItems={this.pageData.pageSections}
+              />
+            </SkillBorder>
+          </Box>
+          <Box>
+            <About logo={this.props.data.logoSignature} />
+          </Box>
+          <Box>
+            <Footer
+              background={this.props.data.bgWood}
+              image={this.props.data.footerTypewriter}
+            />
+          </Box>
+          <Box>
+            <FooterSub
+              twitter={this.props.data.socialTwitter}
+              github={this.props.data.socialGithub}
+              codewars={this.props.data.socialCodewars}
+            />
+          </Box>
+        </Flex>
       </div>
     );
   }

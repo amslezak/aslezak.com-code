@@ -6,24 +6,10 @@ import { Link } from "react-scroll";
 import { ThemeProvider } from "emotion-theming";
 import theme from "../css/Theme";
 
+import Container from "../style/Container";
 import Header from "../components/Header";
 
-const Wrapper = styled.div`
-  padding: 150px 0;
-
-  background-color: #f8f8fb;
-  border-top: 1px solid RGBA(67, 166, 177, 0.05);
-  border-bottom: 1px solid RGBA(67, 166, 177, 0.05);
-
-  @media (max-width: 768px) {
-    height: 83vh;
-    padding: 25px;
-  }
-
-  @media (max-width: 414px) {
-    height: 100%;
-  }
-`;
+import { Flex, Box } from "grid-styled";
 
 const Body = styled.div`
   font-size: 18px;
@@ -40,26 +26,10 @@ const Body = styled.div`
     padding: 0;
     margin: 25px 0;
   }
-
-  @media (max-width: 768px) {
-    padding: 0 5px 0 0;
-    margin: 0 0 5px 0;
-  }
-
-  @media (max-width: 414px) {
-    letter-spacing: 1.1px;
-  }
 `;
 
 const Signature = styled.div`
-  padding-right: 25px;
-  margin-right: 25px;
-  margin-bottom: -25px;
-
-  @media (max-width: 375px) {
-    padding: 0;
-    margin: 0;
-  }
+  max-width: 250px;
 `;
 
 const ContactLink = styled.a`
@@ -71,7 +41,6 @@ const ContactLink = styled.a`
   &:hover {
     transition-duration: 0.2s;
     text-decoration: underline;
-    text-decoration-color: red;
   }
 `;
 
@@ -79,17 +48,16 @@ export default class App extends React.Component {
   render() {
     return (
       <ThemeProvider theme={theme}>
-        <Wrapper>
-          <div className="container">
-            <div className="row">
-              <Header>
-                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <Container>
+          <Flex>
+            <Box p={3}>
+              <Box>
+                <Header>
                   <h1>HELLO</h1>
-                </div>
-              </Header>
-
-              <Body>
-                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-11">
+                </Header>
+              </Box>
+              <Box mt={2}>
+                <Body>
                   <p>
                     I'm Andy. I'm a web developer. In a previous life, my best
                     friend and I started a company called CytexOne. It focused
@@ -120,18 +88,16 @@ export default class App extends React.Component {
                     he gave me the gifts of patience & learning. To my mom
                     because she gave me the gifts of persistence & love.
                   </p>
-                </div>
-              </Body>
-            </div>
-            <div className="row end-xs end-md end-lg">
-              <div className="col-xs-6 col-sm-4 col-md-4 col-lg-3">
+                </Body>
+              </Box>
+              <Box>
                 <Signature>
                   <Img sizes={this.props.logo.sizes} />
                 </Signature>
-              </div>
-            </div>
-          </div>
-        </Wrapper>
+              </Box>
+            </Box>
+          </Flex>
+        </Container>
       </ThemeProvider>
     );
   }

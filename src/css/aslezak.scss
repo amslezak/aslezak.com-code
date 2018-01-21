@@ -62,33 +62,14 @@ $h4-font-stack: Helvetica, sans-serif;
 }
 
 .skill-background {
-  object-fit: cover;
   top: 0;
   left: 0;
   right: 0;
-  z-index: -1;
-  height: 880px;
+  z-index: -1 !important;
+}
 
-  @media (max-width: 1680px) {
-    height: 60vh;
-  }
-
-  @media (max-width: 1440px) {
-    height: 60vh;
-  }
-
-  @media (max-width: 1024px) {
-    height: 500px;
-    padding: 0;
-  }
-
-  @media (max-width: 768px) {
-    height: 49vh;
-  }
-
-  @media (max-width: 414px) {
-    height: 85vh;
-  }
+.skill-image {
+  max-width: 600px;
 }
 
 .homeHero-background {

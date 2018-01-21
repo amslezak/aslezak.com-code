@@ -5,6 +5,7 @@ import Helmet from "react-helmet";
 import NavBar from "../components/NavBar";
 import "bootstrap/dist/css/bootstrap.css";
 import "flexboxgrid2/flexboxgrid2.css";
+import { Flex, Box, Grid } from "grid-styled";
 
 export default class TemplateWrapper extends React.Component {
   constructor(props) {
@@ -26,10 +27,10 @@ export default class TemplateWrapper extends React.Component {
             }
           ]}
         />
-        <div>
+        <Flex column>
           <NavBar logo={this.props.data.logoAslezak} />
           {this.props.children()}
-        </div>
+        </Flex>
       </div>
     );
   }
