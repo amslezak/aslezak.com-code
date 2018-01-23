@@ -7,42 +7,47 @@ import Quote from "../components/Quote";
 import Portfolio from "../components/Portfolio";
 import Footer from "../components/Footer";
 import FooterSub from "../components/FooterSub";
+import XRay from "react-x-ray";
+
+import { Flex, Box } from "rebass";
 
 class HomePage extends Component {
   render() {
     return (
-      <div>
-        <HeroHomepage
-          gear={this.props.data.gear}
-          background={this.props.data.bgWood}
-        />
+      <Flex column>
+        <Box w={1}>
+          <HeroHomepage
+            gear={this.props.data.gear}
+            background={this.props.data.bgWood}
+          />
 
-        <About logo={this.props.data.logoSignature} />
+          <About logo={this.props.data.logoSignature} />
 
-        <Work
-          background={this.props.data.bgWood}
-          design={this.props.data.workDesign}
-          code={this.props.data.workCode}
-          cloud={this.props.data.workCloud}
-          iot={this.props.data.workIoT}
-        />
+          <Work
+            background={this.props.data.bgWood}
+            design={this.props.data.workDesign}
+            code={this.props.data.workCode}
+            cloud={this.props.data.workCloud}
+            iot={this.props.data.workIoT}
+          />
 
-        <Quote quotes={this.props.data.quotes.edges[0].node.data.quotes[0]} />
-        <Portfolio
-          background={this.props.data.bgWood}
-          image={this.props.data.portfolio}
-        />
-        <Quote quotes={this.props.data.quotes.edges[0].node.data.quotes[1]} />
-        <Footer
-          background={this.props.data.bgWood}
-          image={this.props.data.footer}
-        />
-        <FooterSub
-          twitter={this.props.data.socialTwitter}
-          github={this.props.data.socialGithub}
-          codewars={this.props.data.socialCodewars}
-        />
-      </div>
+          <Quote quotes={this.props.data.quotes.edges[0].node.data.quotes[0]} />
+          <Portfolio
+            background={this.props.data.bgWood}
+            image={this.props.data.portfolio}
+          />
+          <Quote quotes={this.props.data.quotes.edges[0].node.data.quotes[1]} />
+          <Footer
+            background={this.props.data.bgWood}
+            image={this.props.data.footer}
+          />
+          <FooterSub
+            twitter={this.props.data.socialTwitter}
+            github={this.props.data.socialGithub}
+            codewars={this.props.data.socialCodewars}
+          />
+        </Box>
+      </Flex>
     );
   }
 }

@@ -19,15 +19,6 @@ import {
 
 import { Flex, Box, Grid } from "grid-styled";
 
-const Wrapper = styled.div`
-  z-index: 3;
-  padding: 35px 0;
-  margin: 0;
-  width: 100%
-  background-color: #fafafa;
-  border-bottom: 1px solid #e0e0e0;
-`;
-
 const Header = styled.div`
   h1 {
     font-family: AvenirNext-Bold;
@@ -89,23 +80,21 @@ export default class HeroOverview extends React.Component {
 
   render() {
     return (
-      <Flex>
-        <Wrapper>
-          <Container>
-            <Header>
-              <Box p={3}>
-                <h1>{this.props.title}</h1>
-                <h3>{this.props.body}</h3>
+      <Flex bg="#fff" align="center">
+        <Container>
+          <Header>
+            <Box p={3}>
+              <h1>{this.props.title}</h1>
+              <h3>{this.props.body}</h3>
 
-                <Link to="more" smooth={true} duration={500} offset={15}>
-                  <Button title="Learn More" className="col-lg-2" />
-                </Link>
+              <Link to="more" smooth={true} duration={500} offset={15}>
+                <Button title="Learn More" className="col-lg-2" />
+              </Link>
 
-                <Element name="more" />
-              </Box>
-            </Header>
-          </Container>
-        </Wrapper>
+              <Element name="more" />
+            </Box>
+          </Header>
+        </Container>
       </Flex>
     );
   }

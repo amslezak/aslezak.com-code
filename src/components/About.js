@@ -4,33 +4,32 @@ import Img from "gatsby-image";
 import { Link } from "react-scroll";
 
 // Styled Components
-import { Flex, Box } from "grid-styled";
 import { ThemeProvider } from "emotion-theming";
+import { Flex, Box, Heading, Text, Container } from "rebass";
 import theme from "../css/Theme";
 
-import Container from "../style/Container";
-import Header from "../components/Header";
+import XRay from "react-x-ray";
 import Body from "../style/Body";
 import ContactLink from "../style/ContactLink";
 
 const Signature = styled.div`
-  max-width: 250px;
+  max-width: 150px;
 `;
 
 export default class App extends React.Component {
   render() {
     return (
       <ThemeProvider theme={theme}>
-        <Container>
-          <Flex column>
-            <Box p={3}>
+        <Flex bg="#fff" wrap column>
+          <Container>
+            <Box w={1} my={3}>
               <Box>
-                <Header>
-                  <h1>HELLO</h1>
-                </Header>
+                <Heading f={[6]} my={3}>
+                  HELLO
+                </Heading>
               </Box>
-              <Box mt={2}>
-                <Body>
+              <Box>
+                <Text justify f={2}>
                   <p>
                     I'm Andy. I'm a web developer. In a previous life, my best
                     friend and I started a company called CytexOne. It focused
@@ -55,22 +54,24 @@ export default class App extends React.Component {
                     </Link>{" "}
                     me if we can work together.
                   </p>
-                  <h6>A DEDICATION</h6>
+                </Text>
+                <Heading f={[3]} my={[3]}>
+                  A DEDICATION
+                </Heading>
+                <Text f={2} justify>
                   <p>
                     This site is dedicated to my mom and dad. To my dad because
                     he gave me the gifts of patience & learning. To my mom
                     because she gave me the gifts of persistence & love.
                   </p>
-                </Body>
+                </Text>
               </Box>
-              <Box>
-                <Signature>
-                  <Img sizes={this.props.logo.sizes} />
-                </Signature>
+              <Box w={175} ml="auto" align="right">
+                <Img sizes={this.props.logo.sizes} />
               </Box>
             </Box>
-          </Flex>
-        </Container>
+          </Container>
+        </Flex>
       </ThemeProvider>
     );
   }

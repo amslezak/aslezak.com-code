@@ -11,27 +11,6 @@ const HeroWrapper = styled.div`
   position: relative;
 `;
 
-const HeroText = styled.div`
-  h1 {
-    font-family: AvenirNext-Bold;
-    font-size: 64px;
-    color: #ffffff;
-    line-height: 116px;
-    letter-spacing: 1.5px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.47);
-    text-transform: uppercase;
-  }
-
-  h2 {
-    font-family: Arvo;
-    font-size: 36px;
-    color: #ffffff;
-    letter-spacing: -0.42px;
-    line-height: 45px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  }
-`;
-
 const ImageWrapper = styled.div``;
 
 export default class HeroHeader extends React.Component {
@@ -46,10 +25,8 @@ export default class HeroHeader extends React.Component {
         <Container>
           <Flex align="center">
             <Box p={3} width={[1, 1 / 2]}>
-              <HeroText>
-                <h1>{this.props.title}</h1>
-                <h2>{this.props.subtitle}</h2>
-              </HeroText>
+              <h1>{this.props.title}</h1>
+              <h2>{this.props.subtitle}</h2>
             </Box>
             <Box p={3} width={[1, 1 / 2]}>
               <ImageWrapper>

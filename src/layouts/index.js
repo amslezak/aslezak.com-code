@@ -3,14 +3,12 @@ import PropTypes from "prop-types";
 import Link from "gatsby-link";
 import Helmet from "react-helmet";
 import NavBar from "../components/NavBar";
-import "bootstrap/dist/css/bootstrap.css";
-import "flexboxgrid2/flexboxgrid2.css";
-import { Flex, Box, Grid } from "grid-styled";
+import { Flex, Box, Provider, Container } from "rebass";
 
+import XRay from "react-x-ray";
 export default class TemplateWrapper extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props);
   }
 
   render() {
@@ -28,8 +26,10 @@ export default class TemplateWrapper extends React.Component {
           ]}
         />
         <Flex column>
-          <NavBar logo={this.props.data.logoAslezak} />
-          {this.props.children()}
+          <Box w={1}>
+            <NavBar logo={this.props.data.logoAslezak} />
+            {this.props.children()}
+          </Box>
         </Flex>
       </div>
     );
