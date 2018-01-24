@@ -26,7 +26,7 @@ export default class Footer extends React.Component {
           </Absolute>
 
           <Element name="contact" />
-          <Container align="center">
+          <Container my={3} align="center">
             <Box w={1} py={2}>
               <Box>
                 <Heading align="left">

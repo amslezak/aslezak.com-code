@@ -17,9 +17,7 @@ export default class App extends React.Component {
       <Flex bg="#fff">
         <Container>
           <Box my={[3, 4]} px={[3, 4]} py={[3, 4]} w={1}>
-            <Heading f={4} justify>
-              {this.props.quotes.quote}
-            </Heading>
+            <Heading f={4}>{this.props.quotes.quote}</Heading>
             <Heading f={1} align="right" mt={3}>
               {this.props.quotes.author}
             </Heading>

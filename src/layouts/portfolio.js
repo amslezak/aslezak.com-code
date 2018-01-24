@@ -12,15 +12,14 @@ import WorkItems from "../components/WorkItem";
 import "animate.css";
 import "../css/aslezak.scss";
 
-const Hero = styled.div``;
-
-const Overview = styled.div``;
+import { flex, space, width, fontSize, color } from "styled-system";
+import { Flex, Box, Heading, NavLink, Container, Absolute } from "rebass";
+import XRay from "react-x-ray";
 
 const WorkWrapper = styled.div`
   background-color: #e0e0e0;
   padding: 50px 0;
 `;
-
 export default class SkillPage extends React.Component {
   constructor(props) {
     super(props);
@@ -30,47 +29,51 @@ export default class SkillPage extends React.Component {
 
   render() {
     return (
-      <div>
-        <Hero>
-          <Img
-            className="skill-background"
-            style={{ position: "absolute" }}
-            backgroundColor="#99765E"
-            sizes={this.props.data.bgWood.sizes}
-          />
-          <HeroHeader
-            title={this.pageData.pageTitle}
-            subtitle={this.pageData.pageSubtitle}
-            image={this.props.data.heroCode}
-            heroImage={this.pageData.headerImage}
-            logos={this.props.data.logos}
-          />
-        </Hero>
-        <Overview>
+      <Flex column>
+        <Flex align="center">
+          <Box width={1}>
+            <HeroHeader
+              title={this.pageData.pageTitle}
+              subtitle={this.pageData.pageSubtitle}
+              image={this.props.data.heroCode}
+              heroImage={this.pageData.headerImage}
+              logos={this.props.data.logos}
+              background={this.props.data.bgWood}
+            />
+          </Box>
+        </Flex>
+        <Box>
           <HeroOverview
             title={this.pageData.headerTitle}
             body={this.pageData.headerBody}
           />
-        </Overview>
+        </Box>
+        <Box>
+          <WorkWrapper items={this.pageData}>
+            <WorkItems
+              data={this.pageData.pageSections}
+              portfolio={this.props.data.portfolio}
+            />
+          </WorkWrapper>
+        </Box>
 
-        <WorkWrapper items={this.pageData}>
-          <WorkItems
-            data={this.pageData.pageSections}
-            portfolio={this.props.data.portfolio}
+        <Box>
+          <About logo={this.props.data.logoSignature} />
+        </Box>
+        <Box>
+          <Footer
+            background={this.props.data.bgWood}
+            image={this.props.data.footerTypewriter}
           />
-        </WorkWrapper>
-
-        <About logo={this.props.data.logoSignature} />
-        <Footer
-          background={this.props.data.bgWood}
-          image={this.props.data.footerTypewriter}
-        />
-        <FooterSub
-          twitter={this.props.data.socialTwitter}
-          github={this.props.data.socialGithub}
-          codewars={this.props.data.socialCodewars}
-        />
-      </div>
+        </Box>
+        <Box>
+          <FooterSub
+            twitter={this.props.data.socialTwitter}
+            github={this.props.data.socialGithub}
+            codewars={this.props.data.socialCodewars}
+          />
+        </Box>
+      </Flex>
     );
   }
 }

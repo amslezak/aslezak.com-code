@@ -1,13 +1,6 @@
 @import "navbar";
 @import "hover";
 
-.skill-background {
-  top: 0;
-  left: 0;
-  right: 0;
-  width: auto;
-}
-
 .skill-image {
   max-width: 600px;
 }
@@ -50,6 +43,14 @@
   left: 0;
   right: 0;
   width: auto;
-  min-height: 450px;
-  max-height: 475px;
+  min-height: 525px;
+  max-height: 525px;
+}
+
+.skill-background {
+  top: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+  max-height: 650px;
 }

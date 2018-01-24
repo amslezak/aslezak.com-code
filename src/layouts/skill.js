@@ -11,14 +11,8 @@ import FooterSub from "../components/FooterSub";
 
 import { flex, space, width, fontSize, color } from "styled-system";
 import { Flex, Box, Heading, NavLink, Container, Absolute } from "rebass";
-import "../css/aslezak.scss";
-
 import XRay from "react-x-ray";
-const SkillBorder = styled.div`
-  background-color: #e0e0e0;
-`;
-
-const Overview = styled.div``;
+import "../css/aslezak.scss";
 
 export default class SkillPage extends React.Component {
   constructor(props) {
@@ -34,35 +28,27 @@ export default class SkillPage extends React.Component {
       <Flex column>
         <Flex align="center">
           <Box width={1}>
-            <Img
-              className="skill-background"
-              style={{ position: "absolute" }}
-              sizes={this.props.data.bgWood.sizes}
-            />
             <HeroHeader
               title={this.pageData.pageTitle}
               subtitle={this.pageData.pageSubtitle}
               image={this.props.data.heroCode}
               heroImage={this.pageData.headerImage}
               logos={this.props.data.logos}
+              background={this.props.data.bgWood}
             />
           </Box>
         </Flex>
         <Box>
-          <Overview>
-            <HeroOverview
-              title={this.pageData.headerTitle}
-              body={this.pageData.headerBody}
-            />
-          </Overview>
+          <HeroOverview
+            title={this.pageData.headerTitle}
+            body={this.pageData.headerBody}
+          />
         </Box>
         <Box>
-          <SkillBorder>
-            <SkillWrapper
-              logos={this.props.data.logos}
-              skillItems={this.pageData.pageSections}
-            />
-          </SkillBorder>
+          <SkillWrapper
+            logos={this.props.data.logos}
+            skillItems={this.pageData.pageSections}
+          />
         </Box>
         <Box>
           <About logo={this.props.data.logoSignature} />

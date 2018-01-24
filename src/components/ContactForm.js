@@ -70,7 +70,7 @@ const EmailForm = props => {
           {errors.name &&
             touched.name && <div className="input-feedback">{errors.name}</div>}
 
-          <Label for="email">Email</Label>
+          <Label children="Email" for="email" />
           <Input
             type="email"
             name="email"
@@ -87,7 +87,8 @@ const EmailForm = props => {
             touched.email && (
               <div className="input-feedback">{errors.email}</div>
             )}
-          <Label for="message">Message</Label>
+          <Label children="Message" for="message" />
+
           <Textarea
             name="message"
             id="message"
@@ -107,14 +108,13 @@ const EmailForm = props => {
             )}
 
           <Button
+            children="SUBMIT"
             type="submit"
             title="Send"
             onClick={handleSubmit}
             block
             disabled={isSubmitting}
-          >
-            SUBMIT
-          </Button>
+          />
         </form>
       </Box>
     </Flex>
