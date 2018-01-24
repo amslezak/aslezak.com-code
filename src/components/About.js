@@ -5,12 +5,12 @@ import { Link } from "react-scroll";
 
 // Styled Components
 import { ThemeProvider } from "emotion-theming";
-import { Flex, Box, Heading, Text, Container } from "rebass";
+import { Flex, Box, Text, Container } from "rebass";
+import HeaderDark from "../styled/HeaderDark";
 import theme from "../css/Theme";
 
 import XRay from "react-x-ray";
-import Body from "../style/Body";
-import ContactLink from "../style/ContactLink";
+import ContactLink from "../styled/ContactLink";
 
 const Signature = styled.div`
   max-width: 150px;
@@ -24,9 +24,9 @@ export default class App extends React.Component {
           <Container>
             <Box w={1} my={3}>
               <Box>
-                <Heading f={[6]} my={3}>
-                  HELLO
-                </Heading>
+                <HeaderDark f={6} my={3}>
+                  Hello
+                </HeaderDark>
               </Box>
               <Box>
                 <Text justify f={2}>
@@ -55,9 +55,9 @@ export default class App extends React.Component {
                     me if we can work together.
                   </p>
                 </Text>
-                <Heading f={[3]} my={[3]}>
+                <HeaderDark f={[3]} my={[3]}>
                   A DEDICATION
-                </Heading>
+                </HeaderDark>
                 <Text f={2} justify>
                   <p>
                     This site is dedicated to my mom and dad. To my dad because
