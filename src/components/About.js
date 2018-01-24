@@ -6,11 +6,12 @@ import { Link } from "react-scroll";
 // Styled Components
 import { ThemeProvider } from "emotion-theming";
 import { Flex, Box, Text, Container } from "rebass";
-import HeaderDark from "../styled/HeaderDark";
-import theme from "../css/Theme";
-
 import XRay from "react-x-ray";
+
+import theme from "../css/Theme";
 import ContactLink from "../styled/ContactLink";
+import HeaderDark from "../styled/HeaderDark";
+import SubHeaderDark from "../styled/SubHeaderDark";
 
 const Signature = styled.div`
   max-width: 150px;
@@ -22,14 +23,14 @@ export default class App extends React.Component {
       <ThemeProvider theme={theme}>
         <Flex bg="#fff" wrap column>
           <Container>
-            <Box w={1} my={3}>
+            <Box w={1}>
               <Box>
-                <HeaderDark f={6} my={3}>
+                <HeaderDark lineHeight={3} f={6}>
                   Hello
                 </HeaderDark>
               </Box>
               <Box>
-                <Text justify f={2}>
+                <Text f={3}>
                   <p>
                     I'm Andy. I'm a web developer. In a previous life, my best
                     friend and I started a company called CytexOne. It focused
@@ -55,10 +56,10 @@ export default class App extends React.Component {
                     me if we can work together.
                   </p>
                 </Text>
-                <HeaderDark f={[3]} my={[3]}>
-                  A DEDICATION
-                </HeaderDark>
-                <Text f={2} justify>
+                <SubHeaderDark lineHeight={4} f={4} letterSpacing={1}>
+                  DEDICATION
+                </SubHeaderDark>
+                <Text f={3}>
                   <p>
                     This site is dedicated to my mom and dad. To my dad because
                     he gave me the gifts of patience & learning. To my mom
