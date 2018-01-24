@@ -1,6 +1,6 @@
 export const data = {
   pageTitle: "About",
-  pageSubtitle: "A little more about Andy Slezak",
+  pageSubtitle: "A little personal",
   pageSlug: "/about",
   headerTitle: "WELCOME",
   headerBody:
