@@ -14,6 +14,7 @@ import {
   scroller
 } from "react-scroll";
 
+import XRay from "react-x-ray";
 import {
   Flex,
   Box,
@@ -21,31 +22,43 @@ import {
   Text,
   Container,
   Border,
-  NavLink,
-  ButtonOutline
+  ButtonOutline,
+  ButtonCircle,
+  Arrow
 } from "rebass";
-import XRay from "react-x-ray";
+
+import HeaderDark from "../styled/HeaderDark";
+import SubHeaderDark from "../styled/SubHeaderDark";
+import Button from "../styled/Button";
 
 export default class HeroOverview extends React.Component {
   render() {
     return (
-      <Flex bg="#fff" align="center">
-        <Container>
-          <Box my={3}>
-            <Heading f={4} my={1}>
-              {this.props.title}
-            </Heading>
-            <Text my={1} f={2}>
-              {this.props.body}
-            </Text>
+      <ThemeProvider theme={theme}>
+        <Flex bg="#fff" align="center">
+          <Container>
+            <Box my={3}>
+              <HeaderDark letterSpacing={0.75} lineHeight={2} f={3}>
+                {this.props.title}
+              </HeaderDark>
+              <Text my={1} f={2}>
+                {this.props.body}
+              </Text>
 
-            <Link to="more" smooth={true} duration={500} offset={-25}>
-              <ButtonOutline children="Learn More" my={2} />
-            </Link>
-            <Element name="more" />
-          </Box>
-        </Container>
-      </Flex>
+              <Flex>
+                <Box my={3}>
+                  <Link to="more" smooth={true} duration={500} offset={-25}>
+                    <Button letterSpacing={1.25} borderRadius={4} p={2}>
+                      Learn More
+                    </Button>
+                  </Link>
+                </Box>
+              </Flex>
+              <Element name="more" />
+            </Box>
+          </Container>
+        </Flex>
+      </ThemeProvider>
     );
   }
 }
