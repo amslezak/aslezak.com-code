@@ -6,18 +6,12 @@ import styled from "react-emotion";
 import { ThemeProvider } from "emotion-theming";
 
 import theme from "../css/Theme";
-import {
-  Flex,
-  Box,
-  Heading,
-  Text,
-  Container,
-  Border,
-  NavLink,
-  Absolute,
-  Relative
-} from "rebass";
+import { Flex, Box, Heading, Text, Container, Border, Absolute } from "rebass";
 import XRay from "react-x-ray";
+
+import HeaderLight from "../styled/HeaderLight";
+import SubHeaderLight from "../styled/SubHeaderLight";
+import LinkFancyLight from "../styled/LinkFancyLight";
 
 export default class Work extends React.Component {
   render() {
@@ -41,10 +35,18 @@ export default class Work extends React.Component {
             <Container align="center">
               <Box w={1} py={2}>
                 <Flex wrap>
-                  <Box w={[1]}>
+                  <Box w={1}>
                     <Heading align="left">
-                      <Heading f={6}>SKILLS</Heading>
-                      <Heading f={3}>Capabilities</Heading>
+                      <Flex column>
+                        <Box>
+                          <HeaderLight f={6}>Skills</HeaderLight>
+                        </Box>
+                        <Box>
+                          <SubHeaderLight letterSpacing={1} f={3}>
+                            Capabilities
+                          </SubHeaderLight>
+                        </Box>
+                      </Flex>
                     </Heading>
                   </Box>
 
@@ -55,13 +57,9 @@ export default class Work extends React.Component {
                         sizes={this.props.design.sizes}
                       />
                     </Link>
-                    <Heading>
-                      <h2>
-                        <NavLink>
-                          <Link to={"/design"}>Design</Link>
-                        </NavLink>
-                      </h2>
-                    </Heading>
+                    <LinkFancyLight f={[1, 3]} letterSpacing={2 * 0.75}>
+                      <Link to={"/design"}>Design</Link>
+                    </LinkFancyLight>
                   </Box>
 
                   <Box w={[1 / 2]}>
@@ -71,11 +69,9 @@ export default class Work extends React.Component {
                         sizes={this.props.code.sizes}
                       />
                     </Link>
-                    <h2>
-                      <NavLink>
-                        <Link to={"/code"}>Code</Link>
-                      </NavLink>
-                    </h2>
+                    <LinkFancyLight f={[1, 3]} letterSpacing={2 * 0.75}>
+                      <Link to={"/code"}>Code</Link>
+                    </LinkFancyLight>
                   </Box>
 
                   <Box w={[1 / 2]}>
@@ -85,11 +81,10 @@ export default class Work extends React.Component {
                         sizes={this.props.cloud.sizes}
                       />
                     </Link>
-                    <Heading>
-                      <NavLink>
-                        <Link to={"/cloud"}>Cloud</Link>
-                      </NavLink>
-                    </Heading>
+
+                    <LinkFancyLight f={[1, 3]} letterSpacing={2 * 0.75}>
+                      <Link to={"/cloud"}>Cloud</Link>
+                    </LinkFancyLight>
                   </Box>
 
                   <Box w={[1 / 2]}>
@@ -99,11 +94,10 @@ export default class Work extends React.Component {
                         sizes={this.props.iot.sizes}
                       />
                     </Link>
-                    <Heading>
-                      <NavLink>
-                        <Link to={"/iot"}>IoT</Link>
-                      </NavLink>
-                    </Heading>
+
+                    <LinkFancyLight f={[1, 3]} letterSpacing={2 * 0.75}>
+                      <Link to={"/iot"}>IoT</Link>
+                    </LinkFancyLight>
                   </Box>
                 </Flex>
               </Box>
