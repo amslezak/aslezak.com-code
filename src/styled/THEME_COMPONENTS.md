@@ -11,13 +11,13 @@ HomeHero1
 HomeHero2
 HomeHero3
 
-HeaderLight
-HeaderDark
+x HeaderLight
+x HeaderDark
 
-SubHeaderLight
-SubHeaderDark
+x SubHeaderLight
+x SubHeaderDark
 
-LinkFancyLight
+x LinkFancyLight
 
 LabelLight
 InputLight
@@ -34,3 +34,5 @@ SectionHeader
 SectionSubHeader
 Icon
 IconHeader
+
+Paper

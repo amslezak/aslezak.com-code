@@ -1,10 +1,25 @@
 const theme = {
   headerDark: {
     font: '"Avenir Next", Helvetica, sans-serif',
-    fontWeight: "700"
+    fontWeight: 700
   },
   subHeaderDark: {
-    color: 
+    color: "#3ea6b2",
+    fontWeight: 500
+  },
+  headerLight: {
+    font: '"Avenir Next", Helvetica, sans-serif',
+    fontWeight: 700,
+    color: "#eee"
+  },
+  subHeaderLight: {
+    color: "#eee",
+    fontWeight: 500
+  },
+  button: {
+    backgroundColor: "#6859b2",
+    boxShadow: "1px 0px 10px #888888",
+    fontWeight: 600
   }
 };
 

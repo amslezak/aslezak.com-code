@@ -15,8 +15,9 @@ const Component = styled.Heading`
   ${letterSpacing};
   ${lineHeight};
   text-transform: uppercase;
-  font-family: ${props => props.theme.headerDark.font};
-  font-weight: ${props => props.theme.headerDark.fontWeight};
+  font-family: ${props => props.theme.subHeaderDark.font};
+  font-weight: ${props => props.theme.subHeaderDark.fontWeight};
+  color: ${props => props.theme.subHeaderDark.color};
 `;
 
 export default Component;
