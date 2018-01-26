@@ -96,7 +96,7 @@ export const query = graphql`
         ...GatsbyImageSharpSizes_withWebp
       }
     }
-    footer: imageSharp(id: { regex: "/footer/typewriter.png/" }) {
+    footer: imageSharp(id: { regex: "/footer/typewriter8.png/" }) {
       sizes(maxWidth: 960, quality: 100) {
         ...GatsbyImageSharpSizes_withWebp
       }
