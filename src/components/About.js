@@ -24,10 +24,8 @@ export default class App extends React.Component {
         <Flex bg="#fff" wrap column>
           <Container>
             <Box w={1}>
-              <Box>
-                <HeaderDark lineHeight={3} f={6}>
-                  Hello
-                </HeaderDark>
+              <Box my={3}>
+                <HeaderDark f={6}>Hello</HeaderDark>
               </Box>
               <Box>
                 <Text f={3}>
@@ -56,9 +54,11 @@ export default class App extends React.Component {
                     me if we can work together.
                   </p>
                 </Text>
-                <SubHeaderDark lineHeight={4} f={4} letterSpacing={1}>
-                  DEDICATION
-                </SubHeaderDark>
+                <Box my={3}>
+                  <SubHeaderDark f={[3, 4]} letterSpacing={1}>
+                    DEDICATION
+                  </SubHeaderDark>
+                </Box>
                 <Text f={3}>
                   <p>
                     This site is dedicated to my mom and dad. To my dad because
@@ -67,7 +67,7 @@ export default class App extends React.Component {
                   </p>
                 </Text>
               </Box>
-              <Box w={175} ml="auto" align="right">
+              <Box my={3} mr={2} w={175} ml="auto" align="right">
                 <Img sizes={this.props.logo.sizes} />
               </Box>
             </Box>
