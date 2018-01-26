@@ -11,41 +11,48 @@ import XRay from "react-x-ray";
 import { Flex, Box, Heading, NavLink, Container, Absolute } from "rebass";
 import { ThemeProvider } from "emotion-theming";
 import theme from "../css/Theme";
+import HeaderLight from "../styled/HeaderLight";
+import SubHeaderLight from "../styled/SubHeaderLight";
 
 export default class Footer extends React.Component {
   render() {
     return (
-      <Flex>
-        <Box w={1}>
-          <Absolute z={-1} w={1}>
-            <Img
-              sizes={this.props.background.sizes}
-              className="footer-background"
-              backgroundColor="#99765E"
-            />
-          </Absolute>
-
-          <Element name="contact" />
-          <Container my={3} align="center">
-            <Box w={1} py={2}>
-              <Box>
-                <Heading align="left">
-                  <h1>CONTACT</h1>
-                  <h2> Message</h2>
-                </Heading>
+      <ThemeProvider theme={theme}>
+        <Flex>
+          <Box w={1}>
+            <Absolute z={-1} w={1}>
+              <Img
+                sizes={this.props.background.sizes}
+                className="footer-background"
+                backgroundColor="#99765E"
+              />
+            </Absolute>
+            <Element name="contact" />
+            <Container align="center">
+              <Box w={1} py={2}>
+                <Flex>
+                  <Heading align="left">
+                    <HeaderLight align="left" f={[5, 6]}>
+                      <Box>CONTACT</Box>
+                    </HeaderLight>
+                    <SubHeaderLight letterSpacing={1} f={[2, 3]}>
+                      <Box>Message</Box>
+                    </SubHeaderLight>
+                  </Heading>
+                </Flex>
+                <Flex wrap>
+                  <Box w={[1, 1 / 2]} m="auto">
+                    <ContactForm />
+                  </Box>
+                  <Box m="auto" w={[null, 1 / 2, 1 / 2, 1 / 2]}>
+                    <Img sizes={this.props.image.sizes} />
+                  </Box>
+                </Flex>
               </Box>
-              <Flex align="center">
-                <Box w={3 / 4}>
-                  <ContactForm />
-                </Box>
-                <Box m="auto" w={400}>
-                  <Img sizes={this.props.image.sizes} />
-                </Box>
-              </Flex>
-            </Box>
-          </Container>
-        </Box>
-      </Flex>
+            </Container>
+          </Box>
+        </Flex>
+      </ThemeProvider>
     );
   }
 }
