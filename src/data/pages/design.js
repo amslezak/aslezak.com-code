@@ -4,7 +4,7 @@ export const data = {
   pageSlug: "/design",
   headerTitle: "Philosophy",
   headerBody:
-    "Design is an experience.  It's about the emotion of taking pleasure in using and discovering.  So that's what I aim for - to make inviting apps you want to use.  Aren't apps are better when they're beautiful and simple?  Below are some of my Design tools.",
+    "Good design is about creating a lovely experience.  It's about enabling 'simple'.  And so I try to make apps you genuinely want to use.  Apps are better when they're beautiful & simple.  Below are some of my Design tools.",
   headerImage: "heroDesign",
   pageSections: [
     {
