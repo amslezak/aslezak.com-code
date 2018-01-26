@@ -9,33 +9,9 @@ import styled from "react-emotion";
 import { ThemeProvider } from "emotion-theming";
 import "../css/aslezak.scss";
 import theme from "../css/Theme";
-import { Flex, Box, Input, Label, Button, Textarea } from "rebass";
-
-const Header = styled.div`
-  h1 {
-    font-family: AvenirNext-Bold;
-    font-size: 48px;
-    color: #ffffff;
-    line-height: 63px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.47);
-  }
-
-  h2 {
-    text-transform: uppercase;
-    font-size: 18px;
-    font-weight: 500;
-    color: #e4e4e4;
-    letter-spacing: 1.5px;
-    line-height: 24px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.47);
-  }
-`;
-
-const FormWrapper = styled.div`
-  color: #e4e4e4;
-  letter-spacing: 0.5px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-`;
+import { Flex, Box, Input, Label, Textarea, Heading } from "rebass";
+import Button from "../styled/Button";
+import XRay from "react-x-ray";
 
 const EmailForm = props => {
   const {
@@ -51,73 +27,94 @@ const EmailForm = props => {
   } = props;
 
   return (
-    <Flex>
-      <Box width={1}>
+    <ThemeProvider theme={theme}>
+      <Flex column>
         <form onSubmit={handleSubmit}>
-          <Label for="name">Name</Label>
-          <Input
-            type="text"
-            name="name"
-            id="name"
-            value={values.name}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            className={
-              errors.name && touched.name ? "text-input error" : "text-input"
-            }
-            placeholder="Jane Appleseed"
-          />
-          {errors.name &&
-            touched.name && <div className="input-feedback">{errors.name}</div>}
+          <Box w={1}>
+            <Label f={2} color="#eee" pt={1} for="name">
+              Name
+            </Label>
+            <Input
+              type="text"
+              name="name"
+              id="name"
+              bg="#fff"
+              value={values.name}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              className={
+                errors.name && touched.name ? "text-input error" : "text-input"
+              }
+              placeholder="Jane Appleseed"
+            />
+            {errors.name &&
+              touched.name && (
+                <div className="input-feedback">{errors.name}</div>
+              )}
+          </Box>
 
-          <Label children="Email" for="email" />
-          <Input
-            type="email"
-            name="email"
-            id="exampleEmail"
-            value={values.email}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            className={
-              errors.email && touched.email ? "text-input error" : "text-input"
-            }
-            placeholder="jane@appleseed.com"
-          />
-          {errors.email &&
-            touched.email && (
-              <div className="input-feedback">{errors.email}</div>
-            )}
-          <Label children="Message" for="message" />
+          <Box w={1}>
+            <Label f={2} color="#eee" pt={1} children="Email" for="email" />
+            <Input
+              bg="#fff"
+              type="email"
+              name="email"
+              id="exampleEmail"
+              value={values.email}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              className={
+                errors.email && touched.email
+                  ? "text-input error"
+                  : "text-input"
+              }
+              placeholder="jane@appleseed.com"
+            />
+            {errors.email &&
+              touched.email && (
+                <div className="input-feedback">{errors.email}</div>
+              )}
+          </Box>
 
-          <Textarea
-            name="message"
-            id="message"
-            placeholder="Hi, Andy - let's work together!"
-            value={values.message}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            className={
-              errors.message && touched.message
-                ? "text-input error"
-                : "text-input"
-            }
-          />
-          {errors.message &&
-            touched.message && (
-              <div className="input-feedback">{errors.message}</div>
-            )}
-
-          <Button
-            children="SUBMIT"
-            type="submit"
-            title="Send"
-            onClick={handleSubmit}
-            block
-            disabled={isSubmitting}
-          />
+          <Box w={1}>
+            <Label f={2} color="#eee" pt={1} children="Message" for="message" />
+            <Textarea
+              bg="#fff"
+              name="message"
+              id="message"
+              placeholder="Hi, Andy - let's work together!"
+              value={values.message}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              className={
+                errors.message && touched.message
+                  ? "text-input error"
+                  : "text-input"
+              }
+            />
+            {errors.message &&
+              touched.message && (
+                <div className="input-feedback">{errors.message}</div>
+              )}
+          </Box>
+          <Box w={1} my={3}>
+            <Heading f={1} align="left">
+              <Button
+                borderRadius={4}
+                w={1}
+                py={2}
+                px={4}
+                title="Send"
+                onClick={handleSubmit}
+                disabled={isSubmitting}
+              >
+                Send
+              </Button>
+            </Heading>
+          </Box>
         </form>
-      </Box>
-    </Flex>
+      </Flex>
+    </ThemeProvider>
   );
 };
 
