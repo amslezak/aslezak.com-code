@@ -4,16 +4,17 @@ import styled from "react-emotion";
 import Img from "gatsby-image";
 import "react-tippy/dist/tippy.css";
 
-import IconWrapper from "../styled/IconWrapper";
-
 import { Tooltip } from "react-tippy";
 import Icon from "../styled/IconWrapper";
 import { ThemeProvider } from "emotion-theming";
 import theme from "../css/Theme";
 
 import { Flex, Box, Heading, Text, Container, Border, NavLink } from "rebass";
-import { flex, space, width, fontSize, color } from "styled-system";
 import XRay from "react-x-ray";
+
+import SectionHeader from "../styled/SectionHeader";
+import SectionSubHeader from "../styled/SectionSubHeader";
+import Paper from "../styled/Paper";
 
 export default class SkillWrapper extends React.Component {
   constructor(props) {
@@ -25,53 +26,66 @@ export default class SkillWrapper extends React.Component {
 
     this.skillItems = this.props.skillItems.map((item, index) => {
       return (
-        <Flex wrap>
-          <Container my={3} w={1} align="center">
-            <Flex>
+        <ThemeProvider theme={theme}>
+          <Flex wrap bg="#fff">
+            <Container my={[1, 3, 3, 4]} w={1} align="center">
               <Box w={1}>
-                <Heading
-                  children={item.sectionTitle}
-                  f={3}
-                  as="h1"
-                  align="left"
-                />
-
-                <Heading
-                  children={item.sectionSubtitle}
-                  f={1}
-                  as="h2"
-                  align="left"
-                />
-              </Box>
-            </Flex>
-
-            <Flex wrap>
-              {item.sectionItems.map(item => {
-                return (
-                  <Box mt={1} w={[1 / 2, 1 / 3, 1 / 4, 1 / 5]}>
-                    <Icon>
-                      <Img
-                        sizes={
-                          this.props.logos.edges.filter(skill => {
-                            let regex = new RegExp(item.itemImage);
-                            let img = regex.test(skill.node.sizes.src);
-                            return img;
-                          })[0].node.sizes
-                        }
-                      />
-                    </Icon>
-                    <Text f={2} children={item.itemTitle} />
+                <Flex wrap>
+                  <Box mb={1} w={1}>
+                    <Heading align="left">
+                      <Box>
+                        <SectionHeader letterSpacing={1.25} f={3}>
+                          {item.sectionTitle}
+                        </SectionHeader>
+                      </Box>
+                      <Box mt={-2}>
+                        <SectionSubHeader f={2} letterSpacing={1}>
+                          {item.sectionSubtitle}
+                        </SectionSubHeader>
+                      </Box>
+                    </Heading>
                   </Box>
-                );
-              })}
-            </Flex>
-          </Container>
-        </Flex>
+                </Flex>
+
+                <Flex wrap>
+                  {item.sectionItems.map(item => {
+                    return (
+                      <Box w={[1 / 2, 1 / 4, 1 / 4, 1 / 5]}>
+                        <Icon borderRadius={10} m={[2, 2]} p={[0, 1, 2, 2]}>
+                          <Img
+                            sizes={
+                              this.props.logos.edges.filter(skill => {
+                                let regex = new RegExp(item.itemImage);
+                                let img = regex.test(skill.node.sizes.src);
+                                return img;
+                              })[0].node.sizes
+                            }
+                          />
+                        </Icon>
+                        <Box m={2}>
+                          <Text f={2} children={item.itemTitle} />
+                        </Box>
+                      </Box>
+                    );
+                  })}
+                </Flex>
+              </Box>
+            </Container>
+          </Flex>
+        </ThemeProvider>
       );
     });
   }
 
   render() {
-    return <div>{this.skillItems}</div>;
+    return (
+      <Flex bg="#eee">
+        <Container w={1}>
+          <Paper w={1} my={[4, 4, 4, 4]} borderRadius={10}>
+            {this.skillItems}
+          </Paper>
+        </Container>
+      </Flex>
+    );
   }
 }
