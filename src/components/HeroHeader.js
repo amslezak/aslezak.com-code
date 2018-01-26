@@ -23,20 +23,22 @@ export default class HeroHeader extends React.Component {
           </Absolute>
 
           <Container w={1} my={3}>
-            <Flex align="center">
-              <Box width={1 / 2}>
+            <Flex align="center" wrap>
+              <Box width={[1 / 2]}>
                 <Flex column>
                   <Box>
-                    <HeaderLight f={[4, 5, 6]}>{this.props.title}</HeaderLight>
+                    <HeaderLight f={[5, 6, 7, 8]}>
+                      {this.props.title}
+                    </HeaderLight>
                   </Box>
                   <Box>
-                    <SubHeaderLight letterSpacing={1} f={[1, 2, 3]}>
+                    <SubHeaderLight letterSpacing={1} f={[1, 2, 3, 4]}>
                       {this.props.subtitle}
                     </SubHeaderLight>
                   </Box>
                 </Flex>
               </Box>
-              <Box width={1 / 2}>
+              <Box width={[1 / 2]}>
                 <Img
                   className="skill-image"
                   sizes={
