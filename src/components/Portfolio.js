@@ -31,10 +31,10 @@ export default class App extends React.Component {
               <Box w={1} py={2}>
                 <Heading align="left">
                   <Flex column>
-                    <HeaderLight letterSpacing f={6}>
+                    <HeaderLight letterSpacing f={[5, 6]}>
                       WORK
                     </HeaderLight>
-                    <SubHeaderLight letterSpacing={1} f={3}>
+                    <SubHeaderLight letterSpacing={1} f={[2, 3]}>
                       Projects
                     </SubHeaderLight>
                   </Flex>
