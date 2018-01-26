@@ -31,25 +31,21 @@ export default class Work extends React.Component {
                 sizes={this.props.background.sizes}
               />
             </Absolute>
-
             <Container align="center">
               <Box w={1} py={2}>
                 <Flex wrap>
                   <Box w={1}>
                     <Heading align="left">
-                      <Flex column>
-                        <Box>
-                          <HeaderLight f={6}>Skills</HeaderLight>
-                        </Box>
-                        <Box>
-                          <SubHeaderLight letterSpacing={1} f={3}>
-                            Capabilities
-                          </SubHeaderLight>
-                        </Box>
+                      <Flex wrap>
+                        <HeaderLight w={1} f={[5, 6]}>
+                          Skills
+                        </HeaderLight>
+                        <SubHeaderLight w={1} letterSpacing={1} f={[2, 3]}>
+                          Capabilities
+                        </SubHeaderLight>
                       </Flex>
                     </Heading>
                   </Box>
-
                   <Box w={[1 / 2]}>
                     <Link to={"/design"}>
                       <Img
@@ -61,7 +57,6 @@ export default class Work extends React.Component {
                       <Link to={"/design"}>Design</Link>
                     </LinkFancyLight>
                   </Box>
-
                   <Box w={[1 / 2]}>
                     <Link to={"/code"}>
                       <Img
@@ -73,7 +68,6 @@ export default class Work extends React.Component {
                       <Link to={"/code"}>Code</Link>
                     </LinkFancyLight>
                   </Box>
-
                   <Box w={[1 / 2]}>
                     <Link to={"/cloud"}>
                       <Img
@@ -81,12 +75,10 @@ export default class Work extends React.Component {
                         sizes={this.props.cloud.sizes}
                       />
                     </Link>
-
                     <LinkFancyLight f={[1, 3]} letterSpacing={2 * 0.75}>
                       <Link to={"/cloud"}>Cloud</Link>
                     </LinkFancyLight>
                   </Box>
-
                   <Box w={[1 / 2]}>
                     <Link to={"/iot"}>
                       <Img
@@ -94,7 +86,6 @@ export default class Work extends React.Component {
                         sizes={this.props.iot.sizes}
                       />
                     </Link>
-
                     <LinkFancyLight f={[1, 3]} letterSpacing={2 * 0.75}>
                       <Link to={"/iot"}>IoT</Link>
                     </LinkFancyLight>
