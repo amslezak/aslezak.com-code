@@ -3,7 +3,7 @@
 ## GLOBAL
 
 LinkNav
-Button
+x Button
 
 ## HOME
 
@@ -24,10 +24,7 @@ InputLight
 
 ## INNER
 
-InnerHeroLight1
-InnerHeroLight2
-
-InnerOverviewHeader
+x InnerOverviewHeader
 InnerOverBody
 
 SectionHeader
