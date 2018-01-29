@@ -71,22 +71,22 @@ export const query = graphql`
         ...GatsbyImageSharpSizes_withWebp
       }
     }
-    workDesign: imageSharp(id: { regex: "/work/design/" }) {
+    workDesign: imageSharp(id: { regex: "/design/heroDesign2.png/" }) {
       sizes(maxWidth: 960, quality: 100) {
         ...GatsbyImageSharpSizes_withWebp
       }
     }
-    workCode: imageSharp(id: { regex: "/work/code/" }) {
+    workCode: imageSharp(id: { regex: "/code/heroCode.png/" }) {
       sizes(maxWidth: 960, quality: 100) {
         ...GatsbyImageSharpSizes_withWebp
       }
     }
-    workCloud: imageSharp(id: { regex: "/work/cloud/" }) {
+    workCloud: imageSharp(id: { regex: "/cloud/heroCloud6.png/" }) {
       sizes(maxWidth: 960, quality: 100) {
         ...GatsbyImageSharpSizes_withWebp
       }
     }
-    workIoT: imageSharp(id: { regex: "/work/iot/" }) {
+    workIoT: imageSharp(id: { regex: "/iot/heroIot4.png/" }) {
       sizes(maxWidth: 960, quality: 100) {
         ...GatsbyImageSharpSizes_withWebp
       }
@@ -96,7 +96,7 @@ export const query = graphql`
         ...GatsbyImageSharpSizes_withWebp
       }
     }
-    footer: imageSharp(id: { regex: "/footer/typewriter8.png/" }) {
+    footer: imageSharp(id: { regex: "/footer/typewriter9.png/" }) {
       sizes(maxWidth: 960, quality: 100) {
         ...GatsbyImageSharpSizes_withWebp
       }
