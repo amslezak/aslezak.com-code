@@ -15,12 +15,22 @@ export default class App extends React.Component {
   render() {
     return (
       <Flex bg="#fff">
-        <Container>
-          <Box my={[3, 4]} px={[3, 4]} py={[3, 4]} w={1}>
-            <Heading f={4}>{this.props.quotes.quote}</Heading>
-            <Heading f={1} align="right" mt={3}>
-              {this.props.quotes.author}
-            </Heading>
+        <Container py={[3, 3]} my={[3, 4]}>
+          <Box my={4}>
+            <Box my={[3, 4]} px={[3, 4]} py={[3, 4]} w={1}>
+              <Heading f={4}>{this.props.quotes.quote}</Heading>
+              <Heading
+                f={[1, 2]}
+                align="right"
+                mt={3}
+                style={{
+                  textTransform: "uppercase",
+                  color: "#43A6B1"
+                }}
+              >
+                {this.props.quotes.author}
+              </Heading>
+            </Box>
           </Box>
         </Container>
       </Flex>
