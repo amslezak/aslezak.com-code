@@ -8,36 +8,63 @@ import theme from "../css/Theme";
 import { Flex, Box, Heading, Text, Container, Border, NavLink } from "rebass";
 import { flex, space, width, fontSize, color } from "styled-system";
 import XRay from "react-x-ray";
+import SectionHeader from "../styled/SectionHeader";
+import SectionSubHeader from "../styled/SectionSubHeader";
+import Paper from "../styled/Paper";
 
 class componentName extends Component {
   render() {
     return (
-      <Flex>
-        <Container my={3} w={1} align="center">
-          <Box w={1}>
-            <Heading children="Gallery" f={3} as="h1" align="left" />
-            <Heading children="Work" f={1} as="h2" align="left" />
+      <ThemeProvider theme={theme}>
+        <Flex bg="#eee">
+          <Container w={1} align="center">
+            <Paper w={1} my={[4, 4, 4, 4]} borderRadius={10}>
+              <Flex wrap bg="#fff">
+                <Container my={[3, 3, 3, 4]} w={1}>
+                  <Box w={1} mb={1}>
+                    <Heading align="left">
+                      <SectionHeader f={[3, 4]} letterSpacing={1.25}>
+                        <Box>Gallery</Box>
+                      </SectionHeader>
+                      <SectionSubHeader f={[2, 3]} letterSpacing={1}>
+                        <Box>Work</Box>
+                      </SectionSubHeader>
+                    </Heading>
 
-            <Flex wrap>
-              {this.props.data.map(item => {
-                let re = new RegExp(item.workImage);
-                return (
-                  <Box mx="auto" w={3 / 4} m={2} p={1}>
-                    <Heading children={item.workTitle} as="h1" m={2} />
-                    <Img
-                      sizes={
-                        this.props.portfolio.edges.filter(item => {
-                          return re.test(item.node.sizes.src);
-                        })[0].node.sizes
-                      }
-                    />
+                    <Flex wrap>
+                      {this.props.data.map(item => {
+                        let re = new RegExp(item.workImage);
+                        return (
+                          <Box w={1} mt={[3, 1]} mx={[0, 2]} p={[0, 3]}>
+                            <Heading
+                              f={[2, 3, 3, 4]}
+                              my={[1, 2]}
+                              style={{ textTransform: "uppercase" }}
+                            >
+                              <Box>{item.workTitle}</Box>
+                            </Heading>
+                            <Text color="#7d7d7d" f={[0, 2]} my={[1, 2]}>
+                              {item.workSubtitle}
+                            </Text>
+
+                            <Img
+                              sizes={
+                                this.props.portfolio.edges.filter(item => {
+                                  return re.test(item.node.sizes.src);
+                                })[0].node.sizes
+                              }
+                            />
+                          </Box>
+                        );
+                      })}
+                    </Flex>
                   </Box>
-                );
-              })}
-            </Flex>
-          </Box>
-        </Container>
-      </Flex>
+                </Container>
+              </Flex>
+            </Paper>
+          </Container>
+        </Flex>
+      </ThemeProvider>
     );
   }
 }
