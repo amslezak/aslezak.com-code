@@ -18,6 +18,9 @@
   top: 0;
   left: 0;
   right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
 }
 
 .homeHero-background {
@@ -53,4 +56,7 @@
   right: 0;
   width: auto;
   max-height: 650px;
+}
+
+.homeHero-overlay {
 }
