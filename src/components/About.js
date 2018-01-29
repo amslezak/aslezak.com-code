@@ -24,11 +24,11 @@ export default class App extends React.Component {
         <Flex bg="#fff" wrap column>
           <Container>
             <Box w={1}>
-              <Box my={3}>
-                <HeaderDark f={6}>Hello</HeaderDark>
+              <Box my={[2, 3]}>
+                <HeaderDark f={[5, 6]}>Hello</HeaderDark>
               </Box>
               <Box>
-                <Text f={3}>
+                <Text f={[2, 3]}>
                   <p>
                     I'm Andy. I'm a web developer. In a previous life, my best
                     friend and I started a company called CytexOne. It focused
@@ -54,12 +54,12 @@ export default class App extends React.Component {
                     me if we can work together.
                   </p>
                 </Text>
-                <Box my={3}>
+                <Box my={[2, 3]}>
                   <SubHeaderDark f={[3, 4]} letterSpacing={1}>
-                    DEDICATION
+                    A DEDICATION
                   </SubHeaderDark>
                 </Box>
-                <Text f={3}>
+                <Text f={[2, 3]}>
                   <p>
                     This site is dedicated to my mom and dad. To my dad because
                     he gave me the gifts of patience & learning. To my mom

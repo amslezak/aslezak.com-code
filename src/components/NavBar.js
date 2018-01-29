@@ -24,9 +24,8 @@ import styled from "react-emotion";
 import { Flex, Box, Heading, Text, Container, Border } from "rebass";
 
 const Logo = styled.div`
-  width: 150px;
-  margin: 0;
-  margin: 0 0 0 10px;
+  width: 104px;
+  margin: 0 0 0 16px;
   z-index: 4;
 `;
 

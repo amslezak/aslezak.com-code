@@ -38,3 +38,9 @@
   margin-top: -100px; /*same height as header*/
   visibility: hidden;
 }
+
+.navbar-light .navbar-nav .nav-link {
+  @media (max-width: 767px) {
+    margin-left: 20px;
+  }
+}
