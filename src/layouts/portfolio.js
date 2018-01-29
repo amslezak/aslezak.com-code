@@ -9,16 +9,19 @@ import backgroundWood from "../images/background-wood.jpg";
 import Footer from "../components/Footer";
 import FooterSub from "../components/FooterSub";
 import WorkItems from "../components/WorkItem";
-import "animate.css";
 import "../css/aslezak.scss";
 
 import { flex, space, width, fontSize, color } from "styled-system";
 import { Flex, Box, Heading, NavLink, Container, Absolute } from "rebass";
+import theme from "../css/Theme";
 import XRay from "react-x-ray";
+import { ThemeProvider } from "styled-components";
+import SectionHeader from "../styled/SectionHeader";
+import SectionSubHeader from "../styled/SectionSubHeader";
+import Paper from "../styled/Paper";
 
 const WorkWrapper = styled.div`
   background-color: #e0e0e0;
-  padding: 50px 0;
 `;
 export default class SkillPage extends React.Component {
   constructor(props) {
@@ -29,51 +32,53 @@ export default class SkillPage extends React.Component {
 
   render() {
     return (
-      <Flex column>
-        <Flex align="center">
-          <Box width={1}>
-            <HeroHeader
-              title={this.pageData.pageTitle}
-              subtitle={this.pageData.pageSubtitle}
-              image={this.props.data.heroCode}
-              heroImage={this.pageData.headerImage}
-              logos={this.props.data.logos}
+      <ThemeProvider theme={theme}>
+        <Flex column>
+          <Flex align="center">
+            <Box width={1}>
+              <HeroHeader
+                title={this.pageData.pageTitle}
+                subtitle={this.pageData.pageSubtitle}
+                image={this.props.data.heroCode}
+                heroImage={this.pageData.headerImage}
+                logos={this.props.data.logos}
+                background={this.props.data.bgWood}
+              />
+            </Box>
+          </Flex>
+          <Box>
+            <HeroOverview
+              title={this.pageData.headerTitle}
+              body={this.pageData.headerBody}
+            />
+          </Box>
+          <Box>
+            <WorkWrapper items={this.pageData}>
+              <WorkItems
+                data={this.pageData.pageSections}
+                portfolio={this.props.data.portfolio}
+              />
+            </WorkWrapper>
+          </Box>
+
+          <Box>
+            <About logo={this.props.data.logoSignature} />
+          </Box>
+          <Box>
+            <Footer
               background={this.props.data.bgWood}
+              image={this.props.data.footerTypewriter}
+            />
+          </Box>
+          <Box>
+            <FooterSub
+              twitter={this.props.data.socialTwitter}
+              github={this.props.data.socialGithub}
+              codewars={this.props.data.socialCodewars}
             />
           </Box>
         </Flex>
-        <Box>
-          <HeroOverview
-            title={this.pageData.headerTitle}
-            body={this.pageData.headerBody}
-          />
-        </Box>
-        <Box>
-          <WorkWrapper items={this.pageData}>
-            <WorkItems
-              data={this.pageData.pageSections}
-              portfolio={this.props.data.portfolio}
-            />
-          </WorkWrapper>
-        </Box>
-
-        <Box>
-          <About logo={this.props.data.logoSignature} />
-        </Box>
-        <Box>
-          <Footer
-            background={this.props.data.bgWood}
-            image={this.props.data.footerTypewriter}
-          />
-        </Box>
-        <Box>
-          <FooterSub
-            twitter={this.props.data.socialTwitter}
-            github={this.props.data.socialGithub}
-            codewars={this.props.data.socialCodewars}
-          />
-        </Box>
-      </Flex>
+      </ThemeProvider>
     );
   }
 }
