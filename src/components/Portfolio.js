@@ -40,16 +40,20 @@ export default class App extends React.Component {
                   </Flex>
                 </Heading>
 
-                <Link to={"/portfolio"}>
-                  <Img
-                    className="portfolio-image"
-                    sizes={this.props.image.sizes}
-                  />
-                </Link>
+                <Box px={[3, 2, 1, 1]}>
+                  <Link to={"/portfolio"}>
+                    <Img
+                      className="portfolio-image hvr-grow"
+                      sizes={this.props.image.sizes}
+                    />
+                  </Link>
+                </Box>
 
-                <LinkFancyLight f={[2, 3]} letterSpacing={2 * 0.75}>
-                  <Link to={"/portfolio"}>PORTFOLIO</Link>
-                </LinkFancyLight>
+                <Box mt={-2}>
+                  <LinkFancyLight f={[2, 3]} letterSpacing={1}>
+                    <Link to={"/portfolio"}>PORTFOLIO</Link>
+                  </LinkFancyLight>
+                </Box>
               </Box>
             </Container>
           </Box>
