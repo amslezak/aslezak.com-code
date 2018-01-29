@@ -45,11 +45,11 @@ export default class HeroOverview extends React.Component {
                 {this.props.body}
               </Text>
 
-              <Flex>
+              <Flex column>
                 <Box my={[3, 3, 3, 3]}>
                   <Link to="more" smooth={true} duration={500} offset={-25}>
                     <Button letterSpacing={1.25} borderRadius={4} p={[2]}>
-                      Learn More
+                      {this.props.button}
                     </Button>
                   </Link>
                 </Box>
