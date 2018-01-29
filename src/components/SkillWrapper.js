@@ -28,7 +28,7 @@ export default class SkillWrapper extends React.Component {
       return (
         <ThemeProvider theme={theme}>
           <Flex wrap bg="#fff">
-            <Container my={[1, 3, 3, 4]} w={1} align="center">
+            <Container my={[3, 3, 3, 4]} w={1} align="center">
               <Box w={1}>
                 <Flex wrap>
                   <Box mb={1} w={1}>
@@ -51,7 +51,7 @@ export default class SkillWrapper extends React.Component {
                   {item.sectionItems.map(item => {
                     return (
                       <Box w={[1 / 2, 1 / 4, 1 / 4, 1 / 5]}>
-                        <Icon borderRadius={10} m={[2, 2]} p={[0, 1, 2, 2]}>
+                        <Icon borderRadius={10} m={[2, 1]} p={[0, 1, 2, 0]}>
                           <Img
                             sizes={
                               this.props.logos.edges.filter(skill => {
@@ -62,8 +62,8 @@ export default class SkillWrapper extends React.Component {
                             }
                           />
                         </Icon>
-                        <Box m={2}>
-                          <Text f={2} children={item.itemTitle} />
+                        <Box>
+                          <Text mt={-2} f={1} children={item.itemTitle} />
                         </Box>
                       </Box>
                     );
