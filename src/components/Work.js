@@ -49,44 +49,44 @@ export default class Work extends React.Component {
                   <Box w={[1 / 2]}>
                     <Link to={"/design"}>
                       <Img
-                        className="work-image"
+                        className="work-image hvr-grow"
                         sizes={this.props.design.sizes}
                       />
                     </Link>
-                    <LinkFancyLight f={[1, 3]} letterSpacing={2 * 0.75}>
+                    <LinkFancyLight f={[1, 3]} letterSpacing={1}>
                       <Link to={"/design"}>Design</Link>
                     </LinkFancyLight>
                   </Box>
                   <Box w={[1 / 2]}>
                     <Link to={"/code"}>
                       <Img
-                        className="work-image"
+                        className="work-image hvr-grow"
                         sizes={this.props.code.sizes}
                       />
                     </Link>
-                    <LinkFancyLight f={[1, 3]} letterSpacing={2 * 0.75}>
+                    <LinkFancyLight f={[1, 3]} letterSpacing={1}>
                       <Link to={"/code"}>Code</Link>
                     </LinkFancyLight>
                   </Box>
                   <Box w={[1 / 2]}>
                     <Link to={"/cloud"}>
                       <Img
-                        className="work-image"
+                        className="work-image hvr-grow"
                         sizes={this.props.cloud.sizes}
                       />
                     </Link>
-                    <LinkFancyLight f={[1, 3]} letterSpacing={2 * 0.75}>
+                    <LinkFancyLight f={[1, 3]} letterSpacing={1}>
                       <Link to={"/cloud"}>Cloud</Link>
                     </LinkFancyLight>
                   </Box>
                   <Box w={[1 / 2]}>
                     <Link to={"/iot"}>
                       <Img
-                        className="work-image"
+                        className="work-image hvr-grow"
                         sizes={this.props.iot.sizes}
                       />
                     </Link>
-                    <LinkFancyLight f={[1, 3]} letterSpacing={2 * 0.75}>
+                    <LinkFancyLight f={[1, 3]} letterSpacing={1}>
                       <Link to={"/iot"}>IoT</Link>
                     </LinkFancyLight>
                   </Box>
