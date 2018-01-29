@@ -19,19 +19,19 @@ export default class App extends React.Component {
   render() {
     return (
       <Flex bg="#fff" column>
-        <Container w={1} align="right">
-          <Box py={2}>
-            <Grid w={50} mx={2}>
+        <Container w={1} align="center">
+          <Box my={[1, 1, 1, 1]} py={2}>
+            <Grid w={75} mx={[1, 2, 3, 3]}>
               <a href="https://twitter.com/aslezak">
                 <Img className="social-img" sizes={this.props.twitter.sizes} />
               </a>
             </Grid>
-            <Grid w={50} mx={2}>
+            <Grid w={75} mx={[1, 2, 3, 3]}>
               <a href="https://www.github.com/amslezak">
                 <Img className="social-img" sizes={this.props.github.sizes} />
               </a>
             </Grid>
-            <Grid w={50} mx={2}>
+            <Grid w={75} mx={[1, 2, 3, 3]}>
               <a href="https://www.codewars.com/users/aslezak">
                 <Img className="social-img" sizes={this.props.codewars.sizes} />
               </a>
