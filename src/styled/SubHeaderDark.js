@@ -1,5 +1,4 @@
 import styled from "react-emotion";
-import Heading from "rebass";
 import {
   space,
   width,
@@ -8,7 +7,7 @@ import {
   lineHeight
 } from "styled-system";
 
-const Component = styled.Heading`
+const Component = styled.span`
   ${space};
   ${width};
   ${fontSize};

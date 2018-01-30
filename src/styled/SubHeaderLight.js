@@ -1,5 +1,4 @@
 import styled from "react-emotion";
-import Heading from "rebass";
 import {
   space,
   width,
@@ -9,14 +8,14 @@ import {
   alignSelf
 } from "styled-system";
 
-const Component = styled.Heading`
+const Component = styled.span`
   ${space};
   ${width};
   ${fontSize};
   ${letterSpacing};
   ${lineHeight};
   ${alignSelf};
-  text-transform: uppercase;
+  text-transform: sentence;
   font-family: ${props => props.theme.subHeaderLight.font};
   font-weight: ${props => props.theme.subHeaderLight.fontWeight};
   color: ${props => props.theme.subHeaderLight.color};

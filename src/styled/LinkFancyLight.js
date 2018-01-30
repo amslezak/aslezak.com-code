@@ -10,7 +10,7 @@ import {
   alignSelf
 } from "styled-system";
 
-const Component = styled.Heading`
+const Component = styled.span`
   ${space};
   ${width};
   ${fontSize};

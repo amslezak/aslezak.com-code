@@ -1,5 +1,4 @@
 import styled from "react-emotion";
-import Button from "rebass";
 import {
   space,
   width,

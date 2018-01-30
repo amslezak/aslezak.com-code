@@ -1,13 +1,11 @@
 import styled from "react-emotion";
 
-const ContactLink = styled.a`
+const ContactLink = styled.span`
   font-weight: 600;
   cursor: pointer;
-  transition-duration: 0.2s;
-  text-decoration: underline;
+  text-decoration: none;
 
   &:hover {
-    transition-duration: 0.2s;
     text-decoration: underline;
   }
 `;
