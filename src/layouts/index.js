@@ -44,7 +44,7 @@ export const query = graphql`
   query NavBarQuery {
     logoAslezak: imageSharp(id: { regex: "/logo_aslezak15.png/g" }) {
       sizes(maxWidth: 480) {
-        ...GatsbyImageSharpSizes_withWebp
+        ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }
   }

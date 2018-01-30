@@ -17,7 +17,6 @@ import "../css/aslezak.scss";
 export default class SkillPage extends React.Component {
   constructor(props) {
     super(props);
-
     if (this.props.data) {
       this.pageData = this.props.data.allJsFrontmatter.edges[0].node.data;
     }
@@ -42,6 +41,8 @@ export default class SkillPage extends React.Component {
           <HeroOverview
             title={this.pageData.headerTitle}
             body={this.pageData.headerBody}
+            button={this.pageData.buttonText}
+            subTitle={this.pageData.headerSubTitle}
           />
         </Box>
         <Box>
@@ -83,6 +84,8 @@ export const query = graphql`
             headerTitle
             headerBody
             headerImage
+            headerSubTitle
+            buttonText
             pageSections {
               sectionTitle
               sectionSubtitle
@@ -98,51 +101,51 @@ export const query = graphql`
     }
     heroCode: imageSharp(id: { regex: "/heroCode.png/" }) {
       sizes(maxWidth: 1600) {
-        ...GatsbyImageSharpSizes
+        ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }
     logos: allImageSharp(filter: { id: { regex: "/skills/" } }) {
       edges {
         node {
           sizes(maxWidth: 480, quality: 80) {
-            ...GatsbyImageSharpSizes
+            ...GatsbyImageSharpSizes_withWebp_noBase64
           }
         }
       }
     }
     logoSignature: imageSharp(id: { regex: "/logoSignature/" }) {
       sizes(maxWidth: 480) {
-        ...GatsbyImageSharpSizes
+        ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }
     footerTypewriter: imageSharp(id: { regex: "footer/typewriter/" }) {
       sizes(maxWidth: 480) {
-        ...GatsbyImageSharpSizes
+        ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }
     bgWood: imageSharp(id: { regex: "/background-wood.jpg/" }) {
       sizes(maxWidth: 2560, quality: 90) {
-        ...GatsbyImageSharpSizes
+        ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }
     social: imageSharp(id: { regex: "/footer/social/" }) {
       sizes(maxWidth: 359) {
-        ...GatsbyImageSharpSizes
+        ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }
     socialTwitter: imageSharp(id: { regex: "/footer/logoTwitter/" }) {
       sizes(maxWidth: 128, quality: 95) {
-        ...GatsbyImageSharpSizes
+        ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }
     socialGithub: imageSharp(id: { regex: "/footer/logoGithub/" }) {
       sizes(maxWidth: 128, quality: 95) {
-        ...GatsbyImageSharpSizes
+        ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }
     socialCodewars: imageSharp(id: { regex: "/footer/logoCodewars/" }) {
       sizes(maxWidth: 128, quality: 95) {
-        ...GatsbyImageSharpSizes
+        ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }
   }
