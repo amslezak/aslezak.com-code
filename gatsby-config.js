@@ -7,6 +7,7 @@ module.exports = {
     `gatsby-plugin-emotion`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-purify-css`,
     `gatsby-plugin-react-next`,
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
@@ -36,8 +37,22 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Arvo`, `Montserrat:700`]
+        fonts: [`Arvo:400`]
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-113297020-1`
+      }
+    },
+    `gatsby-plugin-netlify`
   ]
 };
+
+// {
+//   resolve: `gatsby-plugin-postcss-sass`,
+//   options: {
+//     postCssPlugins: [require("postcss-import")(), require("autoprefixer")()]
+//   }
+// }
