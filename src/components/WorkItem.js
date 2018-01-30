@@ -5,8 +5,16 @@ import { Tooltip } from "react-tippy";
 
 import { ThemeProvider } from "emotion-theming";
 import theme from "../css/Theme";
-import { Flex, Box, Heading, Text, Container, Border, NavLink } from "rebass";
-import { flex, space, width, fontSize, color } from "styled-system";
+import {
+  Flex,
+  Subhead,
+  Box,
+  Heading,
+  Text,
+  Container,
+  Border,
+  NavLink
+} from "rebass";
 import XRay from "react-x-ray";
 import SectionHeader from "../styled/SectionHeader";
 import SectionSubHeader from "../styled/SectionSubHeader";
@@ -22,27 +30,33 @@ class componentName extends Component {
               <Flex wrap bg="#fff">
                 <Container my={[3, 3, 3, 4]} w={1}>
                   <Box w={1} mb={1}>
-                    <Heading align="left">
+                    <Subhead align="left">
                       <SectionHeader f={[3, 4]} letterSpacing={1.25}>
                         <Box>Gallery</Box>
                       </SectionHeader>
                       <SectionSubHeader f={[2, 3]} letterSpacing={1}>
                         <Box>Work</Box>
                       </SectionSubHeader>
-                    </Heading>
+                    </Subhead>
 
                     <Flex wrap>
-                      {this.props.data.map(item => {
+                      {this.props.data.map((item, index) => {
                         let re = new RegExp(item.workImage);
                         return (
-                          <Box w={1} mt={[3, 1]} mx={[0, 2]} p={[0, 3]}>
-                            <Heading
+                          <Box
+                            key={index}
+                            w={1}
+                            mt={[3, 1]}
+                            mx={[0, 2]}
+                            p={[0, 3]}
+                          >
+                            <Subhead
                               f={[2, 3, 3, 4]}
                               my={[1, 2]}
                               style={{ textTransform: "uppercase" }}
                             >
                               <Box>{item.workTitle}</Box>
-                            </Heading>
+                            </Subhead>
                             <Text color="#7d7d7d" f={[0, 2]} my={[1, 2]}>
                               {item.workSubtitle}
                             </Text>

@@ -5,7 +5,15 @@ import "../css/aslezak.scss";
 
 import { ThemeProvider } from "emotion-theming";
 import theme from "../css/Theme";
-import { Flex, Box, Heading, Absolute, Container, Relative } from "rebass";
+import {
+  Flex,
+  Subhead,
+  Box,
+  Heading,
+  Absolute,
+  Container,
+  Relative
+} from "rebass";
 import XRay from "react-x-ray";
 
 import HomeHeroHeaderLight1 from "../styled/HomeHeroHeaderLight1";
@@ -31,11 +39,11 @@ export default class componentName extends Component {
                 <Container w={1} align="center" mt={3}>
                   <Box w={1}>
                     <Flex column>
-                      <Heading pt={[0, 3, 3, 4]} w={1}>
+                      <Subhead pt={[0, 3, 3, 4]} w={1}>
                         <HomeHeroHeaderLight1
                           f={[5, 6, 6, 7]}
                           letterSpacing={1}
-                          lineHeight={1 * 1.5}
+                          lineheight={1 * 1.5}
                         >
                           <Box mb={[0, 0, 0, 0]}>Andy Slezak</Box>
                         </HomeHeroHeaderLight1>
@@ -43,12 +51,12 @@ export default class componentName extends Component {
                           <HomeHeroSubHeaderLight
                             f={[4, 4, 4, 5]}
                             letterSpacing={1}
-                            lineHeight={1 * 1.25}
+                            lineheight={1 * 1.25}
                           >
-                            <Box>design & code smart web apps</Box>
+                            <Box>Design & code smart web apps 📱</Box>
                           </HomeHeroSubHeaderLight>
                         </Box>
-                      </Heading>
+                      </Subhead>
                     </Flex>
                   </Box>
                 </Container>

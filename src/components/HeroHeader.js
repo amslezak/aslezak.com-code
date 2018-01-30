@@ -32,7 +32,7 @@ export default class HeroHeader extends React.Component {
                     </HeaderLight>
                   </Box>
                   <Box>
-                    <SubHeaderLight letterSpacing={1} f={[1, 2, 3, 4]}>
+                    <SubHeaderLight letterSpacing={1} f={[1, 3, 3, 4]}>
                       {this.props.subtitle}
                     </SubHeaderLight>
                   </Box>

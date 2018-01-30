@@ -9,7 +9,16 @@ import Icon from "../styled/IconWrapper";
 import { ThemeProvider } from "emotion-theming";
 import theme from "../css/Theme";
 
-import { Flex, Box, Heading, Text, Container, Border, NavLink } from "rebass";
+import {
+  Flex,
+  Subhead,
+  Box,
+  Heading,
+  Text,
+  Container,
+  Border,
+  NavLink
+} from "rebass";
 import XRay from "react-x-ray";
 
 import SectionHeader from "../styled/SectionHeader";
@@ -26,10 +35,10 @@ export default class SkillWrapper extends React.Component {
 
     this.skillItems = this.props.skillItems.map((item, index) => {
       return (
-        <ThemeProvider theme={theme}>
+        <ThemeProvider key={index} theme={theme}>
           <Flex wrap bg="#fff">
             <Container my={[3, 3, 3, 4]} w={1} align="center">
-              <Box w={1}>
+              <Box key={index} w={1}>
                 <Flex wrap>
                   <Box mb={1} w={1}>
                     <Heading align="left">
@@ -48,9 +57,9 @@ export default class SkillWrapper extends React.Component {
                 </Flex>
 
                 <Flex wrap>
-                  {item.sectionItems.map(item => {
+                  {item.sectionItems.map((item, index) => {
                     return (
-                      <Box w={[1 / 2, 1 / 4, 1 / 4, 1 / 5]}>
+                      <Box key={index} w={[1 / 2, 1 / 4, 1 / 4, 1 / 5]}>
                         <Icon borderRadius={10} m={[2, 1]} p={[0, 1, 2, 0]}>
                           <Img
                             sizes={

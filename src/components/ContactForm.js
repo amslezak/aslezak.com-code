@@ -9,7 +9,7 @@ import styled from "react-emotion";
 import { ThemeProvider } from "emotion-theming";
 import "../css/aslezak.scss";
 import theme from "../css/Theme";
-import { Flex, Box, Input, Label, Textarea, Heading } from "rebass";
+import { Flex, Subhead, Box, Input, Label, Textarea, Heading } from "rebass";
 import Button from "../styled/Button";
 import XRay from "react-x-ray";
 
@@ -31,11 +31,12 @@ const EmailForm = props => {
       <Flex column>
         <form onSubmit={handleSubmit}>
           <Box w={1}>
-            <Label f={2} color="#eee" pt={1} for="name">
+            <Label f={2} color="#eee" pt={1}>
               Name
             </Label>
             <Input
               type="text"
+              autoComplete="name"
               name="name"
               id="name"
               bg="#fff"
@@ -54,8 +55,9 @@ const EmailForm = props => {
           </Box>
 
           <Box w={1}>
-            <Label f={2} color="#eee" pt={1} children="Email" for="email" />
+            <Label f={2} color="#eee" pt={1} children="Email" />
             <Input
+              autoComplete="email"
               bg="#fff"
               type="email"
               name="email"
@@ -77,7 +79,7 @@ const EmailForm = props => {
           </Box>
 
           <Box w={1}>
-            <Label f={2} color="#eee" pt={1} children="Message" for="message" />
+            <Label f={2} color="#eee" pt={1} children="Message" />
             <Textarea
               bg="#fff"
               name="message"
@@ -98,7 +100,7 @@ const EmailForm = props => {
               )}
           </Box>
           <Box w={1} my={3}>
-            <Heading f={1} align="left">
+            <Subhead f={1} align="left">
               <Button
                 borderRadius={4}
                 w={1}
@@ -110,7 +112,7 @@ const EmailForm = props => {
               >
                 Send
               </Button>
-            </Heading>
+            </Subhead>
           </Box>
         </form>
       </Flex>
@@ -131,12 +133,7 @@ const EnhancedForm = withFormik({
       .required("Email is required"),
     message: Yup.string().required("Message required")
   }),
-  handleSubmit: (values, { setSubmitting }) => {
-    setTimeout(() => {
-      alert("Thanks for writing.  Your message has been sent to Andy!");
-      setSubmitting(false);
-    }, 250);
-
+  handleSubmit: (values, { setSubmitting, resetForm }) => {
     var data = {
       from: values.name,
       email: values.email,
@@ -151,6 +148,11 @@ const EnhancedForm = withFormik({
     })
       .then(res => res.json())
       .catch(err => console.log(err));
+
+    setTimeout(() => {
+      alert("Thanks for writing.  Your message has been sent to Andy!");
+      setSubmitting(false);
+    }, 500);
   }
 })(EmailForm);
 

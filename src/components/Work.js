@@ -6,7 +6,16 @@ import styled from "react-emotion";
 import { ThemeProvider } from "emotion-theming";
 
 import theme from "../css/Theme";
-import { Flex, Box, Heading, Text, Container, Border, Absolute } from "rebass";
+import {
+  Flex,
+  Subhead,
+  Box,
+  Heading,
+  Text,
+  Container,
+  Border,
+  Absolute
+} from "rebass";
 import XRay from "react-x-ray";
 
 import HeaderLight from "../styled/HeaderLight";
@@ -35,7 +44,7 @@ export default class Work extends React.Component {
               <Box w={1} py={2}>
                 <Flex wrap>
                   <Box w={1}>
-                    <Heading align="left">
+                    <Subhead align="left">
                       <Flex wrap>
                         <HeaderLight w={1} f={[5, 6]}>
                           Skills
@@ -44,7 +53,7 @@ export default class Work extends React.Component {
                           Capabilities
                         </SubHeaderLight>
                       </Flex>
-                    </Heading>
+                    </Subhead>
                   </Box>
                   <Box w={[1 / 2]}>
                     <Link to={"/design"}>

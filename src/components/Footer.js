@@ -8,7 +8,15 @@ import { Element } from "react-scroll";
 
 import XRay from "react-x-ray";
 // Styled Components
-import { Flex, Box, Heading, NavLink, Container, Absolute } from "rebass";
+import {
+  Flex,
+  Subhead,
+  Box,
+  Heading,
+  NavLink,
+  Container,
+  Absolute
+} from "rebass";
 import { ThemeProvider } from "emotion-theming";
 import theme from "../css/Theme";
 import HeaderLight from "../styled/HeaderLight";
@@ -31,14 +39,14 @@ export default class Footer extends React.Component {
             <Container align="center">
               <Box w={1} py={2}>
                 <Flex>
-                  <Heading align="left">
+                  <Subhead align="left">
                     <HeaderLight align="left" f={[5, 6]}>
                       <Box>CONTACT</Box>
                     </HeaderLight>
                     <SubHeaderLight letterSpacing={1} f={[2, 3]}>
                       <Box>Message</Box>
                     </SubHeaderLight>
-                  </Heading>
+                  </Subhead>
                 </Flex>
                 <Flex wrap>
                   <Box w={[1, 1 / 2]} m="auto">

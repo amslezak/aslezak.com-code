@@ -3,7 +3,7 @@ import styled from "react-emotion";
 
 import { ThemeProvider } from "emotion-theming";
 import theme from "../css/Theme";
-import { Flex, Box, Heading, Text, Container } from "rebass";
+import { Flex, Subhead, Box, Heading, Text, Container } from "rebass";
 import XRay from "react-x-ray";
 const Wrapper = styled.div``;
 
@@ -18,8 +18,8 @@ export default class App extends React.Component {
         <Container py={[3, 3]} my={[3, 4]}>
           <Box my={4}>
             <Box my={[3, 4]} px={[3, 4]} py={[3, 4]} w={1}>
-              <Heading f={4}>{this.props.quotes.quote}</Heading>
-              <Heading
+              <Subhead f={4}>{this.props.quotes.quote}</Subhead>
+              <Subhead
                 f={[1, 2]}
                 align="right"
                 mt={3}
@@ -29,7 +29,7 @@ export default class App extends React.Component {
                 }}
               >
                 {this.props.quotes.author}
-              </Heading>
+              </Subhead>
             </Box>
           </Box>
         </Container>

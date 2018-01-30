@@ -5,7 +5,7 @@ import Img from "gatsby-image";
 import styled from "react-emotion";
 import { ThemeProvider } from "emotion-theming";
 
-import { Flex, Heading, Box, Container, Absolute } from "rebass";
+import { Flex, Subhead, Heading, Box, Container, Absolute } from "rebass";
 import XRay from "react-x-ray";
 import theme from "../css/Theme";
 import "../css/aslezak.scss";
@@ -29,16 +29,16 @@ export default class App extends React.Component {
 
             <Container align="center">
               <Box w={1} py={2}>
-                <Heading align="left">
+                <Subhead align="left">
                   <Flex column>
-                    <HeaderLight letterSpacing f={[5, 6]}>
+                    <HeaderLight letterSpacing={1} f={[5, 6]}>
                       WORK
                     </HeaderLight>
                     <SubHeaderLight letterSpacing={1} f={[2, 3]}>
                       Projects
                     </SubHeaderLight>
                   </Flex>
-                </Heading>
+                </Subhead>
 
                 <Box px={[3, 2, 1, 1]}>
                   <Link to={"/portfolio"}>
