@@ -1,10 +1,12 @@
 export const data = {
   pageTitle: "About",
-  pageSubtitle: "A little personal",
+  pageSubtitle: "A little personal 👨🏼‍🏫",
   pageSlug: "/about",
   headerTitle: "WELCOME",
   headerBody:
-    "I'm a self-taught full-stack developer.  I love to learn and make the world a better place.  My hero is Leonardo Da Vinci.  I like to laugh and collaborate.  People like to ask me for directions.  I wear glasses, and I'm blonde.  I am currently available for both full-time and contract work.  Below you'll find a little more about me.",
+    "I'm a self-taught full-stack developer.  I love to learn and make the world a better place.  My hero is Leonardo Da Vinci.  I like to laugh and collaborate.  People like to ask me for directions.  I wear glasses, and I'm blonde.  I am currently available for both full-time and contract work.  ",
+  buttonText: "My Interests",
+  headerSubTitle: "Below are some of my Code Tools",
   headerImage: "heroAbout",
   pageSections: [
     {
@@ -45,6 +47,16 @@ export const data = {
           itemTitle: "Creativity",
           itemSubtitle: "Taking an idea bringing it to life",
           itemImage: "logoCreativity"
+        },
+        {
+          itemTitle: "Culture",
+          itemSubtitle: "Music, Travel, People",
+          itemImage: "logoCulture"
+        },
+        {
+          itemTitle: "Cats",
+          itemSubtitle: "All Cuddly Creatures",
+          itemImage: "logoCats"
         }
       ]
     },

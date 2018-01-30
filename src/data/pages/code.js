@@ -1,10 +1,12 @@
 export const data = {
   pageTitle: "Code",
-  pageSubtitle: "Magic made with open source",
+  pageSubtitle: "Open source is magical 🔮",
   pageSlug: "/code",
-  headerTitle: "Overview",
+  headerTitle: "Logical",
   headerBody:
-    "Code is a recently discovered love of mine.  Little did I know I approached life in a manner that was already 'coding'.  I found that if I took basic logic, and mapped out every step of the way, then I could make some powerful programs.  When I coupled these powerful essentials with powerful coding tools, I could create some magical apps.  I'd love to work with you and create magical apps together.  Below are some of my Code tools.",
+    "Code is a recently discovered love.  Little did I know I approached life in a manner that was already coding.  When I took basic logic and mapped out each step of the way, they became powerful programs.  If I added coding frameworks & tools, then magical apps became real.  I'd love to work with you and create magical apps together.",
+  headerSubTitle: "Below are some of my Code Tools",
+  buttonText: "Code Tools",
   headerImage: "heroCode",
   pageSections: [
     {

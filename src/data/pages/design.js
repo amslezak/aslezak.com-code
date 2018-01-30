@@ -1,10 +1,12 @@
 export const data = {
   pageTitle: "Design",
-  pageSubtitle: "Web apps your mom would love",
+  pageSubtitle: "Web apps mom would love ❤️️",
   pageSlug: "/design",
   headerTitle: "Philosophy",
   headerBody:
-    "Good design is an engaging experience.I try to make apps you genuinely want to use.  They're better when they're clean & simple.  Below are some of my Design tools.",
+    "Good apps are better when they're clean & simple.  They enable the end-user to intuitively know where to click next.  They work with you, and are frictionless.  I strive to make apps you genuinely want to use.  Good design is the most engaging experience.",
+  buttonText: "Design Tools",
+  headerSubTitle: "Below are some of my Code Tools",
   headerImage: "heroDesign",
   pageSections: [
     {

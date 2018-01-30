@@ -1,12 +1,14 @@
 export const data = {
   pageTitle: "Portfolio",
-  pageSubtitle: "Some of my work",
+  pageSubtitle: "Some of my work 👨‍🎨",
   pageSlug: "/portfolio",
   headerTitle: "Experience",
   headerBody:
     "I've been lucky to take part in many exciting projects over the years.  Everything from programming, to devops, to graphic design.  The key lesson I've learned is it is important to understand all the pieces.  When we know how each piece connects, the pieces align more smoothly.  The end-user can feel that smoothness.  This translates into an enjoyable experience, and joy is always a success.",
 
   headerImage: "heroPortfolio",
+  headerSubTitle: "Below are some of my Code Tools",
+  buttonText: "My Work",
   pageSections: [
     {
       workTitle: "Web App",
