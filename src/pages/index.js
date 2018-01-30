@@ -58,68 +58,68 @@ export const query = graphql`
   query HomePageQuery {
     background: imageSharp(id: { regex: "/heroImg.jpg/" }) {
       sizes(maxWidth: 1800, quality: 100) {
-        ...GatsbyImageSharpSizes
+        ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }
     gear: imageSharp(id: { regex: "/gear.png/" }) {
       sizes(maxWidth: 2560, quality: 100) {
-        ...GatsbyImageSharpSizes_withWebp
+        ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }
     bgWood: imageSharp(id: { regex: "/background-wood.jpg/" }) {
       sizes(maxWidth: 2560, quality: 100) {
-        ...GatsbyImageSharpSizes_withWebp
+        ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }
     workDesign: imageSharp(id: { regex: "/design/heroDesign2.png/" }) {
       sizes(maxWidth: 960, quality: 100) {
-        ...GatsbyImageSharpSizes_withWebp
+        ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }
     workCode: imageSharp(id: { regex: "/code/heroCode.png/" }) {
       sizes(maxWidth: 960, quality: 100) {
-        ...GatsbyImageSharpSizes_withWebp
+        ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }
     workCloud: imageSharp(id: { regex: "/cloud/heroCloud6.png/" }) {
       sizes(maxWidth: 960, quality: 100) {
-        ...GatsbyImageSharpSizes_withWebp
+        ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }
     workIoT: imageSharp(id: { regex: "/iot/heroIot4.png/" }) {
       sizes(maxWidth: 960, quality: 100) {
-        ...GatsbyImageSharpSizes_withWebp
+        ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }
     portfolio: imageSharp(id: { regex: "/heroPortfolio2/" }) {
       sizes(maxWidth: 960, quality: 100) {
-        ...GatsbyImageSharpSizes_withWebp
+        ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }
     footer: imageSharp(id: { regex: "/footer/typewriter9.png/" }) {
       sizes(maxWidth: 960, quality: 100) {
-        ...GatsbyImageSharpSizes_withWebp
+        ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }
     socialTwitter: imageSharp(id: { regex: "/footer/logoTwitter/" }) {
       sizes(maxWidth: 128, quality: 95) {
-        ...GatsbyImageSharpSizes_withWebp
+        ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }
     socialGithub: imageSharp(id: { regex: "/footer/logoGithub/" }) {
       sizes(maxWidth: 128, quality: 95) {
-        ...GatsbyImageSharpSizes_withWebp
+        ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }
     socialCodewars: imageSharp(id: { regex: "/footer/logoCodewars/" }) {
       sizes(maxWidth: 128, quality: 95) {
-        ...GatsbyImageSharpSizes_withWebp
+        ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }
 
     logoSignature: imageSharp(id: { regex: "/logoSignature/" }) {
       sizes(maxWidth: 480) {
-        ...GatsbyImageSharpSizes_withWebp_tracedSVG
+        ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }
     quotes: allJsFrontmatter(filter: { id: { regex: "/quotes/" } }) {
