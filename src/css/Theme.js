@@ -14,7 +14,8 @@ const theme = {
   },
   subHeaderLight: {
     color: "#eee",
-    fontWeight: 500
+    fontWeight: 300,
+    font: 'Arvo, "Avenir Next", Helvetica, sans-serif'
   },
   button: {
     backgroundColor: "#6859b2",
