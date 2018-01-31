@@ -41,18 +41,18 @@ export default class SkillWrapper extends React.Component {
               <Box key={index} w={1}>
                 <Flex wrap>
                   <Box mb={1} w={1}>
-                    <Heading align="left">
+                    <Subhead align="left">
                       <Box>
                         <SectionHeader letterSpacing={1.25} f={3}>
                           {item.sectionTitle}
                         </SectionHeader>
                       </Box>
-                      <Box mt={-2}>
+                      <Box mt={-1}>
                         <SectionSubHeader f={2} letterSpacing={1}>
                           {item.sectionSubtitle}
                         </SectionSubHeader>
                       </Box>
-                    </Heading>
+                    </Subhead>
                   </Box>
                 </Flex>
 
