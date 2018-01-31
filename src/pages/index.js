@@ -58,10 +58,10 @@ export const query = graphql`
   query HomePageQuery {
     background: imageSharp(id: { regex: "/heroImg.jpg/" }) {
       sizes(maxWidth: 1800, quality: 100) {
-        ...GatsbyImageSharpSizes_withWebp_noBase64
+        ...GatsbyImageSharpSizes_withWebp_tracedSVG
       }
     }
-    gear: imageSharp(id: { regex: "/gear.png/" }) {
+    gear: imageSharp(id: { regex: "/gear9.png/" }) {
       sizes(maxWidth: 2560, quality: 100) {
         ...GatsbyImageSharpSizes_withWebp_noBase64
       }
