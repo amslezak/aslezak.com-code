@@ -1,8 +1,8 @@
 export const data = {
   pageTitle: "Cloud",
-  pageSubtitle: "Where design & code meet",
+  pageSubtitle: "Deploying smart apps globally",
   pageSlug: "/cloud",
-  headerTitle: "Infrastructure",
+  headerTitle: "Infrastructure & Tools",
   headerBody:
     "Cloud apps have allowed for a whole new level of creativity.  I couldn't imagine building any other way.  Designing & coding on a laptop, then deploying to a global infrastructure.  There's something very powerful about taking an idea and making it available globally in seconds.  That is the power of the cloud.",
   headerSubTitle: "Below are some of my Code Tools",
