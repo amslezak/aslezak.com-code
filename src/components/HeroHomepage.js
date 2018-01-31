@@ -36,10 +36,10 @@ export default class componentName extends Component {
 
             <Relative w={1}>
               <Absolute w={1} z={2}>
-                <Container w={1} align="center" mt={3}>
+                <Container w={1} align="center">
                   <Box w={1}>
                     <Flex column>
-                      <Subhead pt={[0, 3, 3, 4]} w={1}>
+                      <Subhead pt={[0, 3, 3, 4]} w={1} pt={[3, 4]}>
                         <HomeHeroHeaderLight1
                           f={[5, 6, 6, 7]}
                           letterSpacing={1}
@@ -53,7 +53,7 @@ export default class componentName extends Component {
                             letterSpacing={1}
                             lineheight={1 * 1.25}
                           >
-                            <Box>Design & code smart web apps 📱</Box>
+                            <Box>Design & code smart web apps</Box>
                           </HomeHeroSubHeaderLight>
                         </Box>
                       </Subhead>

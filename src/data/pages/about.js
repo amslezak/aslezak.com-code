@@ -1,6 +1,6 @@
 export const data = {
   pageTitle: "About",
-  pageSubtitle: "A little personal 👨🏼‍🏫",
+  pageSubtitle: "A little personal",
   pageSlug: "/about",
   headerTitle: "WELCOME",
   headerBody:

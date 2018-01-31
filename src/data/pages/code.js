@@ -1,6 +1,6 @@
 export const data = {
   pageTitle: "Code",
-  pageSubtitle: "Open source is magical 🔮",
+  pageSubtitle: "Magic made with open source",
   pageSlug: "/code",
   headerTitle: "Logical",
   headerBody:
