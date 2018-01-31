@@ -2,16 +2,18 @@
 source code and graphics for aslezak.com
 
 ### Tools
-- React
 - Gatsby
+- React
 - Rebass
 - Emotion
 - styled-system
 - Formik
 - AWS Lambda
+- AWS Route53
 - Mailgun
 - Netlify
 - Sketch
+- Sass
 
 ###  Dev
 
