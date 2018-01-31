@@ -1,13 +1,33 @@
-# gatsby-starter-default
-The default Gatsby starter
+# aslezak.com
+source code and graphics for aslezak.com
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/)
+### Tools
+- React
+- Gatsby
+- Rebass
+- Emotion
+- styled-system
+- Formik
+- AWS Lambda
+- Mailgun
+- Netlify
+- Sketch
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
+###  Dev
+
+`gatsby develop -H 0.0.0.0` 
+
+### Build
+
 ```
-gatsby new gatsby-example-site
+`gatsby build` // build for production
+`gatsby serve`  // test production build locally
 ```
 
-## Deploy
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+
+Deploy
+```
+cd public
+netlify deploy
+```
