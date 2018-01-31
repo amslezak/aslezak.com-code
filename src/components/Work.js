@@ -55,7 +55,7 @@ export default class Work extends React.Component {
                       </Flex>
                     </Subhead>
                   </Box>
-                  <Box w={[1 / 2]}>
+                  <Box w={[1 / 2]} p={2}>
                     <Link to={"/design"}>
                       <Img
                         className="work-image hvr-grow"
@@ -66,7 +66,7 @@ export default class Work extends React.Component {
                       <Link to={"/design"}>Design</Link>
                     </LinkFancyLight>
                   </Box>
-                  <Box w={[1 / 2]}>
+                  <Box w={[1 / 2]} p={2}>
                     <Link to={"/code"}>
                       <Img
                         className="work-image hvr-grow"
@@ -77,7 +77,7 @@ export default class Work extends React.Component {
                       <Link to={"/code"}>Code</Link>
                     </LinkFancyLight>
                   </Box>
-                  <Box w={[1 / 2]}>
+                  <Box w={[1 / 2]} p={2}>
                     <Link to={"/cloud"}>
                       <Img
                         className="work-image hvr-grow"
@@ -88,7 +88,7 @@ export default class Work extends React.Component {
                       <Link to={"/cloud"}>Cloud</Link>
                     </LinkFancyLight>
                   </Box>
-                  <Box w={[1 / 2]}>
+                  <Box w={[1 / 2]} p={2}>
                     <Link to={"/iot"}>
                       <Img
                         className="work-image hvr-grow"

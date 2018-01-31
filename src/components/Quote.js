@@ -15,7 +15,7 @@ export default class App extends React.Component {
   render() {
     return (
       <Flex bg="#fff">
-        <Container py={[3, 3]} my={[3, 4]}>
+        <Container my={[3, 4]}>
           <Box my={4}>
             <Box my={[3, 4]} px={[3, 4]} py={[3, 4]} w={1}>
               <Subhead f={4}>{this.props.quotes.quote}</Subhead>

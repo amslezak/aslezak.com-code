@@ -19,10 +19,11 @@ export default class HeroHeader extends React.Component {
             <Img
               className="skill-background"
               sizes={this.props.background.sizes}
+              backgroundColor="#99765E"
             />
           </Absolute>
 
-          <Container w={1} my={3}>
+          <Container w={1} my={0}>
             <Flex align="center" wrap>
               <Box width={[1 / 2]}>
                 <Flex column>

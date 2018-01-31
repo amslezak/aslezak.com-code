@@ -38,7 +38,7 @@ export default class HeroOverview extends React.Component {
         <Flex bg="#fff" align="center" py={[2, 3, 2, 3]}>
           <Container>
             <Box my={[1, 3]}>
-              <HeaderDark letterSpacing={0.75} lineheight={2} f={[3, 4]}>
+              <HeaderDark letterSpacing={0.75} lineheight={2} f={[2, 3]}>
                 {this.props.title}
               </HeaderDark>
               <Text my={1} f={[2, 3]}>

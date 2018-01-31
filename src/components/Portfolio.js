@@ -24,6 +24,7 @@ export default class App extends React.Component {
               <Img
                 className="portfolio-bg"
                 sizes={this.props.background.sizes}
+                backgroundColor="#99765E"
               />
             </Absolute>
 
@@ -40,7 +41,7 @@ export default class App extends React.Component {
                   </Flex>
                 </Subhead>
 
-                <Box px={[3, 2, 1, 1]}>
+                <Box my={-2} px={[4, 2, 1, 1]}>
                   <Link to={"/portfolio"}>
                     <Img
                       className="portfolio-image hvr-grow"
@@ -49,7 +50,7 @@ export default class App extends React.Component {
                   </Link>
                 </Box>
 
-                <Box mt={-2}>
+                <Box mt={[-2, -4]}>
                   <LinkFancyLight f={[2, 3]} letterSpacing={1}>
                     <Link to={"/portfolio"}>PORTFOLIO</Link>
                   </LinkFancyLight>
