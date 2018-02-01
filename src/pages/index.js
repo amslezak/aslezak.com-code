@@ -63,7 +63,7 @@ export const query = graphql`
     }
     gear: imageSharp(id: { regex: "/gear9.png/" }) {
       sizes(maxWidth: 2560, quality: 100) {
-        ...GatsbyImageSharpSizes_withWebp
+        ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }
     bgWood: imageSharp(id: { regex: "/background-wood.jpg/" }) {
