@@ -10,9 +10,7 @@ module.exports = {
     `gatsby-plugin-purify-css`,
     `gatsby-plugin-react-next`,
     `gatsby-transformer-sharp`,
-    `gatsby-transformer-remark`,
     `gatsby-transformer-javascript-static-exports`,
-    `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -44,6 +42,24 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: `UA-113297020-1`
+      }
+    },
+    {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: "./src/favicon.png",
+        injectHTML: true,
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: true,
+          coast: false,
+          favicons: true,
+          firefox: true,
+          twitter: false,
+          yandex: false,
+          windows: false
+        }
       }
     },
     `gatsby-plugin-netlify`
