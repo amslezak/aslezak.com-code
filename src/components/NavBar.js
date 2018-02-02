@@ -26,7 +26,7 @@ import { Flex, Box, Text, Container, Border } from "rebass";
 import LinkWrapper from "../styled/LinkWrapper";
 import ContactNav from "../styled/ContactNav";
 const Logo = styled.div`
-  width: 120px;
+  width: 104px;
   margin: 0;
   z-index: 1;
 `;
@@ -49,7 +49,7 @@ export default class navbar extends React.Component {
     return (
       <Flex>
         <Box w={1}>
-          <div id="NavBar" style={{ marginBottom: "78px" }}>
+          <div id="NavBar" style={{ marginBottom: "62px" }}>
             <Navbar
               light
               expand="lg"
