@@ -71,32 +71,32 @@ export const query = graphql`
         ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }
-    workDesign: imageSharp(id: { regex: "/design/heroDesign2.png/" }) {
-      sizes(maxWidth: 960, quality: 100) {
+    workDesign: imageSharp(id: { regex: "/design/heroDesign4.png/" }) {
+      sizes(maxWidth: 480, quality: 100) {
         ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }
-    workCode: imageSharp(id: { regex: "/code/heroCode.png/" }) {
-      sizes(maxWidth: 960, quality: 100) {
+    workCode: imageSharp(id: { regex: "/code/heroCode2.png/" }) {
+      sizes(maxWidth: 480, quality: 100) {
         ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }
-    workCloud: imageSharp(id: { regex: "/cloud/heroCloud6.png/" }) {
-      sizes(maxWidth: 960, quality: 100) {
+    workCloud: imageSharp(id: { regex: "/cloud/heroCloud8.png/" }) {
+      sizes(maxWidth: 480, quality: 100) {
         ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }
-    workIoT: imageSharp(id: { regex: "/iot/heroIot4.png/" }) {
-      sizes(maxWidth: 960, quality: 100) {
+    workIoT: imageSharp(id: { regex: "/iot/heroIot5.png/" }) {
+      sizes(maxWidth: 480, quality: 100) {
         ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }
-    portfolio: imageSharp(id: { regex: "/heroPortfolio2/" }) {
-      sizes(maxWidth: 960, quality: 100) {
+    portfolio: imageSharp(id: { regex: "/heroPortfolio5.png/" }) {
+      sizes(maxWidth: 480, quality: 100) {
         ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }
-    footer: imageSharp(id: { regex: "/footer/typewriter9.png/" }) {
+    footer: imageSharp(id: { regex: "/footer/typewriter10.png/" }) {
       sizes(maxWidth: 960, quality: 100) {
         ...GatsbyImageSharpSizes_withWebp_noBase64
       }

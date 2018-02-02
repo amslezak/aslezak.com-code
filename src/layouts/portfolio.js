@@ -26,7 +26,6 @@ const WorkWrapper = styled.div`
 export default class SkillPage extends React.Component {
   constructor(props) {
     super(props);
-
     this.pageData = this.props.data.allJsFrontmatter.edges[0].node.data;
   }
 
@@ -35,11 +34,11 @@ export default class SkillPage extends React.Component {
       <ThemeProvider theme={theme}>
         <Flex column>
           <Flex align="center">
-            <Box width={1}>
+            <Box width={1} mt={1}>
               <HeroHeader
                 title={this.pageData.pageTitle}
                 subtitle={this.pageData.pageSubtitle}
-                image={this.props.data.heroCode}
+                image={this.props.data.headerImage}
                 heroImage={this.pageData.headerImage}
                 logos={this.props.data.logos}
                 background={this.props.data.bgWood}
@@ -107,8 +106,8 @@ export const query = graphql`
       }
     }
 
-    heroCode: imageSharp(id: { regex: "/heroCode.png/" }) {
-      sizes(maxWidth: 1600) {
+    heroPortfolio: imageSharp(id: { regex: "/heroPortfolio5.png/" }) {
+      sizes(maxWidth: 480) {
         ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }
@@ -160,7 +159,7 @@ export const query = graphql`
     portfolio: allImageSharp(filter: { id: { regex: "/portfolio/" } }) {
       edges {
         node {
-          sizes(maxWidth: 960, quality: 90) {
+          sizes(maxWidth: 480, quality: 90) {
             ...GatsbyImageSharpSizes_withWebp_noBase64
           }
         }
