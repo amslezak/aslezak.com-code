@@ -26,7 +26,7 @@ export default class componentName extends Component {
     return (
       <ThemeProvider theme={theme}>
         <Flex>
-          <Box w={1}>
+          <Box w={1} mt={1}>
             <Absolute w={1} z={-1}>
               <Img
                 className="homeHero-background"

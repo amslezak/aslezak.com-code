@@ -39,7 +39,7 @@ export default class HeroHeader extends React.Component {
                   </Box>
                 </Flex>
               </Box>
-              <Box width={[1 / 2]}>
+              <Box width={[1 / 2]} p={[2, 3]}>
                 <Img
                   className="skill-image"
                   sizes={
