@@ -15,6 +15,7 @@ import {
   Relative
 } from "rebass";
 import XRay from "react-x-ray";
+import { Link as ScrollLink, Element } from "react-scroll";
 
 import HomeHeroHeaderLight1 from "../styled/HomeHeroHeaderLight1";
 import HomeHeroSubHeaderLight from "../styled/HomeHeroSubHeaderLight";
@@ -61,19 +62,24 @@ export default class componentName extends Component {
                   </Box>
                 </Container>
               </Absolute>
-              <HomeHeroOverlay w={1} z={1}>
-                <Relative z={-1}>
-                  <Img
-                    className="homeHero-gear"
-                    sizes={this.props.gear.sizes}
-                  />
+              <HomeHeroOverlay w={1} z={2}>
+                <Relative z={1}>
+                  <ScrollLink
+                    to="hello"
+                    smooth={true}
+                    duration={500}
+                    offset={-75}
+                    animation="easeInOutQuart"
+                  >
+                    <Img
+                      className="homeHero-gear"
+                      sizes={this.props.gear.sizes}
+                    />
+                  </ScrollLink>
                 </Relative>
               </HomeHeroOverlay>
               <Absolute />
             </Relative>
-            <Container>
-              <Box w={1} />
-            </Container>
           </Box>
         </Flex>
       </ThemeProvider>

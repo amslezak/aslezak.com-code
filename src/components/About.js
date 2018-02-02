@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "react-emotion";
 import Img from "gatsby-image";
-import { Link } from "react-scroll";
+import { Link, Element } from "react-scroll";
 
 // Styled Components
 import { ThemeProvider } from "emotion-theming";
@@ -22,6 +22,7 @@ export default class App extends React.Component {
     return (
       <ThemeProvider theme={theme}>
         <Flex bg="#fff" wrap column>
+          <Element name="hello" />
           <Container>
             <Box w={1}>
               <Box my={[2, 3]}>
