@@ -18,12 +18,13 @@ import {
 import "../css/bootstrap.css";
 import "../css/aslezak.scss";
 
+import { Link as ScrollLink } from "react-scroll";
 import { ThemeProvider } from "emotion-theming";
 import theme from "../css/Theme";
 import styled from "react-emotion";
 import { Flex, Box, Text, Container, Border } from "rebass";
 import LinkWrapper from "../styled/LinkWrapper";
-
+import ContactNav from "../styled/ContactNav";
 const Logo = styled.div`
   width: 120px;
   margin: 0;
@@ -48,7 +49,7 @@ export default class navbar extends React.Component {
     return (
       <Flex>
         <Box w={1}>
-          <div id="NavBar" style={{ marginBottom: "65px" }}>
+          <div id="NavBar" style={{ marginBottom: "78px" }}>
             <Navbar
               light
               expand="lg"
@@ -82,6 +83,19 @@ export default class navbar extends React.Component {
                   </LinkWrapper>
                   <LinkWrapper mx={[0, 1]} m={1} onClick={this.toggle}>
                     <Link to={"/about"}>ABOUT</Link>
+                  </LinkWrapper>
+                  <LinkWrapper mx={[0, 1]} m={1} onClick={this.toggle}>
+                    <ScrollLink
+                      onClick={this.toggle}
+                      to="contact"
+                      smooth={true}
+                      duration={1500}
+                      offset={-100}
+                      animation="easeInOutQuart"
+                    >
+                      {" "}
+                      <ContactNav>CONTACT</ContactNav>
+                    </ScrollLink>
                   </LinkWrapper>
                 </Nav>
               </Collapse>
