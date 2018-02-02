@@ -4,7 +4,7 @@ export const data = {
   pageSlug: "/portfolio",
   headerTitle: "Experience",
   headerBody:
-    "I've been lucky to take part in many exciting projects over the years.  Everything from programming, to devops, to graphic design.  The key lesson I've learned is it is important to understand all the pieces.  When we know how each piece connects, the pieces align more smoothly.  The end-user can feel that smoothness.  This translates into an enjoyable experience, and joy is always a success.",
+    "I've been lucky to take part in many exciting projects over the years.  Everything from programming, to cloud architecture, to graphic design.  The key is to know the purpose of each elemental piece.  When we do, the whole project aligns seamlessly, and the end-user can feel this. It translates into an enjoyable experience, and joy is always a success.",
 
   headerImage: "heroPortfolio",
   headerSubTitle: "Below are some of my Code Tools",
