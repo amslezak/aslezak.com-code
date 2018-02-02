@@ -64,9 +64,6 @@ export default class SkillPage extends React.Component {
           </Box>
 
           <Box>
-            <About logo={this.props.data.logoSignature} />
-          </Box>
-          <Box>
             <Footer
               background={this.props.data.bgWood}
               image={this.props.data.footerTypewriter}
