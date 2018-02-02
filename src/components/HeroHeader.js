@@ -23,7 +23,7 @@ export default class HeroHeader extends React.Component {
             />
           </Absolute>
 
-          <Container w={1} my={0}>
+          <Container w={1} my={-2}>
             <Flex align="center" wrap>
               <Box width={[1 / 2]}>
                 <Flex column>
