@@ -21,7 +21,10 @@ class HomePage extends Component {
             background={this.props.data.bgWood}
           />
 
-          <About logo={this.props.data.logoSignature} />
+          <About
+            headshot={this.props.data.headshot}
+            logo={this.props.data.logoSignature}
+          />
 
           <Work
             background={this.props.data.bgWood}
@@ -118,6 +121,11 @@ export const query = graphql`
     }
 
     logoSignature: imageSharp(id: { regex: "/logoSignature/" }) {
+      sizes(maxWidth: 480) {
+        ...GatsbyImageSharpSizes_withWebp_noBase64
+      }
+    }
+    headshot: imageSharp(id: { regex: "/headshot/" }) {
       sizes(maxWidth: 480) {
         ...GatsbyImageSharpSizes_withWebp_noBase64
       }

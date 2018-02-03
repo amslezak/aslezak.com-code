@@ -64,7 +64,16 @@ export default class App extends React.Component {
                   she gave me the gifts of persistence & love.
                 </Text>
               </Box>
-              <Box my={1} mr={2} w={175} ml="auto" align="right">
+              <Box
+                mt={[3, 2]}
+                mr={[2, 3]}
+                w={[96, 124]}
+                ml="auto"
+                align="right"
+              >
+                <Img sizes={this.props.headshot.sizes} />
+              </Box>
+              <Box mb={1} mr={[1, 2]} w={[124, 176]} ml="auto" align="right">
                 <Img sizes={this.props.logo.sizes} />
               </Box>
             </Box>
