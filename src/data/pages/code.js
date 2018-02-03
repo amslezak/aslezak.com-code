@@ -73,6 +73,11 @@ export const data = {
           itemTitle: "Shell",
           itemSubtitle: "Command Line",
           itemImage: "logoShell"
+        },
+        {
+          itemTitle: "Postman",
+          itemSubtitle: "API Testing",
+          itemImage: "logoPostman"
         }
       ]
     }
