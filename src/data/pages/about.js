@@ -4,7 +4,7 @@ export const data = {
   pageSlug: "/about",
   headerTitle: "WELCOME",
   headerBody:
-    "Hi, I'm Andy.  I'm a self-taught, full-stack developer with 15 years design & code experience.  In the past 3 years I have been architecting cloud-scale solutions (specifically with real-time IoT sensors).  I'm partial to building with Amazon AWS.  My goal is to use technology to make the world around us better. My hero is Leonardo Da Vinci.  I like to laugh and collaborate.  People like to ask me for directions.  I wear glasses, and I'm blonde.  I am currently available for both full-time and contract work.",
+    "Hi, I'm Andy.  I'm a self-taught, full-stack developer with 15 years design & code experience.  In the past three years I have been architecting cloud-scale solutions (specifically with real-time IoT sensors).  I'm partial to building with Amazon AWS.  My goal is to use technology to make the world around us better. My hero is Leonardo Da Vinci.  I like to laugh and collaborate.  People like to ask me for directions.  My favorite book is The Alchmemist.  I am currently available for full-time and contract work.",
   buttonText: "My Interests",
   headerSubTitle: "Below are some of my Code Tools",
   headerImage: "heroAbout2",
