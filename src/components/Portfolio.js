@@ -41,7 +41,7 @@ export default class App extends React.Component {
                   </Flex>
                 </Subhead>
 
-                <Box my={-2} px={4}>
+                <Box my={-2} px={[3, 4]}>
                   <Link to={"/portfolio"}>
                     <Img
                       className="portfolio-image hvr-grow"
