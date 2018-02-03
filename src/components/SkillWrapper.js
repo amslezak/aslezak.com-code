@@ -90,7 +90,7 @@ export default class SkillWrapper extends React.Component {
     return (
       <Flex bg="#eee">
         <Container w={1}>
-          <Paper w={1} my={[4, 4, 4, 4]} borderRadius={10}>
+          <Paper w={1} my={[3, 4, 4, 4]} borderRadius={10}>
             {this.skillItems}
           </Paper>
         </Container>

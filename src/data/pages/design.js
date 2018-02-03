@@ -21,12 +21,12 @@ export const data = {
         {
           itemTitle: "HTML",
           itemSubtitle: "Web Framework Language",
-          itemImage: "logoHTML"
+          itemImage: "logoHtml"
         },
         {
           itemTitle: "CSS",
           itemSubtitle: "Web Design Language",
-          itemImage: "logoCSS"
+          itemImage: "logoCss"
         }
       ]
     },
