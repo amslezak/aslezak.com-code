@@ -26,7 +26,7 @@ export default class SkillPage extends React.Component {
     return (
       <Flex column>
         <Flex align="center">
-          <Box width={1}>
+          <Box width={1} mt={1}>
             <HeroHeader
               title={this.pageData.pageTitle}
               subtitle={this.pageData.pageSubtitle}

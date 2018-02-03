@@ -49,10 +49,10 @@ export default class Footer extends React.Component {
                   </Subhead>
                 </Flex>
                 <Flex wrap>
-                  <Box w={[1, 1 / 2]} m="auto">
+                  <Box w={[1, 1 / 2]} mt={[1, 1, 3]}>
                     <ContactForm />
                   </Box>
-                  <Box m="auto" w={[null, 1 / 2, 1 / 2, 1 / 2]}>
+                  <Box mt={-3} w={[null, 1 / 2, 1 / 2, 1 / 2]}>
                     <Img sizes={this.props.image.sizes} />
                   </Box>
                 </Flex>
