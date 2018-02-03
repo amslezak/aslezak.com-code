@@ -26,6 +26,7 @@ const Component = styled.span`
   color: ${props => props.theme.headerLight.color};
   box-shadow: ${props => props.theme.button.boxShadow};
   text-shadow: rgba(0, 0, 0, 0.47) 0px 2px 4px;
+  cursor: pointer;
 `;
 
 export default Component;
