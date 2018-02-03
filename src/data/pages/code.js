@@ -4,7 +4,7 @@ export const data = {
   pageSlug: "/code",
   headerTitle: "Coding & Tools",
   headerBody:
-    "Code is a recently discovered love.  Little did I know I approached life in a manner that was already coding.  When I took basic logic and mapped out each step of the way, they became powerful programs.  If I added coding frameworks & tools, then magical apps became real.  I'd love to work with you and create apps together.",
+    "Writing code is a recently discovered love.  Little did I know I approached life in a manner that was already coding.  When I took basic logic and mapped out each step of the way, they became powerful programs.  If I added coding frameworks & tools, then magical apps became real.  I'd love to work with you and create apps together.",
   headerSubTitle: "Below are some of my Code Tools",
   buttonText: "Code Tools",
   headerImage: "heroCode",
