@@ -6,13 +6,13 @@
 
 // You can delete this file if you're not using it
 
-import objectFitImages from "object-fit-images";
+import objectFitImages from "object-fit-images"
 
 exports.onClientEntry = () => {
-  objectFitImages();
-};
+  objectFitImages()
+}
 
 exports.shouldUpdateScroll = (prevRouterProps, pathname) => {
-  window.scrollTo(0, 0);
-  return false;
-};
+  window.scrollTo(0, 0)
+  return false
+}

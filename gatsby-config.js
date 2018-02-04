@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Andy Slezak`
+    title: `Andy Slezak`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -15,34 +15,34 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `page data`,
-        path: `${__dirname}/src/data/pages`
-      }
+        path: `${__dirname}/src/data/pages`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `component data`,
-        path: `${__dirname}/src/data/components`
-      }
+        path: `${__dirname}/src/data/components`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`
-      }
+        path: `${__dirname}/src/images`,
+      },
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Arvo:400`]
-      }
+        fonts: [`Arvo:400`],
+      },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: `UA-113297020-1`
-      }
+        trackingId: `UA-113297020-1`,
+      },
     },
     {
       resolve: `gatsby-plugin-favicon`,
@@ -58,17 +58,10 @@ module.exports = {
           firefox: true,
           twitter: false,
           yandex: false,
-          windows: false
-        }
-      }
+          windows: false,
+        },
+      },
     },
-    `gatsby-plugin-netlify`
-  ]
-};
-
-// {
-//   resolve: `gatsby-plugin-postcss-sass`,
-//   options: {
-//     postCssPlugins: [require("postcss-import")(), require("autoprefixer")()]
-//   }
-// }
+    `gatsby-plugin-netlify`,
+  ],
+}
