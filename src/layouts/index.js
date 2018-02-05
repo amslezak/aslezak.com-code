@@ -1,28 +1,38 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Link from "gatsby-link";
-import Helmet from "react-helmet";
-import NavBar from "../components/NavBar";
-import { Flex, Box, Provider, Container } from "rebass";
+import React from "react"
+import PropTypes from "prop-types"
+import Link from "gatsby-link"
+import Helmet from "react-helmet"
+import NavBar from "../components/NavBar"
+import { Flex, Box, Container } from "rebass"
+import WebFont from "webfontloader"
 
-import XRay from "react-x-ray";
+import XRay from "react-x-ray"
 export default class TemplateWrapper extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
   }
 
   render() {
+    WebFont.load({
+      google: {
+        families: ["Arvo:400"],
+      },
+    })
+
     return (
       <div>
         <Helmet
           title="Andy Slezak"
           meta={[
-            { name: "description", content: "Andy Slezak" },
+            {
+              name: "description",
+              content: "Design & Code, Full-stack JS, Cloud, IoT",
+            },
             {
               name: "keywords",
               content:
-                "webapps, react, developer, fullstack, graphql, iot, aws, amazon, cloud"
-            }
+                "webapps, react, developer, fullstack, graphql, iot, aws, amazon, cloud",
+            },
           ]}
         />
         <Flex column>
@@ -32,13 +42,13 @@ export default class TemplateWrapper extends React.Component {
           </Box>
         </Flex>
       </div>
-    );
+    )
   }
 }
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.func
-};
+  children: PropTypes.func,
+}
 
 export const query = graphql`
   query NavBarQuery {
@@ -48,4 +58,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`
