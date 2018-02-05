@@ -1,14 +1,8 @@
-const path = require("path");
-const { createFilePath } = require(`gatsby-source-filesystem`);
-
-exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
-  const { createNodeField } = boundActionCreators;
-  if (node.internal.type === "JSFrontmatter") {
-  }
-};
+const path = require("path")
+const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators;
+  const { createPage } = boundActionCreators
   return new Promise((resolve, reject) => {
     graphql(`
       query SkillPages {
@@ -32,9 +26,9 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             path: node.data.pageSlug,
             component: path.resolve(`./src/layouts/skill.js`),
             context: {
-              pageSlug: node.data.pageSlug
-            }
-          });
+              pageSlug: node.data.pageSlug,
+            },
+          })
         }
 
         if (node.data.pageSlug == "/portfolio") {
@@ -42,12 +36,12 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             path: node.data.pageSlug,
             component: path.resolve(`./src/layouts/portfolio.js`),
             context: {
-              pageSlug: node.data.pageSlug
-            }
-          });
+              pageSlug: node.data.pageSlug,
+            },
+          })
         }
-      });
-      resolve();
-    });
-  });
-};
+      })
+      resolve()
+    })
+  })
+}
