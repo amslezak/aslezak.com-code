@@ -16,19 +16,19 @@ export const data = {
         {
           itemTitle: "JavaScript",
           itemSubtitle: "Web Logic Language",
-          itemImage: "logoJavascript"
+          itemImage: "logoJavascript",
         },
         {
           itemTitle: "HTML",
           itemSubtitle: "Web Framework Language",
-          itemImage: "logoHtml"
+          itemImage: "logoHtml",
         },
         {
           itemTitle: "CSS",
           itemSubtitle: "Web Design Language",
-          itemImage: "logoCss"
-        }
-      ]
+          itemImage: "logoCss",
+        },
+      ],
     },
     {
       sectionTitle: "Framework",
@@ -37,49 +37,59 @@ export const data = {
         {
           itemTitle: "React",
           itemSubtitle: "Smart Web Components",
-          itemImage: "logoReact"
+          itemImage: "logoReact",
         },
         {
           itemTitle: "Redux",
           itemSubtitle: "Smart State for Large Apps",
-          itemImage: "logoRedux"
+          itemImage: "logoRedux",
         },
         {
           itemTitle: "Apollo",
           itemSubtitle: "Amazing GraphQL Suite",
-          itemImage: "logoApollo"
+          itemImage: "logoApollo",
         },
         {
           itemTitle: "Webpack",
           itemSubtitle: "Web Bundler",
-          itemImage: "logoWebpack"
+          itemImage: "logoWebpack",
         },
         {
           itemTitle: "Lodash",
           itemSubtitle: "Swiss Army Functions",
-          itemImage: "logoLodash"
+          itemImage: "logoLodash",
         },
         {
           itemTitle: "Sass",
           itemSubtitle: "Dynamic CSS",
-          itemImage: "logoSass"
+          itemImage: "logoSass",
         },
         {
           itemTitle: "Gatsby",
           itemSubtitle: "Static Web Framework",
-          itemImage: "logoGatsby"
+          itemImage: "logoGatsby",
         },
         {
           itemTitle: "GraphQL",
           itemSubtitle: "Next Generation API",
-          itemImage: "logoGraphql"
+          itemImage: "logoGraphql",
         },
         {
           itemTitle: "Emotion",
           itemSubtitle: "Next Generation CSS-in-JS",
-          itemImage: "logoEmotion"
-        }
-      ]
+          itemImage: "logoEmotion",
+        },
+        {
+          itemTitle: "Basscss",
+          itemSubtitle: "Design Constrained CSS",
+          itemImage: "logoBass",
+        },
+        {
+          itemTitle: "Rebass",
+          itemSubtitle: "React Components",
+          itemImage: "logoRebass",
+        },
+      ],
     },
     {
       sectionTitle: "UI/UX",
@@ -88,24 +98,24 @@ export const data = {
         {
           itemTitle: "Sketch",
           itemSubtitle: "Web Graphics/Vector Tool",
-          itemImage: "logoSketch"
+          itemImage: "logoSketch",
         },
         {
           itemTitle: "Photoshop",
           itemSubtitle: "Classic Design Tool",
-          itemImage: "logoPhotoshop"
+          itemImage: "logoPhotoshop",
         },
         {
           itemTitle: "Illustrator",
           itemSubtitle: "Powerful Vector Tool",
-          itemImage: "logoIllustrator"
+          itemImage: "logoIllustrator",
         },
         {
           itemTitle: "Lightroom",
           itemSubtitle: "Organize & Edit photos",
-          itemImage: "logoLightroom"
-        }
-      ]
-    }
-  ]
-};
+          itemImage: "logoLightroom",
+        },
+      ],
+    },
+  ],
+}
