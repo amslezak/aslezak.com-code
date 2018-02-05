@@ -11,7 +11,7 @@
     "emotion-server": "^8.0.12",
     "emotion-theming": "^8.0.12",
     "flexboxgrid": "^6.3.1",
-    "formik": "^0.10.5",
+    "formik": "^0.11.4",
     "gatsby": "^1.9.178",
     "gatsby-image": "^1.0.34",
     "gatsby-link": "^1.6.36",
@@ -46,7 +46,7 @@
     "react-x-ray": "^1.0.0-4",
     "reactstrap": "^5.0.0-beta",
     "rebass": "^1.0.4",
-    "styled-system": "^1.1.1",
+    "styled-system": "^1.1.4",
     "yup": "^0.24.0"
   },
   "keywords": [
