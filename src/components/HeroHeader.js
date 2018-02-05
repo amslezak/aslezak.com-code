@@ -1,15 +1,15 @@
-import React from "react";
-import Img from "gatsby-image";
-import styled from "react-emotion";
-import { ThemeProvider } from "emotion-theming";
-import theme from "../css/Theme";
-import { Flex, Box, Heading, Container, Absolute } from "rebass";
-import { flex, space, width, fontSize, color } from "styled-system";
-import XRay from "react-x-ray";
-import "../css/aslezak.scss";
+import React from "react"
+import Img from "gatsby-image"
+import styled from "react-emotion"
+import { ThemeProvider } from "emotion-theming"
+import theme from "../css/Theme"
+import { Flex, Box, Heading, Container, Absolute } from "rebass"
+import { flex, space, width, fontSize, color } from "styled-system"
+import XRay from "react-x-ray"
+import "../css/aslezak.scss"
 
-import HeaderLight from "../styled/HeaderLight";
-import SubHeaderLight from "../styled/SubHeaderLight";
+import HeaderLight from "../styled/HeaderLight"
+import SubHeaderLight from "../styled/SubHeaderLight"
 export default class HeroHeader extends React.Component {
   render() {
     return (
@@ -23,7 +23,7 @@ export default class HeroHeader extends React.Component {
             />
           </Absolute>
 
-          <Container w={1} my={-2}>
+          <Container w={1} my={[-1, -2, -3, -4]}>
             <Flex align="center" wrap>
               <Box width={[1 / 2]}>
                 <Flex column>
@@ -33,19 +33,18 @@ export default class HeroHeader extends React.Component {
                     </HeaderLight>
                   </Box>
                   <Box>
-                    <SubHeaderLight letterSpacing={1} f={[1, 3, 3, 4]}>
+                    <SubHeaderLight letterSpacing={1} f={[2, 3, 4, 4]}>
                       {this.props.subtitle}
                     </SubHeaderLight>
                   </Box>
                 </Flex>
               </Box>
-              <Box width={[1 / 2]} p={[2, 3]}>
+              <Box width={[1 / 2]} p={[0, 1, 2, 3]}>
                 <Img
-                  className="skill-image"
                   sizes={
                     this.props.logos.edges.filter(item => {
-                      let re = new RegExp(this.props.heroImage);
-                      return re.test(item.node.sizes.src);
+                      let re = new RegExp(this.props.heroImage)
+                      return re.test(item.node.sizes.src)
                     })[0].node.sizes
                   }
                 />
@@ -54,6 +53,6 @@ export default class HeroHeader extends React.Component {
           </Container>
         </Flex>
       </ThemeProvider>
-    );
+    )
   }
 }

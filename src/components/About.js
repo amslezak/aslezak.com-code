@@ -1,21 +1,21 @@
-import React from "react";
-import styled from "react-emotion";
-import Img from "gatsby-image";
-import { Link, Element } from "react-scroll";
+import React from "react"
+import styled from "react-emotion"
+import Img from "gatsby-image"
+import { Link, Element } from "react-scroll"
 
 // Styled Components
-import { ThemeProvider } from "emotion-theming";
-import { Flex, Box, Text, Container } from "rebass";
-import XRay from "react-x-ray";
+import { ThemeProvider } from "emotion-theming"
+import { Flex, Box, Text, Container } from "rebass"
+import XRay from "react-x-ray"
 
-import theme from "../css/Theme";
-import ContactLink from "../styled/ContactLink";
-import HeaderDark from "../styled/HeaderDark";
-import SubHeaderDark from "../styled/SubHeaderDark";
+import theme from "../css/Theme"
+import ContactLink from "../styled/ContactLink"
+import HeaderDark from "../styled/HeaderDark"
+import SubHeaderDark from "../styled/SubHeaderDark"
 
 const Signature = styled.div`
   max-width: 150px;
-`;
+`
 
 export default class App extends React.Component {
   render() {
@@ -64,22 +64,23 @@ export default class App extends React.Component {
                   she gave me the gifts of persistence & love.
                 </Text>
               </Box>
+              <Box mr={[1, 2]} w={[124, 160]} ml="auto" align="right">
+                <Img sizes={this.props.logo.sizes} />
+              </Box>
               <Box
-                mt={[3, 2]}
+                mt={-2}
+                mb={4}
                 mr={[2, 3]}
-                w={[96, 124]}
+                w={[96, 104]}
                 ml="auto"
                 align="right"
               >
                 <Img sizes={this.props.headshot.sizes} />
               </Box>
-              <Box mb={1} mr={[1, 2]} w={[124, 176]} ml="auto" align="right">
-                <Img sizes={this.props.logo.sizes} />
-              </Box>
             </Box>
           </Container>
         </Flex>
       </ThemeProvider>
-    );
+    )
   }
 }

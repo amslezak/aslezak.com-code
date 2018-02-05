@@ -1,13 +1,13 @@
-import React from "react";
-import SkillItem from "./SkillItem";
-import styled from "react-emotion";
-import Img from "gatsby-image";
-import "react-tippy/dist/tippy.css";
+import React from "react"
+import SkillItem from "./SkillItem"
+import styled from "react-emotion"
+import Img from "gatsby-image"
+import "react-tippy/dist/tippy.css"
 
-import { Tooltip } from "react-tippy";
-import Icon from "../styled/IconWrapper";
-import { ThemeProvider } from "emotion-theming";
-import theme from "../css/Theme";
+import { Tooltip } from "react-tippy"
+import Icon from "../styled/IconWrapper"
+import { ThemeProvider } from "emotion-theming"
+import theme from "../css/Theme"
 
 import {
   Flex,
@@ -17,21 +17,21 @@ import {
   Text,
   Container,
   Border,
-  NavLink
-} from "rebass";
-import XRay from "react-x-ray";
+  NavLink,
+} from "rebass"
+import XRay from "react-x-ray"
 
-import SectionHeader from "../styled/SectionHeader";
-import SectionSubHeader from "../styled/SectionSubHeader";
-import Paper from "../styled/Paper";
+import SectionHeader from "../styled/SectionHeader"
+import SectionSubHeader from "../styled/SectionSubHeader"
+import Paper from "../styled/Paper"
 
 export default class SkillWrapper extends React.Component {
   constructor(props) {
-    super(props);
-    this.logos = props.logos.edges;
+    super(props)
+    this.logos = props.logos.edges
     this.myImage = this.logos.filter(logo => {
-      return /node/.test(logo.node.sizes.src);
-    });
+      return /node/.test(logo.node.sizes.src)
+    })
 
     this.skillItems = this.props.skillItems.map((item, index) => {
       return (
@@ -64,9 +64,9 @@ export default class SkillWrapper extends React.Component {
                           <Img
                             sizes={
                               this.props.logos.edges.filter(skill => {
-                                let regex = new RegExp(item.itemImage);
-                                let img = regex.test(skill.node.sizes.src);
-                                return img;
+                                let regex = new RegExp(item.itemImage)
+                                let img = regex.test(skill.node.sizes.src)
+                                return img
                               })[0].node.sizes
                             }
                           />
@@ -75,15 +75,15 @@ export default class SkillWrapper extends React.Component {
                           <Text mt={-2} f={1} children={item.itemTitle} />
                         </Box>
                       </Box>
-                    );
+                    )
                   })}
                 </Flex>
               </Box>
             </Container>
           </Flex>
         </ThemeProvider>
-      );
-    });
+      )
+    })
   }
 
   render() {
@@ -95,6 +95,6 @@ export default class SkillWrapper extends React.Component {
           </Paper>
         </Container>
       </Flex>
-    );
+    )
   }
 }

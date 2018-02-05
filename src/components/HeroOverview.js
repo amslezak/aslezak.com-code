@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "react-emotion";
-import Img from "gatsby-image";
+import React from "react"
+import styled from "react-emotion"
+import Img from "gatsby-image"
 
-import { ThemeProvider } from "emotion-theming";
-import theme from "../css/Theme";
+import { ThemeProvider } from "emotion-theming"
+import theme from "../css/Theme"
 import {
   Link,
   DirectLink,
@@ -11,10 +11,10 @@ import {
   Events,
   animateScroll as scroll,
   scrollSpy,
-  scroller
-} from "react-scroll";
+  scroller,
+} from "react-scroll"
 
-import XRay from "react-x-ray";
+import XRay from "react-x-ray"
 import {
   Flex,
   Box,
@@ -24,21 +24,21 @@ import {
   Border,
   ButtonOutline,
   ButtonCircle,
-  Arrow
-} from "rebass";
+  Arrow,
+} from "rebass"
 
-import HeaderDark from "../styled/HeaderDark";
-import SubHeaderDark from "../styled/SubHeaderDark";
-import Button from "../styled/Button";
+import HeaderDark from "../styled/HeaderDark"
+import SubHeaderDark from "../styled/SubHeaderDark"
+import Button from "../styled/Button"
 
 export default class HeroOverview extends React.Component {
   render() {
     return (
       <ThemeProvider theme={theme}>
-        <Flex bg="#fff" align="center" py={[2, 3, 2, 3]}>
+        <Flex bg="#fff" align="center" py={3}>
           <Container>
             <Box my={[1, 3]}>
-              <HeaderDark letterSpacing={0.75} lineheight={2} f={[2, 3]}>
+              <HeaderDark letterSpacing={0.75} lineheight={2} f={[2, 3, 4, 4]}>
                 {this.props.title}
               </HeaderDark>
               <Text my={1} f={[2, 3]}>
@@ -46,7 +46,7 @@ export default class HeroOverview extends React.Component {
               </Text>
 
               <Flex column>
-                <Box my={[3, 3, 3, 3]}>
+                <Box my={3}>
                   <Link to="more" smooth={true} duration={500} offset={-25}>
                     <Button letterSpacing={1.25} borderRadius={4} p={[2]}>
                       {this.props.button}
@@ -59,6 +59,6 @@ export default class HeroOverview extends React.Component {
           </Container>
         </Flex>
       </ThemeProvider>
-    );
+    )
   }
 }
