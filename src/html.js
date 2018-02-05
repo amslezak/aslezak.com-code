@@ -1,24 +1,41 @@
-import React from "react";
+import React from "react"
 
-let stylesStr;
+let stylesStr
 if (process.env.NODE_ENV === `production`) {
   try {
-    stylesStr = require(`!raw-loader!../public/styles.css`);
+    stylesStr = require(`!raw-loader!../public/styles.css`)
   } catch (e) {
-    console.log(e);
+    console.log(e)
+  }
+}
+
+if (typeof window !== `undefined`) {
+  window.onload = function() {
+    var WebFont = require("webfontloader")
+
+    WebFont = {
+      google: { families: ["Arvo:400"] },
+    }
+    ;(function(d) {
+      var wf = d.createElement("script"),
+        s = d.scripts[0]
+      wf.src = "https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"
+      wf.async = true
+      s.parentNode.insertBefore(wf, s)
+    })(document)
   }
 }
 
 module.exports = class HTML extends React.Component {
   render() {
-    let css;
+    let css
     if (process.env.NODE_ENV === `production`) {
       css = (
         <style
           id="gatsby-inlined-css"
           dangerouslySetInnerHTML={{ __html: stylesStr }}
         />
-      );
+      )
     }
     return (
       <html {...this.props.htmlAttributes}>
@@ -42,6 +59,6 @@ module.exports = class HTML extends React.Component {
           {this.props.postBodyComponents}
         </body>
       </html>
-    );
+    )
   }
-};
+}

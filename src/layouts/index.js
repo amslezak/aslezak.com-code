@@ -4,7 +4,6 @@ import Link from "gatsby-link"
 import Helmet from "react-helmet"
 import NavBar from "../components/NavBar"
 import { Flex, Box, Container } from "rebass"
-import WebFont from "webfontloader"
 
 import XRay from "react-x-ray"
 export default class TemplateWrapper extends React.Component {
@@ -12,13 +11,26 @@ export default class TemplateWrapper extends React.Component {
     super(props)
   }
 
-  render() {
-    WebFont.load({
-      google: {
-        families: ["Arvo:400"],
-      },
-    })
+  componentDidMount() {
+    if (!document.getElementById("webfontloader")) {
+      const wf = document.createElement("script")
+      const s = document.scripts[0]
+      wf.src = "/webfont-1.6.26.js"
+      wf.async = true
+      wf.id = "webfontloader"
+      wf.onload = () => {
+        WebFont.load({
+          google: {
+            families: ["Arvo:300,400,700,900"],
+          },
+        })
+      }
 
+      s.parentNode.insertBefore(wf, s)
+    }
+  }
+
+  render() {
     return (
       <div>
         <Helmet
