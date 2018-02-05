@@ -16,19 +16,19 @@ export const data = {
         {
           itemTitle: "Node",
           itemSubtitle: "Server Side Javascript",
-          itemImage: "logoNode"
+          itemImage: "logoNode",
         },
         {
           itemTitle: "Python",
           itemSubtitle: "Swiss Army Knife",
-          itemImage: "logoPython"
+          itemImage: "logoPython",
         },
         {
           itemTitle: "PHP",
           itemSubtitle: "PHP Hypertext Preprocessor",
-          itemImage: "logoPhp"
-        }
-      ]
+          itemImage: "logoPhp",
+        },
+      ],
     },
     {
       sectionTitle: "Development",
@@ -37,49 +37,59 @@ export const data = {
         {
           itemTitle: "VS Code",
           itemSubtitle: "Client IDE",
-          itemImage: "logoVscode"
+          itemImage: "logoVscode",
         },
         {
           itemTitle: "Vim",
           itemSubtitle: "Server IDE",
-          itemImage: "logoVim"
+          itemImage: "logoVim",
         },
         {
           itemTitle: "Git",
           itemSubtitle: "Version Control",
-          itemImage: "logoGit"
+          itemImage: "logoGit",
         },
         {
           itemTitle: "Github",
           itemSubtitle: "Hosted Version Control",
-          itemImage: "logoGithub"
+          itemImage: "logoGithub",
         },
         {
           itemTitle: "Docker",
           itemSubtitle: "Containerized Apps",
-          itemImage: "logoDocker"
+          itemImage: "logoDocker",
         },
         {
           itemTitle: "NPM",
           itemSubtitle: "Node Package Manager",
-          itemImage: "logoNpm"
+          itemImage: "logoNpm",
         },
         {
           itemTitle: "Serverless",
           itemSubtitle: "Serverless Development",
-          itemImage: "logoServerless"
+          itemImage: "logoServerless",
         },
         {
           itemTitle: "Shell",
           itemSubtitle: "Command Line",
-          itemImage: "logoShell"
+          itemImage: "logoShell",
         },
         {
           itemTitle: "Postman",
           itemSubtitle: "API Testing",
-          itemImage: "logoPostman"
-        }
-      ]
-    }
-  ]
-};
+          itemImage: "logoPostman",
+        },
+        {
+          itemTitle: "Asana",
+          itemSubtitle: "Task Tracking",
+          itemImage: "logoAsana",
+        },
+        {
+          itemTitle: "Jira",
+          itemSubtitle: "Issue Tracking",
+          itemImage: "logoJira",
+        },
+      ],
+    },
+  ],
+}
