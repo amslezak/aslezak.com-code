@@ -16,24 +16,24 @@ export const data = {
         {
           itemTitle: "Amazon AWS",
           itemSubtitle: "King of Cloud",
-          itemImage: "logoAmazonaws1"
+          itemImage: "logoAmazonaws1",
         },
         {
           itemTitle: "Microsoft Azure",
           itemSubtitle: "Great Cloud Provider",
-          itemImage: "logoAzure"
+          itemImage: "logoAzure",
         },
         {
           itemTitle: "Google GCP",
           itemSubtitle: "Solid Infrastructure",
-          itemImage: "logoGcp"
+          itemImage: "logoGcp",
         },
         {
           itemTitle: "VMware Cloud",
           itemSubtitle: "Old School",
-          itemImage: "logoVmware"
-        }
-      ]
+          itemImage: "logoVmware",
+        },
+      ],
     },
     {
       sectionTitle: "Serverless",
@@ -42,24 +42,24 @@ export const data = {
         {
           itemTitle: "AWS Lambda",
           itemSubtitle: "Serverless Compute",
-          itemImage: "logoAwslambda"
+          itemImage: "logoAwslambda",
         },
         {
           itemTitle: "AWS API Gateway",
           itemSubtitle: "Serverless Frontend",
-          itemImage: "logoAwsapigateway"
+          itemImage: "logoAwsapigateway",
         },
         {
           itemTitle: "AWS ECS",
           itemSubtitle: "Docker on AWS",
-          itemImage: "logoAwsecs"
+          itemImage: "logoAwsecs",
         },
         {
           itemTitle: "AWS IoT",
           itemSubtitle: "Hosted MQTT",
-          itemImage: "logoAwsiot"
-        }
-      ]
+          itemImage: "logoAwsiot",
+        },
+      ],
     },
     {
       sectionTitle: "Database",
@@ -68,29 +68,29 @@ export const data = {
         {
           itemTitle: "AWS DynamoDB",
           itemSubtitle: "Cloud Scale NoSQL",
-          itemImage: "logoAwsdynamodb"
+          itemImage: "logoAwsdynamodb",
         },
         {
           itemTitle: "Redis",
           itemSubtitle: "Caching Server",
-          itemImage: "logoRedis"
+          itemImage: "logoRedis",
         },
         {
           itemTitle: "PostgreSQL",
           itemSubtitle: "Solid Database",
-          itemImage: "logoPostgresql"
+          itemImage: "logoPostgresql",
         },
         {
           itemTitle: "MySQL",
           itemSubtitle: "My First DB",
-          itemImage: "logoMysql"
+          itemImage: "logoMysql",
         },
         {
           itemTitle: "SQL Server",
           itemSubtitle: "When in Microsoftland",
-          itemImage: "logoSqlserver"
-        }
-      ]
+          itemImage: "logoSqlserver",
+        },
+      ],
     },
     {
       sectionTitle: "Anaylytics",
@@ -99,24 +99,24 @@ export const data = {
         {
           itemTitle: "AWS Kinesis",
           itemSubtitle: "Streaming Ingestion & Analytics",
-          itemImage: "logoAwskinesis"
+          itemImage: "logoAwskinesis",
         },
         {
           itemTitle: "Elastic ELK",
           itemSubtitle: "Fast Search & Analytics",
-          itemImage: "logoElastic"
+          itemImage: "logoElastic",
         },
         {
           itemTitle: "Nagios",
           itemSubtitle: "Old School Monitoring",
-          itemImage: "logoNagios"
+          itemImage: "logoNagios",
         },
         {
           itemTitle: "Zabbix",
           itemSubtitle: "Slightly Newer School Monitoring",
-          itemImage: "logoZabbix"
-        }
-      ]
+          itemImage: "logoZabbix",
+        },
+      ],
     },
     {
       sectionTitle: "Storage",
@@ -125,14 +125,14 @@ export const data = {
         {
           itemTitle: "AWS Cloudfront",
           itemSubtitle: "S3 at the Edge",
-          itemImage: "logoAwscloudfront"
+          itemImage: "logoAwscloudfront",
         },
         {
           itemTitle: "AWS S3",
           itemSubtitle: "Object Storage",
-          itemImage: "logoAwss3"
-        }
-      ]
+          itemImage: "logoAwss3",
+        },
+      ],
     },
     {
       sectionTitle: "Identity",
@@ -141,19 +141,46 @@ export const data = {
         {
           itemTitle: "AWS IAM",
           itemSubtitle: "AWS Permissions",
-          itemImage: "logoAwsiam"
+          itemImage: "logoAwsiam",
         },
         {
           itemTitle: "AWS Cognito",
           itemSubtitle: "AWS Identity as a Service",
-          itemImage: "logoAwscognito"
+          itemImage: "logoAwscognito",
         },
         {
           itemTitle: "Auth0",
           itemSubtitle: "Excellent Identity as a Service",
-          itemImage: "logoAuth0"
-        }
-      ]
-    }
-  ]
-};
+          itemImage: "logoAuth0",
+        },
+
+        {
+          itemTitle: "Okta",
+          itemSubtitle: "Another Excellent Identity as a Service",
+          itemImage: "logoOkta",
+        },
+      ],
+    },
+    {
+      sectionTitle: "Messaging",
+      sectionSubtitle: "Tools",
+      sectionItems: [
+        {
+          itemTitle: "SendGrid",
+          itemSubtitle: "Transactional Email",
+          itemImage: "logoSendgrid",
+        },
+        {
+          itemTitle: "MailGun",
+          itemSubtitle: "Developer Friendly Email",
+          itemImage: "logoMailgun",
+        },
+        {
+          itemTitle: "Twilio",
+          itemSubtitle: "Developer Friendly SMS",
+          itemImage: "logoTwilio",
+        },
+      ],
+    },
+  ],
+}
