@@ -4,7 +4,7 @@ export const data = {
   pageSlug: "/cloud",
   headerTitle: "Infrastructure & Tools",
   headerBody:
-    "Cloud apps have allowed for a whole new level of creativity.  I couldn't imagine building any other way.  Designing & coding on a laptop, then deploying to a global infrastructure.  There's something very powerful about taking an idea and making it available globally in seconds.  That is the power of the cloud.",
+    "Cloud apps have allowed for a whole new level of creativity.  I couldn't imagine building any other way.  Designing & coding on a laptop, and  deploying to a global infrastructure.  There's something very powerful about taking an idea and making it available globally in seconds.  That is the power of the cloud.",
   headerSubTitle: "Below are some of my Code Tools",
   buttonText: "Cloud Tools",
   headerImage: "heroCloud8",

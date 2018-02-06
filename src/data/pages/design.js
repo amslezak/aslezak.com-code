@@ -4,7 +4,7 @@ export const data = {
   pageSlug: "/design",
   headerTitle: "Philosophy & Tools",
   headerBody:
-    "Good apps are better when they're clean & simple.  They enable the end-user to intuitively know where to click next.  They work with you and are frictionless.  I strive to make apps you genuinely want to use.  Good design is the most engaging experience.",
+    "Good apps are better when they're clean & simple.  They enable the end-user to intuitively feel where to click next.  They work with you and are frictionless.  Good design is an engaging experience.  I strive to make apps you genuinely want to use.",
   buttonText: "Design Tools",
   headerSubTitle: "Below are some of my Code Tools",
   headerImage: "heroDesign",
